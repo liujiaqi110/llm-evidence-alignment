@@ -1,0 +1,190 @@
+{
+  "when": "2026-11-25 09:12:43",
+  "seed": 42,
+  "ok": true,
+  "error": null,
+  "purpose": "DPO 可行性复测（非正式训练；临时权重 DO_NOT_USE）",
+  "init_adapter": "<WORKSPACE>\\runs\\p6_v5\\sft_3b_s42\\adapter",
+  "init_adapter_sha256": "09668483084be6e6bf95ab95670795976aa201659fd23e4720db6bc7da380f89",
+  "pairs_sha256": "61804f6636b81277f2482550713ab201fc8c10a6ee14be2329280b94ca448d06",
+  "data_order": {
+    "step1": "longest_seq_8",
+    "step2": "longest_completion_8",
+    "step3": "longest_seq_8（重复，lr > 0 后看 reward 是否非零）"
+  },
+  "pair_ids": [
+    "v5ef_0089__133",
+    "v5ef_0084__125",
+    "v5ef_0154__201",
+    "v5ef_0068__107",
+    "v5ef_0117__162",
+    "v5ef_0117__163",
+    "v5ef_0064__100",
+    "v5ef_0068__106",
+    "v5ef_0176__231",
+    "v5ef_0026__43",
+    "v5ef_0064__100",
+    "v5ef_0065__102",
+    "v5ef_0042__66",
+    "v5ef_0089__133",
+    "v5ef_0182__243",
+    "v5ef_0182__244",
+    "v5ef_0089__133",
+    "v5ef_0084__125",
+    "v5ef_0154__201",
+    "v5ef_0068__107",
+    "v5ef_0117__162",
+    "v5ef_0117__163",
+    "v5ef_0064__100",
+    "v5ef_0068__106"
+  ],
+  "trl_tokenization_matches_precheck": "24/24",
+  "config": {
+    "beta": 0.1,
+    "lr": 2e-05,
+    "max_length": 1024,
+    "max_prompt_length": 896,
+    "use_logits_to_keep": true,
+    "precompute_ref_log_probs": false,
+    "optim": "paged_adamw_8bit",
+    "ga": 8,
+    "P6_MEM_FRACTION": 0.74,
+    "PYTORCH_CUDA_ALLOC_CONF": ""
+  },
+  "steps": 3,
+  "wall_time_s": 225.8,
+  "gpu": {
+    "total_mib": 8188,
+    "device_free_before_load_mib": 7106,
+    "other_processes_mib_approx": 1082,
+    "process_limit_mib": 6059,
+    "load_peak_mib": 3148,
+    "train_peak_allocated_mib": 5590,
+    "train_peak_reserved_mib": 5978,
+    "headroom_reserved_vs_limit_mib": 81
+  },
+  "memory_events": [
+    {
+      "event": "step_end",
+      "step": 1,
+      "allocated_mib": 2718,
+      "peak_allocated_mib": 5531,
+      "peak_reserved_mib": 5950,
+      "device_free_mib": 522
+    },
+    {
+      "event": "save",
+      "step": 1,
+      "allocated_mib": 2718,
+      "peak_allocated_mib": 5531,
+      "peak_reserved_mib": 5950,
+      "device_free_mib": 522
+    },
+    {
+      "event": "step_end",
+      "step": 2,
+      "allocated_mib": 2718,
+      "peak_allocated_mib": 5590,
+      "peak_reserved_mib": 5978,
+      "device_free_mib": 506
+    },
+    {
+      "event": "save",
+      "step": 2,
+      "allocated_mib": 2718,
+      "peak_allocated_mib": 5590,
+      "peak_reserved_mib": 5978,
+      "device_free_mib": 506
+    },
+    {
+      "event": "step_end",
+      "step": 3,
+      "allocated_mib": 2718,
+      "peak_allocated_mib": 5590,
+      "peak_reserved_mib": 5978,
+      "device_free_mib": 553
+    },
+    {
+      "event": "save",
+      "step": 3,
+      "allocated_mib": 2718,
+      "peak_allocated_mib": 5590,
+      "peak_reserved_mib": 5978,
+      "device_free_mib": 528
+    }
+  ],
+  "adapter_check": {
+    "trainable_param_tensors": 504,
+    "trainable_all_policy": true,
+    "reference_requires_grad_any": false,
+    "reference_max_abs_change": 0.0,
+    "policy_tensors_changed": "504/504",
+    "saved_reference_equals_init_adapter": [
+      true,
+      true,
+      true
+    ]
+  },
+  "checkpoint_saved": [
+    "checkpoint-1\\policy\\adapter_model.safetensors",
+    "checkpoint-1\\reference\\adapter_model.safetensors",
+    "checkpoint-2\\policy\\adapter_model.safetensors",
+    "checkpoint-2\\reference\\adapter_model.safetensors",
+    "checkpoint-3\\policy\\adapter_model.safetensors",
+    "checkpoint-3\\reference\\adapter_model.safetensors"
+  ],
+  "has_preference_metrics": true,
+  "logs": [
+    {
+      "loss": 0.6931,
+      "grad_norm": 10.850659370422363,
+      "learning_rate": 0.0,
+      "rewards/chosen": 0.0,
+      "rewards/rejected": 0.0,
+      "rewards/accuracies": 0.0,
+      "rewards/margins": 0.0,
+      "logps/chosen": -5.7168474197387695,
+      "logps/rejected": -32.36409378051758,
+      "logits/chosen": -2.420057773590088,
+      "logits/rejected": -2.286407470703125,
+      "epoch": 0.3333333333333333,
+      "step": 1
+    },
+    {
+      "loss": 0.6931,
+      "grad_norm": 14.900060653686523,
+      "learning_rate": 2e-05,
+      "rewards/chosen": 0.0,
+      "rewards/rejected": 0.0,
+      "rewards/accuracies": 0.0,
+      "rewards/margins": 0.0,
+      "logps/chosen": -7.711613655090332,
+      "logps/rejected": -67.28076934814453,
+      "logits/chosen": -2.4023165702819824,
+      "logits/rejected": -2.1358766555786133,
+      "epoch": 0.6666666666666666,
+      "step": 2
+    },
+    {
+      "loss": 0.5335,
+      "grad_norm": 11.317092895507812,
+      "learning_rate": 1e-05,
+      "rewards/chosen": 0.01613769680261612,
+      "rewards/rejected": -0.3541492223739624,
+      "rewards/accuracies": 1.0,
+      "rewards/margins": 0.37028688192367554,
+      "logps/chosen": -10.705984115600586,
+      "logps/rejected": -70.9200439453125,
+      "logits/chosen": -2.3520607948303223,
+      "logits/rejected": -2.191993474960327,
+      "epoch": 1.0,
+      "step": 3
+    }
+  ],
+  "versions": {
+    "trl": "0.23.1",
+    "peft": "0.22.0",
+    "transformers": "4.57.6",
+    "torch": "2.11.0+cu128"
+  }
+}

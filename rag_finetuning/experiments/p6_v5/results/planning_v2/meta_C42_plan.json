@@ -1,0 +1,22 @@
+{
+  "group": "C42_plan",
+  "desc": "3B v4 种子 42 + 现有证据覆盖生成（evidence_planning v1）",
+  "model": "Qwen2.5-3B-Instruct+v4_3b_s42",
+  "input": "hard_dev",
+  "frozen_sha256": "3b79e057c3e7037601944ab1fdd58a4c3e3eeba15314ed0d2617149540ef7987",
+  "generation_settings": {
+    "backend": "transformers",
+    "max_new_tokens": 384,
+    "do_sample": false,
+    "repetition_penalty": 1.0,
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "adapter": "<WORKSPACE>/runs/p6_v4/v4_3b_s42/adapter",
+    "quantization": "bitsandbytes 4-bit NF4 + double quant, bf16 compute",
+    "load_peak_alloc_mib": 2939,
+    "adapter_sha256": "3f58fa7599b5ebcc9221ef40e4fc4517de170f6859a78624534ee62733a18f6d"
+  },
+  "plan": true,
+  "n": 56,
+  "wall_s": 1398.1
+}

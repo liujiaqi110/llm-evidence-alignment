@@ -1,0 +1,32 @@
+# local experiment workspace: weights, adapters, checkpoints, logs, private data (never committed)
+workspace/
+runs/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.gguf
+*.ckpt
+adapter_model*
+optimizer.pt
+# unpublished experiment data, if placed back locally for full reproduction
+rag_finetuning/data/
+rag_finetuning/experiments/*/data/*
+!rag_finetuning/experiments/*/data/frozen/
+rag_finetuning/experiments/*/data/frozen/*
+!rag_finetuning/experiments/*/data/frozen/*.manifest.json
+!rag_finetuning/experiments/*/data/*/manifest.json
+rag_finetuning/experiments/p6_v2/blind/
+rag_finetuning/experiments/p6_v2/frozen_inputs/*.jsonl
+# environments / caches / secrets
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+*.egg-info/
+build/
+dist/
+.cache/
+.ipynb_checkpoints/

@@ -1,0 +1,30 @@
+{
+  "set": "longest_seq_8",
+  "tag": "_A_expseg",
+  "precompute_ref_log_probs": false,
+  "PYTORCH_CUDA_ALLOC_CONF": "expandable_segments:True",
+  "pair_ids": [
+    "v5ef_0208__280",
+    "v5ef_0139__187",
+    "v5ef_0016__28",
+    "v5ef_0209__282",
+    "v5ef_0083__124",
+    "v5ef_0083__123",
+    "v5ef_0139__188",
+    "v5ef_0208__281"
+  ],
+  "max_length": 1024,
+  "use_logits_to_keep": true,
+  "ok": false,
+  "error": "CUDA OOM: CUDA out of memory. Tried to allocate 214.00 MiB. GPU 0 has a total capacity of 8.00 GiB of which 470.35 MiB is free. 5.92 GiB allowed; Of the allocated memory 5.45 GiB is allocated by PyTorch, and 311.69 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try set",
+  "steps": 0,
+  "wall_time_s": 33.9,
+  "load_peak_mib": 3148,
+  "train_peak_allocated_mib": 5680,
+  "train_peak_reserved_mib": 5890,
+  "limit_mib": 6059,
+  "memory_events": [],
+  "checkpoint_saved": [],
+  "has_preference_metrics": false,
+  "logs": []
+}

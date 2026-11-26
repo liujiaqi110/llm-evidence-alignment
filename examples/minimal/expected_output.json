@@ -1,0 +1,83 @@
+{
+ "scorer_version": "4.0.3",
+ "n_items": 6,
+ "prompt_messages": 2,
+ "system_prompt_chars": 446,
+ "system_A": {
+  "content_ok_v4": {
+   "k": 3.0,
+   "n": 6
+  },
+  "multi_complete_v5": {
+   "k": 0.0,
+   "n": 3
+  },
+  "required_fact_coverage": {
+   "k": 3.0,
+   "n": 5
+  },
+  "citation_valid": {
+   "k": 6.0,
+   "n": 6
+  },
+  "behavior_ok": {
+   "k": 3.0,
+   "n": 6
+  }
+ },
+ "system_B": {
+  "content_ok_v4": {
+   "k": 6.0,
+   "n": 6
+  },
+  "multi_complete_v5": {
+   "k": 3.0,
+   "n": 3
+  },
+  "required_fact_coverage": {
+   "k": 5.0,
+   "n": 5
+  },
+  "citation_valid": {
+   "k": 6.0,
+   "n": 6
+  },
+  "behavior_ok": {
+   "k": 6.0,
+   "n": 6
+  }
+ },
+ "paired_B_minus_A": {
+  "content_ok_v4": {
+   "n": 6,
+   "n_clusters": 3,
+   "diff": 0.5,
+   "ci95_cluster_bootstrap": [
+    0.3333,
+    1.0
+   ]
+  },
+  "multi_complete_v5": {
+   "n": 3,
+   "n_clusters": 3,
+   "diff": 1.0,
+   "ci95_cluster_bootstrap": [
+    1.0,
+    1.0
+   ]
+  }
+ },
+ "missing_facts_A": {
+  "ex_02": [
+   "30分钟",
+   "组长签字"
+  ],
+  "ex_03": [
+   "加收"
+  ],
+  "ex_05": [
+   "1块",
+   "6周"
+  ]
+ }
+}

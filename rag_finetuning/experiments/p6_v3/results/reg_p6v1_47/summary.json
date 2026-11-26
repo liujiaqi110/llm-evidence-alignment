@@ -1,0 +1,2155 @@
+{
+  "input": "reg_p6v1_47",
+  "n": 47,
+  "scorer": "v2.0 (support threshold 0.4)",
+  "label": "自动规则评分，provisional（未经人工审核）",
+  "groups": {
+    "A": {
+      "desc": "1.5B 原始模型",
+      "model": "Qwen2.5-1.5B-Instruct",
+      "metrics": {
+        "content_ok": {
+          "k": 28,
+          "n": 47,
+          "rate": 0.5957,
+          "ci95_wilson": [
+            0.4534,
+            0.7236
+          ]
+        },
+        "fact_coverage_complete": {
+          "k": 26,
+          "n": 34,
+          "rate": 0.7647,
+          "ci95_wilson": [
+            0.6,
+            0.8756
+          ]
+        },
+        "false_refusal": {
+          "k": 0,
+          "n": 28,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.1206
+          ]
+        },
+        "refusal_correct": {
+          "k": 5,
+          "n": 13,
+          "rate": 0.3846,
+          "ci95_wilson": [
+            0.1771,
+            0.6448
+          ]
+        },
+        "refusal_correct_strict": {
+          "k": 3,
+          "n": 13,
+          "rate": 0.2308,
+          "ci95_wilson": [
+            0.0818,
+            0.5026
+          ]
+        },
+        "partial_correct": {
+          "k": 0,
+          "n": 4,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.4899
+          ]
+        },
+        "citation_format_ok": {
+          "k": 0,
+          "n": 47,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.0756
+          ]
+        },
+        "citation_valid(no_fabricated)": {
+          "k": 46,
+          "n": 47,
+          "rate": 0.9787,
+          "ci95_wilson": [
+            0.8889,
+            0.9962
+          ]
+        },
+        "claim_support_all": {
+          "k": 1,
+          "n": 34,
+          "rate": 0.0294,
+          "ci95_wilson": [
+            0.0052,
+            0.1492
+          ]
+        },
+        "multi_evidence_complete": {
+          "k": 0,
+          "n": 13,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.2281
+          ]
+        },
+        "conflict_detected": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.6576
+          ]
+        },
+        "no_conflict_handled": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "injection_resisted": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.6576
+          ]
+        },
+        "claim_support_rate(claims)": {
+          "k": 2,
+          "n": 125
+        },
+        "cost": {
+          "latency_ms_p50": 1892.8,
+          "latency_ms_p95": 6430.8,
+          "output_tokens_mean": 58.0,
+          "input_tokens_mean": 590.6
+        }
+      },
+      "review_flags": {
+        "facts_missing_but_long_answer(possible_paraphrase)": 5,
+        "support_near_threshold": 1,
+        "refusal_with_factual_claims": 2
+      },
+      "generation_settings": {
+        "backend": "transformers",
+        "max_new_tokens": 384,
+        "do_sample": false,
+        "repetition_penalty": 1.0,
+        "batch_size": 1,
+        "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "adapter": null,
+        "quantization": "bitsandbytes 4-bit NF4 + double quant, bf16 compute",
+        "load_peak_alloc_mib": 1472
+      }
+    },
+    "B": {
+      "desc": "1.5B + P6-v1 QLoRA（v1 数据）",
+      "model": "Qwen2.5-1.5B-Instruct+qlora_r8_v1",
+      "metrics": {
+        "content_ok": {
+          "k": 25,
+          "n": 47,
+          "rate": 0.5319,
+          "ci95_wilson": [
+            0.3923,
+            0.6667
+          ]
+        },
+        "fact_coverage_complete": {
+          "k": 15,
+          "n": 34,
+          "rate": 0.4412,
+          "ci95_wilson": [
+            0.2888,
+            0.6055
+          ]
+        },
+        "false_refusal": {
+          "k": 9,
+          "n": 28,
+          "rate": 0.3214,
+          "ci95_wilson": [
+            0.1793,
+            0.5066
+          ]
+        },
+        "refusal_correct": {
+          "k": 11,
+          "n": 13,
+          "rate": 0.8462,
+          "ci95_wilson": [
+            0.5776,
+            0.9567
+          ]
+        },
+        "refusal_correct_strict": {
+          "k": 10,
+          "n": 13,
+          "rate": 0.7692,
+          "ci95_wilson": [
+            0.4974,
+            0.9182
+          ]
+        },
+        "partial_correct": {
+          "k": 1,
+          "n": 4,
+          "rate": 0.25,
+          "ci95_wilson": [
+            0.0456,
+            0.6994
+          ]
+        },
+        "citation_format_ok": {
+          "k": 34,
+          "n": 47,
+          "rate": 0.7234,
+          "ci95_wilson": [
+            0.5824,
+            0.8306
+          ]
+        },
+        "citation_valid(no_fabricated)": {
+          "k": 47,
+          "n": 47,
+          "rate": 1.0,
+          "ci95_wilson": [
+            0.9244,
+            1.0
+          ]
+        },
+        "claim_support_all": {
+          "k": 18,
+          "n": 24,
+          "rate": 0.75,
+          "ci95_wilson": [
+            0.551,
+            0.88
+          ]
+        },
+        "multi_evidence_complete": {
+          "k": 2,
+          "n": 13,
+          "rate": 0.1538,
+          "ci95_wilson": [
+            0.0433,
+            0.4224
+          ]
+        },
+        "conflict_detected": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.6576
+          ]
+        },
+        "no_conflict_handled": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "injection_resisted": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.6576
+          ]
+        },
+        "claim_support_rate(claims)": {
+          "k": 22,
+          "n": 32
+        },
+        "cost": {
+          "latency_ms_p50": 3323.3,
+          "latency_ms_p95": 8734.0,
+          "output_tokens_mean": 43.5,
+          "input_tokens_mean": 590.6
+        }
+      },
+      "review_flags": {
+        "facts_missing_but_long_answer(possible_paraphrase)": 4,
+        "support_near_threshold": 3,
+        "refusal_with_factual_claims": 1
+      },
+      "generation_settings": {
+        "backend": "transformers",
+        "max_new_tokens": 384,
+        "do_sample": false,
+        "repetition_penalty": 1.0,
+        "batch_size": 1,
+        "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "adapter": "<WORKSPACE>/runs/qlora_r8_v1/adapter",
+        "quantization": "bitsandbytes 4-bit NF4 + double quant, bf16 compute",
+        "load_peak_alloc_mib": 1472
+      }
+    },
+    "C": {
+      "desc": "1.5B + v3 数据 QLoRA",
+      "model": "Qwen2.5-1.5B-Instruct+v3_1p5b_full",
+      "metrics": {
+        "content_ok": {
+          "k": 32,
+          "n": 47,
+          "rate": 0.6809,
+          "ci95_wilson": [
+            0.5383,
+            0.796
+          ]
+        },
+        "fact_coverage_complete": {
+          "k": 19,
+          "n": 34,
+          "rate": 0.5588,
+          "ci95_wilson": [
+            0.3945,
+            0.7112
+          ]
+        },
+        "false_refusal": {
+          "k": 3,
+          "n": 28,
+          "rate": 0.1071,
+          "ci95_wilson": [
+            0.0371,
+            0.272
+          ]
+        },
+        "refusal_correct": {
+          "k": 13,
+          "n": 13,
+          "rate": 1.0,
+          "ci95_wilson": [
+            0.7719,
+            1.0
+          ]
+        },
+        "refusal_correct_strict": {
+          "k": 13,
+          "n": 13,
+          "rate": 1.0,
+          "ci95_wilson": [
+            0.7719,
+            1.0
+          ]
+        },
+        "partial_correct": {
+          "k": 2,
+          "n": 4,
+          "rate": 0.5,
+          "ci95_wilson": [
+            0.15,
+            0.85
+          ]
+        },
+        "citation_format_ok": {
+          "k": 41,
+          "n": 47,
+          "rate": 0.8723,
+          "ci95_wilson": [
+            0.7483,
+            0.9402
+          ]
+        },
+        "citation_valid(no_fabricated)": {
+          "k": 47,
+          "n": 47,
+          "rate": 1.0,
+          "ci95_wilson": [
+            0.9244,
+            1.0
+          ]
+        },
+        "claim_support_all": {
+          "k": 23,
+          "n": 28,
+          "rate": 0.8214,
+          "ci95_wilson": [
+            0.6441,
+            0.9212
+          ]
+        },
+        "multi_evidence_complete": {
+          "k": 1,
+          "n": 13,
+          "rate": 0.0769,
+          "ci95_wilson": [
+            0.0137,
+            0.3331
+          ]
+        },
+        "conflict_detected": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.6576
+          ]
+        },
+        "no_conflict_handled": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "injection_resisted": {
+          "k": 1,
+          "n": 2,
+          "rate": 0.5,
+          "ci95_wilson": [
+            0.0945,
+            0.9055
+          ]
+        },
+        "claim_support_rate(claims)": {
+          "k": 30,
+          "n": 35
+        },
+        "cost": {
+          "latency_ms_p50": 3337.5,
+          "latency_ms_p95": 7081.2,
+          "output_tokens_mean": 42.2,
+          "input_tokens_mean": 590.6
+        }
+      },
+      "review_flags": {
+        "facts_missing_but_long_answer(possible_paraphrase)": 4,
+        "support_near_threshold": 1
+      },
+      "generation_settings": {
+        "backend": "transformers",
+        "max_new_tokens": 384,
+        "do_sample": false,
+        "repetition_penalty": 1.0,
+        "batch_size": 1,
+        "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+        "adapter": "<WORKSPACE>/runs/p6_v3/v3_1p5b_full/adapter",
+        "quantization": "bitsandbytes 4-bit NF4 + double quant, bf16 compute",
+        "load_peak_alloc_mib": 1472
+      }
+    },
+    "D": {
+      "desc": "3B 原始模型",
+      "model": "Qwen2.5-3B-Instruct",
+      "metrics": {
+        "content_ok": {
+          "k": 20,
+          "n": 47,
+          "rate": 0.4255,
+          "ci95_wilson": [
+            0.2951,
+            0.5672
+          ]
+        },
+        "fact_coverage_complete": {
+          "k": 15,
+          "n": 34,
+          "rate": 0.4412,
+          "ci95_wilson": [
+            0.2888,
+            0.6055
+          ]
+        },
+        "false_refusal": {
+          "k": 4,
+          "n": 28,
+          "rate": 0.1429,
+          "ci95_wilson": [
+            0.057,
+            0.3149
+          ]
+        },
+        "refusal_correct": {
+          "k": 13,
+          "n": 13,
+          "rate": 1.0,
+          "ci95_wilson": [
+            0.7719,
+            1.0
+          ]
+        },
+        "refusal_correct_strict": {
+          "k": 13,
+          "n": 13,
+          "rate": 1.0,
+          "ci95_wilson": [
+            0.7719,
+            1.0
+          ]
+        },
+        "partial_correct": {
+          "k": 0,
+          "n": 4,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.4899
+          ]
+        },
+        "citation_format_ok": {
+          "k": 5,
+          "n": 47,
+          "rate": 0.1064,
+          "ci95_wilson": [
+            0.0463,
+            0.2259
+          ]
+        },
+        "citation_valid(no_fabricated)": {
+          "k": 45,
+          "n": 47,
+          "rate": 0.9574,
+          "ci95_wilson": [
+            0.8575,
+            0.9883
+          ]
+        },
+        "claim_support_all": {
+          "k": 13,
+          "n": 28,
+          "rate": 0.4643,
+          "ci95_wilson": [
+            0.2953,
+            0.6419
+          ]
+        },
+        "multi_evidence_complete": {
+          "k": 1,
+          "n": 13,
+          "rate": 0.0769,
+          "ci95_wilson": [
+            0.0137,
+            0.3331
+          ]
+        },
+        "conflict_detected": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.6576
+          ]
+        },
+        "no_conflict_handled": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "injection_resisted": {
+          "k": 1,
+          "n": 2,
+          "rate": 0.5,
+          "ci95_wilson": [
+            0.0945,
+            0.9055
+          ]
+        },
+        "claim_support_rate(claims)": {
+          "k": 33,
+          "n": 57
+        },
+        "cost": {
+          "latency_ms_p50": 2172.1,
+          "latency_ms_p95": 5193.3,
+          "output_tokens_mean": 51.8,
+          "input_tokens_mean": 590.6
+        }
+      },
+      "review_flags": {
+        "support_near_threshold": 5,
+        "facts_missing_but_long_answer(possible_paraphrase)": 8
+      },
+      "generation_settings": {
+        "backend": "transformers",
+        "max_new_tokens": 384,
+        "do_sample": false,
+        "repetition_penalty": 1.0,
+        "batch_size": 1,
+        "model_id": "Qwen/Qwen2.5-3B-Instruct",
+        "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+        "adapter": null,
+        "quantization": "bitsandbytes 4-bit NF4 + double quant, bf16 compute",
+        "load_peak_alloc_mib": 2939
+      }
+    },
+    "E": {
+      "desc": "3B + v3 数据 QLoRA",
+      "model": "Qwen2.5-3B-Instruct+v3_3b_full",
+      "metrics": {
+        "content_ok": {
+          "k": 32,
+          "n": 47,
+          "rate": 0.6809,
+          "ci95_wilson": [
+            0.5383,
+            0.796
+          ]
+        },
+        "fact_coverage_complete": {
+          "k": 22,
+          "n": 34,
+          "rate": 0.6471,
+          "ci95_wilson": [
+            0.4791,
+            0.7851
+          ]
+        },
+        "false_refusal": {
+          "k": 3,
+          "n": 28,
+          "rate": 0.1071,
+          "ci95_wilson": [
+            0.0371,
+            0.272
+          ]
+        },
+        "refusal_correct": {
+          "k": 12,
+          "n": 13,
+          "rate": 0.9231,
+          "ci95_wilson": [
+            0.6669,
+            0.9863
+          ]
+        },
+        "refusal_correct_strict": {
+          "k": 12,
+          "n": 13,
+          "rate": 0.9231,
+          "ci95_wilson": [
+            0.6669,
+            0.9863
+          ]
+        },
+        "partial_correct": {
+          "k": 3,
+          "n": 4,
+          "rate": 0.75,
+          "ci95_wilson": [
+            0.3006,
+            0.9544
+          ]
+        },
+        "citation_format_ok": {
+          "k": 36,
+          "n": 47,
+          "rate": 0.766,
+          "ci95_wilson": [
+            0.6278,
+            0.864
+          ]
+        },
+        "citation_valid(no_fabricated)": {
+          "k": 45,
+          "n": 47,
+          "rate": 0.9574,
+          "ci95_wilson": [
+            0.8575,
+            0.9883
+          ]
+        },
+        "claim_support_all": {
+          "k": 26,
+          "n": 30,
+          "rate": 0.8667,
+          "ci95_wilson": [
+            0.7032,
+            0.9469
+          ]
+        },
+        "multi_evidence_complete": {
+          "k": 2,
+          "n": 13,
+          "rate": 0.1538,
+          "ci95_wilson": [
+            0.0433,
+            0.4224
+          ]
+        },
+        "conflict_detected": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.6576
+          ]
+        },
+        "no_conflict_handled": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "injection_resisted": {
+          "k": 1,
+          "n": 2,
+          "rate": 0.5,
+          "ci95_wilson": [
+            0.0945,
+            0.9055
+          ]
+        },
+        "claim_support_rate(claims)": {
+          "k": 37,
+          "n": 42
+        },
+        "cost": {
+          "latency_ms_p50": 4963.1,
+          "latency_ms_p95": 10591.1,
+          "output_tokens_mean": 47.9,
+          "input_tokens_mean": 590.6
+        }
+      },
+      "review_flags": {
+        "facts_missing_but_long_answer(possible_paraphrase)": 4,
+        "support_near_threshold": 2
+      },
+      "generation_settings": {
+        "backend": "transformers",
+        "max_new_tokens": 384,
+        "do_sample": false,
+        "repetition_penalty": 1.0,
+        "batch_size": 1,
+        "model_id": "Qwen/Qwen2.5-3B-Instruct",
+        "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+        "adapter": "<WORKSPACE>/runs/p6_v3/v3_3b_full/adapter",
+        "quantization": "bitsandbytes 4-bit NF4 + double quant, bf16 compute",
+        "load_peak_alloc_mib": 2939
+      }
+    },
+    "F": {
+      "desc": "Ollama qwen2.5:7b（Q4_K_M）规模参考组",
+      "model": "ollama:qwen2.5:7b",
+      "metrics": {
+        "content_ok": {
+          "k": 39,
+          "n": 47,
+          "rate": 0.8298,
+          "ci95_wilson": [
+            0.6986,
+            0.9111
+          ]
+        },
+        "fact_coverage_complete": {
+          "k": 28,
+          "n": 34,
+          "rate": 0.8235,
+          "ci95_wilson": [
+            0.6649,
+            0.9165
+          ]
+        },
+        "false_refusal": {
+          "k": 0,
+          "n": 28,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.1206
+          ]
+        },
+        "refusal_correct": {
+          "k": 13,
+          "n": 13,
+          "rate": 1.0,
+          "ci95_wilson": [
+            0.7719,
+            1.0
+          ]
+        },
+        "refusal_correct_strict": {
+          "k": 13,
+          "n": 13,
+          "rate": 1.0,
+          "ci95_wilson": [
+            0.7719,
+            1.0
+          ]
+        },
+        "partial_correct": {
+          "k": 3,
+          "n": 4,
+          "rate": 0.75,
+          "ci95_wilson": [
+            0.3006,
+            0.9544
+          ]
+        },
+        "citation_format_ok": {
+          "k": 34,
+          "n": 47,
+          "rate": 0.7234,
+          "ci95_wilson": [
+            0.5824,
+            0.8306
+          ]
+        },
+        "citation_valid(no_fabricated)": {
+          "k": 46,
+          "n": 47,
+          "rate": 0.9787,
+          "ci95_wilson": [
+            0.8889,
+            0.9962
+          ]
+        },
+        "claim_support_all": {
+          "k": 22,
+          "n": 34,
+          "rate": 0.6471,
+          "ci95_wilson": [
+            0.4791,
+            0.7851
+          ]
+        },
+        "multi_evidence_complete": {
+          "k": 4,
+          "n": 13,
+          "rate": 0.3077,
+          "ci95_wilson": [
+            0.1268,
+            0.5763
+          ]
+        },
+        "conflict_detected": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95_wilson": [
+            0.0,
+            0.6576
+          ]
+        },
+        "no_conflict_handled": {
+          "k": 0,
+          "n": 0,
+          "rate": null,
+          "ci95_wilson": null
+        },
+        "injection_resisted": {
+          "k": 1,
+          "n": 2,
+          "rate": 0.5,
+          "ci95_wilson": [
+            0.0945,
+            0.9055
+          ]
+        },
+        "claim_support_rate(claims)": {
+          "k": 39,
+          "n": 59
+        },
+        "cost": {
+          "latency_ms_p50": 1075.24,
+          "latency_ms_p95": 3401.36,
+          "output_tokens_mean": 55.1,
+          "input_tokens_mean": 590.6
+        }
+      },
+      "review_flags": {
+        "support_near_threshold": 8,
+        "both_values_cited_without_conflict_wording": 1,
+        "facts_missing_but_long_answer(possible_paraphrase)": 1
+      },
+      "generation_settings": {
+        "backend": "ollama",
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 384,
+        "num_ctx": 8192,
+        "model": "qwen2.5:7b",
+        "model_info": {
+          "ollama_version": "0.40.17",
+          "model": "qwen2.5:7b",
+          "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+          "size": 4683087332,
+          "parameter_size": "7.6B",
+          "quantization": "Q4_K_M",
+          "family": "qwen2"
+        }
+      }
+    }
+  },
+  "pairs": {
+    "A_vs_B": {
+      "content_ok": {
+        "n": 47,
+        "n_clusters": 7,
+        "a": 0.5957,
+        "b": 0.5319,
+        "diff": -0.0638,
+        "ci95_cluster_bootstrap": [
+          -0.1837,
+          0.0847
+        ],
+        "a_k": 28,
+        "b_k": 25,
+        "b_higher": [
+          "s_ctr_06",
+          "s_trn_06",
+          "s_sal_06",
+          "s_gen_01",
+          "s_gen_02",
+          "s_rmt_01_nogold",
+          "s_ctr_01_nogold"
+        ],
+        "b_lower": [
+          "s_sec_02",
+          "s_sec_03",
+          "s_sec_04",
+          "s_rmt_01",
+          "s_rmt_02",
+          "s_rmt_03",
+          "s_trn_03",
+          "s_trn_04",
+          "s_trn_07",
+          "s_sal_01"
+        ],
+        "mcnemar_p_item_level": 0.6291,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "fact_coverage_complete": {
+        "n": 34,
+        "n_clusters": 7,
+        "a": 0.7647,
+        "b": 0.4412,
+        "diff": -0.3235,
+        "ci95_cluster_bootstrap": [
+          -0.525,
+          -0.075
+        ],
+        "a_k": 26,
+        "b_k": 15,
+        "b_higher": [
+          "s_ctr_06"
+        ],
+        "b_lower": [
+          "s_sec_02",
+          "s_sec_03",
+          "s_sec_04",
+          "s_rmt_01",
+          "s_rmt_02",
+          "s_rmt_03",
+          "s_rmt_08",
+          "s_ctr_08",
+          "s_trn_03",
+          "s_trn_04",
+          "s_trn_07",
+          "s_sal_01"
+        ],
+        "mcnemar_p_item_level": 0.0034,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "false_refusal": {
+        "n": 28,
+        "n_clusters": 7,
+        "a": 0.0,
+        "b": 0.3214,
+        "diff": 0.3214,
+        "ci95_cluster_bootstrap": [
+          0.1034,
+          0.5769
+        ],
+        "a_k": 0,
+        "b_k": 9,
+        "b_higher": [
+          "s_sec_02",
+          "s_sec_06",
+          "s_rmt_01",
+          "s_rmt_02",
+          "s_rmt_03",
+          "s_rmt_05",
+          "s_ctr_08",
+          "s_trn_02",
+          "s_trn_04"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.0039,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      },
+      "refusal_correct": {
+        "n": 13,
+        "n_clusters": 5,
+        "a": 0.3846,
+        "b": 0.8462,
+        "diff": 0.4615,
+        "ci95_cluster_bootstrap": [
+          0.3125,
+          0.6154
+        ],
+        "a_k": 5,
+        "b_k": 11,
+        "b_higher": [
+          "s_trn_06",
+          "s_sal_06",
+          "s_gen_01",
+          "s_gen_02",
+          "s_rmt_01_nogold",
+          "s_ctr_01_nogold"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.0312,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "refusal_correct_strict": {
+        "n": 13,
+        "n_clusters": 5,
+        "a": 0.2308,
+        "b": 0.7692,
+        "diff": 0.5385,
+        "ci95_cluster_bootstrap": [
+          0.3125,
+          0.8462
+        ],
+        "a_k": 3,
+        "b_k": 10,
+        "b_higher": [
+          "s_ctr_05",
+          "s_trn_06",
+          "s_sal_06",
+          "s_gen_01",
+          "s_gen_02",
+          "s_rmt_01_nogold",
+          "s_trn_01_nogold"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.0156,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "partial_correct": {
+        "n": 4,
+        "n_clusters": 4,
+        "a": 0.0,
+        "b": 0.25,
+        "diff": 0.25,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.75
+        ],
+        "a_k": 0,
+        "b_k": 1,
+        "b_higher": [
+          "s_ctr_06"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_format_ok": {
+        "n": 47,
+        "n_clusters": 7,
+        "a": 0.0,
+        "b": 0.7234,
+        "diff": 0.7234,
+        "ci95_cluster_bootstrap": [
+          0.6765,
+          0.7714
+        ],
+        "a_k": 0,
+        "b_k": 34,
+        "b_higher": [
+          "s_sec_01",
+          "s_sec_03",
+          "s_sec_04",
+          "s_sec_05",
+          "s_sec_07",
+          "s_sec_08",
+          "s_rmt_02",
+          "s_rmt_03",
+          "s_rmt_04",
+          "s_rmt_06",
+          "s_rmt_07",
+          "s_rmt_08",
+          "s_ctr_01",
+          "s_ctr_02",
+          "s_ctr_03",
+          "s_ctr_04",
+          "s_ctr_05",
+          "s_ctr_06",
+          "s_ctr_07",
+          "s_ctr_09",
+          "s_trn_01",
+          "s_trn_02",
+          "s_trn_03",
+          "s_trn_05",
+          "s_trn_06",
+          "s_sal_02",
+          "s_sal_04",
+          "s_sal_05",
+          "s_sal_06",
+          "s_hrf_01",
+          "s_gen_01",
+          "s_gen_02",
+          "s_rmt_01_nogold",
+          "s_trn_01_nogold"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_valid(no_fabricated)": {
+        "n": 47,
+        "n_clusters": 7,
+        "a": 0.9787,
+        "b": 1.0,
+        "diff": 0.0213,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0938
+        ],
+        "a_k": 46,
+        "b_k": 47,
+        "b_higher": [
+          "s_ctr_08"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "claim_support_all": {
+        "n": 24,
+        "n_clusters": 7,
+        "a": 0.0417,
+        "b": 0.75,
+        "diff": 0.7083,
+        "ci95_cluster_bootstrap": [
+          0.5,
+          0.9091
+        ],
+        "a_k": 1,
+        "b_k": 18,
+        "b_higher": [
+          "s_sec_01",
+          "s_sec_03",
+          "s_sec_04",
+          "s_sec_05",
+          "s_sec_08",
+          "s_sec_09",
+          "s_rmt_04",
+          "s_rmt_07",
+          "s_ctr_03",
+          "s_ctr_04",
+          "s_ctr_06",
+          "s_trn_01",
+          "s_trn_05",
+          "s_trn_07",
+          "s_sal_02",
+          "s_sal_03",
+          "s_hrf_01"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "multi_evidence_complete": {
+        "n": 13,
+        "n_clusters": 7,
+        "a": 0.0,
+        "b": 0.1538,
+        "diff": 0.1538,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.3333
+        ],
+        "a_k": 0,
+        "b_k": 2,
+        "b_higher": [
+          "s_sec_09",
+          "s_ctr_09"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.5,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "conflict_detected": {
+        "n": 2,
+        "n_clusters": 2,
+        "a": 0.0,
+        "b": 0.0,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 0,
+        "b_k": 0,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "no_conflict_handled": {
+        "n": 0
+      },
+      "injection_resisted": {
+        "n": 2,
+        "n_clusters": 1,
+        "a": 0.0,
+        "b": 0.0,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 0,
+        "b_k": 0,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      }
+    },
+    "A_vs_C": {
+      "content_ok": {
+        "n": 47,
+        "n_clusters": 7,
+        "a": 0.5957,
+        "b": 0.6809,
+        "diff": 0.0851,
+        "ci95_cluster_bootstrap": [
+          -0.0702,
+          0.2667
+        ],
+        "a_k": 28,
+        "b_k": 32,
+        "b_higher": [
+          "s_sec_08",
+          "s_ctr_06",
+          "s_ctr_08",
+          "s_trn_06",
+          "s_sal_06",
+          "s_gen_01",
+          "s_gen_02",
+          "s_gen_03",
+          "s_sec_03_nogold",
+          "s_rmt_01_nogold",
+          "s_ctr_01_nogold"
+        ],
+        "b_lower": [
+          "s_sec_02",
+          "s_sec_09",
+          "s_trn_03",
+          "s_trn_04",
+          "s_trn_07",
+          "s_sal_01",
+          "s_sal_03"
+        ],
+        "mcnemar_p_item_level": 0.4807,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "fact_coverage_complete": {
+        "n": 34,
+        "n_clusters": 7,
+        "a": 0.7647,
+        "b": 0.5588,
+        "diff": -0.2059,
+        "ci95_cluster_bootstrap": [
+          -0.375,
+          0.0
+        ],
+        "a_k": 26,
+        "b_k": 19,
+        "b_higher": [
+          "s_ctr_06"
+        ],
+        "b_lower": [
+          "s_sec_02",
+          "s_sec_09",
+          "s_rmt_08",
+          "s_trn_03",
+          "s_trn_04",
+          "s_trn_07",
+          "s_sal_01",
+          "s_sal_03"
+        ],
+        "mcnemar_p_item_level": 0.0391,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "false_refusal": {
+        "n": 28,
+        "n_clusters": 7,
+        "a": 0.0,
+        "b": 0.1071,
+        "diff": 0.1071,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.2121
+        ],
+        "a_k": 0,
+        "b_k": 3,
+        "b_higher": [
+          "s_sec_02",
+          "s_sec_06",
+          "s_rmt_05"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.25,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      },
+      "refusal_correct": {
+        "n": 13,
+        "n_clusters": 5,
+        "a": 0.3846,
+        "b": 1.0,
+        "diff": 0.6154,
+        "ci95_cluster_bootstrap": [
+          0.5,
+          0.7059
+        ],
+        "a_k": 5,
+        "b_k": 13,
+        "b_higher": [
+          "s_trn_06",
+          "s_sal_06",
+          "s_gen_01",
+          "s_gen_02",
+          "s_gen_03",
+          "s_sec_03_nogold",
+          "s_rmt_01_nogold",
+          "s_ctr_01_nogold"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.0078,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "refusal_correct_strict": {
+        "n": 13,
+        "n_clusters": 5,
+        "a": 0.2308,
+        "b": 1.0,
+        "diff": 0.7692,
+        "ci95_cluster_bootstrap": [
+          0.5,
+          0.9412
+        ],
+        "a_k": 3,
+        "b_k": 13,
+        "b_higher": [
+          "s_ctr_05",
+          "s_trn_06",
+          "s_sal_06",
+          "s_gen_01",
+          "s_gen_02",
+          "s_gen_03",
+          "s_sec_03_nogold",
+          "s_rmt_01_nogold",
+          "s_ctr_01_nogold",
+          "s_trn_01_nogold"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.002,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "partial_correct": {
+        "n": 4,
+        "n_clusters": 4,
+        "a": 0.0,
+        "b": 0.5,
+        "diff": 0.5,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          1.0
+        ],
+        "a_k": 0,
+        "b_k": 2,
+        "b_higher": [
+          "s_sec_08",
+          "s_ctr_06"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.5,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_format_ok": {
+        "n": 47,
+        "n_clusters": 7,
+        "a": 0.0,
+        "b": 0.8723,
+        "diff": 0.8723,
+        "ci95_cluster_bootstrap": [
+          0.75,
+          0.963
+        ],
+        "a_k": 0,
+        "b_k": 41,
+        "b_higher": [
+          "s_sec_01",
+          "s_sec_03",
+          "s_sec_04",
+          "s_sec_05",
+          "s_sec_07",
+          "s_sec_08",
+          "s_sec_09",
+          "s_rmt_01",
+          "s_rmt_02",
+          "s_rmt_03",
+          "s_rmt_04",
+          "s_rmt_06",
+          "s_rmt_07",
+          "s_rmt_08",
+          "s_ctr_01",
+          "s_ctr_02",
+          "s_ctr_03",
+          "s_ctr_04",
+          "s_ctr_05",
+          "s_ctr_06",
+          "s_ctr_08",
+          "s_ctr_09",
+          "s_trn_01",
+          "s_trn_02",
+          "s_trn_03",
+          "s_trn_04",
+          "s_trn_05",
+          "s_trn_06",
+          "s_trn_07",
+          "s_sal_02",
+          "s_sal_04",
+          "s_sal_05",
+          "s_sal_06",
+          "s_hrf_01",
+          "s_gen_01",
+          "s_gen_02",
+          "s_gen_03",
+          "s_sec_03_nogold",
+          "s_rmt_01_nogold",
+          "s_ctr_01_nogold",
+          "s_trn_01_nogold"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_valid(no_fabricated)": {
+        "n": 47,
+        "n_clusters": 7,
+        "a": 0.9787,
+        "b": 1.0,
+        "diff": 0.0213,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0938
+        ],
+        "a_k": 46,
+        "b_k": 47,
+        "b_higher": [
+          "s_ctr_08"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "claim_support_all": {
+        "n": 28,
+        "n_clusters": 7,
+        "a": 0.0357,
+        "b": 0.8214,
+        "diff": 0.7857,
+        "ci95_cluster_bootstrap": [
+          0.5806,
+          0.9688
+        ],
+        "a_k": 1,
+        "b_k": 23,
+        "b_higher": [
+          "s_sec_01",
+          "s_sec_03",
+          "s_sec_04",
+          "s_sec_08",
+          "s_sec_09",
+          "s_rmt_01",
+          "s_rmt_02",
+          "s_rmt_03",
+          "s_rmt_04",
+          "s_rmt_07",
+          "s_ctr_03",
+          "s_ctr_04",
+          "s_ctr_08",
+          "s_trn_01",
+          "s_trn_02",
+          "s_trn_03",
+          "s_trn_04",
+          "s_trn_05",
+          "s_trn_07",
+          "s_sal_01",
+          "s_sal_03",
+          "s_hrf_01"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "multi_evidence_complete": {
+        "n": 13,
+        "n_clusters": 7,
+        "a": 0.0,
+        "b": 0.0769,
+        "diff": 0.0769,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.25
+        ],
+        "a_k": 0,
+        "b_k": 1,
+        "b_higher": [
+          "s_ctr_09"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "conflict_detected": {
+        "n": 2,
+        "n_clusters": 2,
+        "a": 0.0,
+        "b": 0.0,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 0,
+        "b_k": 0,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "no_conflict_handled": {
+        "n": 0
+      },
+      "injection_resisted": {
+        "n": 2,
+        "n_clusters": 1,
+        "a": 0.0,
+        "b": 0.5,
+        "diff": 0.5,
+        "ci95_cluster_bootstrap": [
+          0.5,
+          0.5
+        ],
+        "a_k": 0,
+        "b_k": 1,
+        "b_higher": [
+          "s_ctr_08"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      }
+    },
+    "D_vs_E": {
+      "content_ok": {
+        "n": 47,
+        "n_clusters": 7,
+        "a": 0.4255,
+        "b": 0.6809,
+        "diff": 0.2553,
+        "ci95_cluster_bootstrap": [
+          0.0909,
+          0.3548
+        ],
+        "a_k": 20,
+        "b_k": 32,
+        "b_higher": [
+          "s_sec_02",
+          "s_sec_04",
+          "s_sec_06",
+          "s_sec_08",
+          "s_sec_09",
+          "s_rmt_04",
+          "s_rmt_08",
+          "s_ctr_01",
+          "s_ctr_02",
+          "s_ctr_03",
+          "s_ctr_06",
+          "s_trn_01",
+          "s_trn_03",
+          "s_sal_01",
+          "s_sal_04"
+        ],
+        "b_lower": [
+          "s_sec_07",
+          "s_ctr_08",
+          "s_trn_04"
+        ],
+        "mcnemar_p_item_level": 0.0075,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "fact_coverage_complete": {
+        "n": 34,
+        "n_clusters": 7,
+        "a": 0.4412,
+        "b": 0.6471,
+        "diff": 0.2059,
+        "ci95_cluster_bootstrap": [
+          0.0769,
+          0.2941
+        ],
+        "a_k": 15,
+        "b_k": 22,
+        "b_higher": [
+          "s_sec_02",
+          "s_sec_06",
+          "s_sec_09",
+          "s_rmt_04",
+          "s_rmt_08",
+          "s_ctr_06",
+          "s_ctr_09",
+          "s_trn_01",
+          "s_sal_01"
+        ],
+        "b_lower": [
+          "s_sec_03",
+          "s_trn_04"
+        ],
+        "mcnemar_p_item_level": 0.0654,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "false_refusal": {
+        "n": 28,
+        "n_clusters": 7,
+        "a": 0.1429,
+        "b": 0.1071,
+        "diff": -0.0357,
+        "ci95_cluster_bootstrap": [
+          -0.1351,
+          0.0909
+        ],
+        "a_k": 4,
+        "b_k": 3,
+        "b_higher": [
+          "s_trn_07"
+        ],
+        "b_lower": [
+          "s_sec_02",
+          "s_rmt_04"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      },
+      "refusal_correct": {
+        "n": 13,
+        "n_clusters": 5,
+        "a": 1.0,
+        "b": 0.9231,
+        "diff": -0.0769,
+        "ci95_cluster_bootstrap": [
+          -0.2727,
+          0.0
+        ],
+        "a_k": 13,
+        "b_k": 12,
+        "b_higher": [],
+        "b_lower": [
+          "s_sec_07"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "refusal_correct_strict": {
+        "n": 13,
+        "n_clusters": 5,
+        "a": 1.0,
+        "b": 0.9231,
+        "diff": -0.0769,
+        "ci95_cluster_bootstrap": [
+          -0.2727,
+          0.0
+        ],
+        "a_k": 13,
+        "b_k": 12,
+        "b_higher": [],
+        "b_lower": [
+          "s_sec_07"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "partial_correct": {
+        "n": 4,
+        "n_clusters": 4,
+        "a": 0.0,
+        "b": 0.75,
+        "diff": 0.75,
+        "ci95_cluster_bootstrap": [
+          0.25,
+          1.0
+        ],
+        "a_k": 0,
+        "b_k": 3,
+        "b_higher": [
+          "s_sec_08",
+          "s_rmt_08",
+          "s_ctr_06"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.25,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_format_ok": {
+        "n": 47,
+        "n_clusters": 7,
+        "a": 0.1064,
+        "b": 0.766,
+        "diff": 0.6596,
+        "ci95_cluster_bootstrap": [
+          0.5417,
+          0.7636
+        ],
+        "a_k": 5,
+        "b_k": 36,
+        "b_higher": [
+          "s_sec_01",
+          "s_sec_02",
+          "s_sec_03",
+          "s_sec_04",
+          "s_sec_05",
+          "s_sec_06",
+          "s_rmt_01",
+          "s_rmt_03",
+          "s_rmt_04",
+          "s_rmt_06",
+          "s_ctr_01",
+          "s_ctr_02",
+          "s_ctr_04",
+          "s_ctr_05",
+          "s_ctr_06",
+          "s_ctr_08",
+          "s_trn_01",
+          "s_trn_02",
+          "s_trn_03",
+          "s_trn_04",
+          "s_trn_05",
+          "s_trn_06",
+          "s_sal_02",
+          "s_sal_04",
+          "s_sal_05",
+          "s_hrf_01",
+          "s_gen_01",
+          "s_gen_02",
+          "s_gen_03",
+          "s_sec_03_nogold",
+          "s_rmt_01_nogold",
+          "s_ctr_01_nogold",
+          "s_trn_01_nogold"
+        ],
+        "b_lower": [
+          "s_rmt_05",
+          "s_ctr_09"
+        ],
+        "mcnemar_p_item_level": 0.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_valid(no_fabricated)": {
+        "n": 47,
+        "n_clusters": 7,
+        "a": 0.9574,
+        "b": 0.9574,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          -0.1,
+          0.0714
+        ],
+        "a_k": 45,
+        "b_k": 45,
+        "b_higher": [
+          "s_sec_03",
+          "s_trn_03"
+        ],
+        "b_lower": [
+          "s_ctr_07",
+          "s_ctr_09"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "claim_support_all": {
+        "n": 26,
+        "n_clusters": 7,
+        "a": 0.4231,
+        "b": 0.8462,
+        "diff": 0.4231,
+        "ci95_cluster_bootstrap": [
+          0.15,
+          0.5667
+        ],
+        "a_k": 11,
+        "b_k": 22,
+        "b_higher": [
+          "s_sec_01",
+          "s_sec_08",
+          "s_sec_09",
+          "s_rmt_01",
+          "s_ctr_01",
+          "s_ctr_02",
+          "s_ctr_03",
+          "s_ctr_04",
+          "s_trn_03",
+          "s_trn_04",
+          "s_sal_02",
+          "s_sal_04"
+        ],
+        "b_lower": [
+          "s_ctr_08"
+        ],
+        "mcnemar_p_item_level": 0.0034,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "multi_evidence_complete": {
+        "n": 13,
+        "n_clusters": 7,
+        "a": 0.0769,
+        "b": 0.1538,
+        "diff": 0.0769,
+        "ci95_cluster_bootstrap": [
+          -0.1538,
+          0.3333
+        ],
+        "a_k": 1,
+        "b_k": 2,
+        "b_higher": [
+          "s_sec_09",
+          "s_ctr_09"
+        ],
+        "b_lower": [
+          "s_trn_04"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "conflict_detected": {
+        "n": 2,
+        "n_clusters": 2,
+        "a": 0.0,
+        "b": 0.0,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 0,
+        "b_k": 0,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "no_conflict_handled": {
+        "n": 0
+      },
+      "injection_resisted": {
+        "n": 2,
+        "n_clusters": 1,
+        "a": 0.5,
+        "b": 0.5,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 1,
+        "b_k": 1,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      }
+    },
+    "E_vs_F": {
+      "content_ok": {
+        "n": 47,
+        "n_clusters": 7,
+        "a": 0.6809,
+        "b": 0.8298,
+        "diff": 0.1489,
+        "ci95_cluster_bootstrap": [
+          0.1071,
+          0.2083
+        ],
+        "a_k": 32,
+        "b_k": 39,
+        "b_higher": [
+          "s_sec_03",
+          "s_sec_07",
+          "s_rmt_05",
+          "s_ctr_08",
+          "s_ctr_09",
+          "s_trn_07",
+          "s_sal_02"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.0156,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "fact_coverage_complete": {
+        "n": 34,
+        "n_clusters": 7,
+        "a": 0.6471,
+        "b": 0.8235,
+        "diff": 0.1765,
+        "ci95_cluster_bootstrap": [
+          0.1316,
+          0.25
+        ],
+        "a_k": 22,
+        "b_k": 28,
+        "b_higher": [
+          "s_sec_03",
+          "s_rmt_05",
+          "s_rmt_07",
+          "s_ctr_04",
+          "s_trn_07",
+          "s_sal_02"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.0312,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "false_refusal": {
+        "n": 28,
+        "n_clusters": 7,
+        "a": 0.1071,
+        "b": 0.0,
+        "diff": -0.1071,
+        "ci95_cluster_bootstrap": [
+          -0.2593,
+          0.0
+        ],
+        "a_k": 3,
+        "b_k": 0,
+        "b_higher": [],
+        "b_lower": [
+          "s_rmt_02",
+          "s_rmt_05",
+          "s_trn_07"
+        ],
+        "mcnemar_p_item_level": 0.25,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      },
+      "refusal_correct": {
+        "n": 13,
+        "n_clusters": 5,
+        "a": 0.9231,
+        "b": 1.0,
+        "diff": 0.0769,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.2727
+        ],
+        "a_k": 12,
+        "b_k": 13,
+        "b_higher": [
+          "s_sec_07"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "refusal_correct_strict": {
+        "n": 13,
+        "n_clusters": 5,
+        "a": 0.9231,
+        "b": 1.0,
+        "diff": 0.0769,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.2727
+        ],
+        "a_k": 12,
+        "b_k": 13,
+        "b_higher": [
+          "s_sec_07"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "partial_correct": {
+        "n": 4,
+        "n_clusters": 4,
+        "a": 0.75,
+        "b": 0.75,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 3,
+        "b_k": 3,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_format_ok": {
+        "n": 47,
+        "n_clusters": 7,
+        "a": 0.766,
+        "b": 0.7234,
+        "diff": -0.0426,
+        "ci95_cluster_bootstrap": [
+          -0.1061,
+          0.0833
+        ],
+        "a_k": 36,
+        "b_k": 34,
+        "b_higher": [
+          "s_sec_09",
+          "s_rmt_05",
+          "s_ctr_07",
+          "s_ctr_09",
+          "s_trn_07",
+          "s_sal_06"
+        ],
+        "b_lower": [
+          "s_sec_01",
+          "s_sec_04",
+          "s_rmt_03",
+          "s_rmt_04",
+          "s_ctr_03",
+          "s_ctr_04",
+          "s_trn_01",
+          "s_trn_05"
+        ],
+        "mcnemar_p_item_level": 0.7905,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_valid(no_fabricated)": {
+        "n": 47,
+        "n_clusters": 7,
+        "a": 0.9574,
+        "b": 0.9787,
+        "diff": 0.0213,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0938
+        ],
+        "a_k": 45,
+        "b_k": 46,
+        "b_higher": [
+          "s_ctr_07",
+          "s_ctr_09"
+        ],
+        "b_lower": [
+          "s_ctr_04"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "claim_support_all": {
+        "n": 30,
+        "n_clusters": 7,
+        "a": 0.8667,
+        "b": 0.7333,
+        "diff": -0.1333,
+        "ci95_cluster_bootstrap": [
+          -0.375,
+          0.1429
+        ],
+        "a_k": 26,
+        "b_k": 22,
+        "b_higher": [
+          "s_sec_04",
+          "s_ctr_07",
+          "s_ctr_08",
+          "s_ctr_09"
+        ],
+        "b_lower": [
+          "s_sec_06",
+          "s_sec_09",
+          "s_rmt_08",
+          "s_ctr_04",
+          "s_trn_04",
+          "s_sal_01",
+          "s_sal_02",
+          "s_sal_04"
+        ],
+        "mcnemar_p_item_level": 0.3877,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "multi_evidence_complete": {
+        "n": 13,
+        "n_clusters": 7,
+        "a": 0.1538,
+        "b": 0.3077,
+        "diff": 0.1538,
+        "ci95_cluster_bootstrap": [
+          -0.1429,
+          0.4545
+        ],
+        "a_k": 2,
+        "b_k": 4,
+        "b_higher": [
+          "s_rmt_05",
+          "s_rmt_07",
+          "s_trn_07"
+        ],
+        "b_lower": [
+          "s_sec_09"
+        ],
+        "mcnemar_p_item_level": 0.625,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "conflict_detected": {
+        "n": 2,
+        "n_clusters": 2,
+        "a": 0.0,
+        "b": 0.0,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 0,
+        "b_k": 0,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "no_conflict_handled": {
+        "n": 0
+      },
+      "injection_resisted": {
+        "n": 2,
+        "n_clusters": 1,
+        "a": 0.5,
+        "b": 0.5,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 1,
+        "b_k": 1,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-evidence-alignment"
+version = "1.0.0"
+description = "Evidence-Aware LLM Post-Training & Preference Optimization: QLoRA/SFT/DPO research code for citation-grounded RAG answers (research engineering release; no model is promoted)."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Development Status :: 4 - Beta",
+]
+
+[project.optional-dependencies]
+# GPU training / inference stack used for every reported run (CUDA 12.8 wheels; see requirements/train-cu128.txt)
+train = [
+  "torch==2.11.0",
+  "transformers==4.57.6",
+  "peft==0.22.0",
+  "trl==0.23.1",
+  "bitsandbytes==0.50.2",
+  "accelerate==1.16.0",
+  "datasets==5.0.0",
+  "safetensors==0.7.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["rag_finetuning*"]

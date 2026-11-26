@@ -1,0 +1,20 @@
+# P6-v5 实验二：QLoRA DPO。策略与参考都初始化自同一种子的针对性 SFT 选中适配器（参考冻结）。超参数在训练前写定（见 freeze.json）。
+run_name: dpo_3b_s43
+seed: 43
+model:
+  id: Qwen/Qwen2.5-3B-Instruct
+  revision: aa8e72537993ba99e69dfaafa59ed015b17504d1
+init_adapter: workspace/runs/p6_v5/sft_3b_s43/adapter
+data:
+  pairs: rag_finetuning/experiments/p6_v5/data/train_pref/dpo_pairs_final.jsonl
+  dev: rag_finetuning/experiments/p6_v5/data/hard_dev/built/hard_dev.jsonl
+  max_length: 1024
+  max_prompt_length: 896
+train:
+  beta: 0.1
+  learning_rate: 2.0e-5
+  num_epochs: 2
+  gradient_accumulation_steps: 8
+  use_logits_to_keep: true   # 修订 3（2026-11-24 冻结）
+output:
+  root: workspace/runs/p6_v5

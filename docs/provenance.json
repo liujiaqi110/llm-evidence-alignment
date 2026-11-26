@@ -1,0 +1,1918 @@
+{
+ "source_branch": "feature/rag-preference-v5",
+ "source_commit": "87839f1",
+ "note": "source_blob_sha256 = sha256 of the file as stored in Git at the source commit (LF line endings)",
+ "files": [
+  {
+   "path": "rag_finetuning/README.md",
+   "source_path": "rag_finetuning/README.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "a70d9f05551ad781b43ed1fc55cac7744357b52f57762b52736160c937dbc087",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/__init__.py",
+   "source_path": "rag_finetuning/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/common.py",
+   "source_path": "rag_finetuning/common.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "1a52094843b8ef0435a06053481234447ab8872cfa4006b33470e0d728645ae7",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/configs/qlora_r8.yaml",
+   "source_path": "rag_finetuning/configs/qlora_r8.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "f1fa7e8f617cf3df8a2d022a350c60b96d6c5041e0a2c6e9785ff46a2638e77f",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/configs/qlora_r8_v2_noderived.yaml",
+   "source_path": "rag_finetuning/configs/qlora_r8_v2_noderived.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "d649cfaad8aa4ae8ee04d278fca7fb7f5018f756136aaf2187a612c5b8892033",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/evaluation/__init__.py",
+   "source_path": "rag_finetuning/evaluation/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/evaluation/evaluate.py",
+   "source_path": "rag_finetuning/evaluation/evaluate.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "3a0281688cd8f84af3074272f8fe0743369f9e191a95bb5e1eaceac4d803f09f",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/evaluation/generate.py",
+   "source_path": "rag_finetuning/evaluation/generate.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "9a9bd1e2f519918752c667d2786118eafe82a340b718e9770a5c79c7073c1137",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/evaluation/llm_judge.py",
+   "source_path": "rag_finetuning/evaluation/llm_judge.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e394d62d1de107b9d251b4e4716187d070b37591659d798012642acc56bfb5fc",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/evaluation/scoring.py",
+   "source_path": "rag_finetuning/evaluation/scoring.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "03c6fd4d60e40bf69dddd8e9b762db55d63ff6ba031abab51e970dd91790a1fd",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/__init__.py",
+   "source_path": "rag_finetuning/experiments/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v2/REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v2/REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "cdecec192bb189a2cfd09e1d239f81948dd12558ef79f5f214a0ed344cb7f704",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v2/__init__.py",
+   "source_path": "rag_finetuning/experiments/p6_v2/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v2/analyze.py",
+   "source_path": "rag_finetuning/experiments/p6_v2/analyze.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ca89a8ed176dc6d9afcad15ac650919906b06aed2df9e101ef0dc3abfbb77d03",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v2/build_blind.py",
+   "source_path": "rag_finetuning/experiments/p6_v2/build_blind.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "f79b1b99d3dc855535b5a4c9b6ff61385ede841bbb37562299b46f5c62b09732",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v2/config.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v2/config.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "31a2d886cfb116309e74d0de5ed7f0069ce6b07efb42147e10bfe661b2c4958a",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v2/freeze_inputs.py",
+   "source_path": "rag_finetuning/experiments/p6_v2/freeze_inputs.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "57028892aa10329a51529f8c849cc778be9e4aa3a82f8eec02986b695e97d533",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v2/frozen_inputs/blind_v1.manifest.json",
+   "source_path": "rag_finetuning/experiments/p6_v2/frozen_inputs/blind_v1.manifest.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "245e27329de34adbad6e2d1888ae578838d8ccc9aacf9a4a2fcae9b138210b87",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v2/frozen_inputs/diagnostic_47.manifest.json",
+   "source_path": "rag_finetuning/experiments/p6_v2/frozen_inputs/diagnostic_47.manifest.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ce349257100199375e800c6de205f16aa68ffab611dd1a61fa17243c9ff4a4a0",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v2/prompts.py",
+   "source_path": "rag_finetuning/experiments/p6_v2/prompts.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "d2a799718d27c02a3bccb0041365a5ee257abdc3eacb62c83bf7ca9dadbc78c0",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v2/prompts/few_shot.md",
+   "source_path": "rag_finetuning/experiments/p6_v2/prompts/few_shot.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "3e4cebd1df1625cf732f2f09eb5bdec55add8ac99e486904b77c5ab68c1f87b5",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v2/prompts/prompt_freeze.json",
+   "source_path": "rag_finetuning/experiments/p6_v2/prompts/prompt_freeze.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "13b4795296d1947e06c6c2e9223524532d2fbf36a5219ea6fc5761ac595995fb",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v2/prompts/zero_shot.md",
+   "source_path": "rag_finetuning/experiments/p6_v2/prompts/zero_shot.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "5e31d785122c36259723117ab75c27e89575242d3209b20d2244bc8452b25cd1",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v2/run_group.py",
+   "source_path": "rag_finetuning/experiments/p6_v2/run_group.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "52d8a013e3b2ccb457c6eea17cff05799bc4ff0f825aab0890cb1e0d174fffc3",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/DATASET_CARD.md",
+   "source_path": "rag_finetuning/experiments/p6_v3/DATASET_CARD.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "7cd2a04d3ff90dcb32235a57e3709eba2c5cb940d9d9c34bcbd0ac1e91bb3213",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/EVALUATION_PROTOCOL.md",
+   "source_path": "rag_finetuning/experiments/p6_v3/EVALUATION_PROTOCOL.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "3c4bf63eb6bc2d88529cfaae5bb0f473c7ae9ad0ef9ee9a3f0f82bbf24410bb8",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/README.md",
+   "source_path": "rag_finetuning/experiments/p6_v3/README.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "dab5cc87f6aa79f2d02ce10228c8927a4726bfa327a7cea8bde7c02dea0d47c2",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/TRAINING_CONFIG.md",
+   "source_path": "rag_finetuning/experiments/p6_v3/TRAINING_CONFIG.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "0f50c1a1a1705f26089367f63ba88292f0b710018b3a6b67f4a3d563e7d4dd41",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/__init__.py",
+   "source_path": "rag_finetuning/experiments/p6_v3/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/ablations/seed_replicate/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v3/ablations/seed_replicate/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "cc7798c068c06083363701bfd9d8c9b7b64053d9f5af520a976a9e495dd030c2",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/ablations/test_v3/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v3/ablations/test_v3/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e0b19bc66235c8d17d2adf6db1e6c22a4259d43adfcfc593d5fdb58c6b0d8ac8",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/configs/abl_1p5b_coarse_cite.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v3/configs/abl_1p5b_coarse_cite.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "b8781f7d11a1bc0c324af7dbc5bd240dbea54381c996a57848b1c87b8fb0ca2d",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/configs/abl_1p5b_minus_new_positives.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v3/configs/abl_1p5b_minus_new_positives.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "a0b85af8df3871a3aaa907e3379e8ed7b588ce35a3e735eb593ab8d778e31cbf",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/configs/abl_1p5b_no_partial.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v3/configs/abl_1p5b_no_partial.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "0d0349fb506e37690b2af69b4293c35ddb6df74201482945eb6c1dbcf1ef8d9e",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/configs/abl_1p5b_refusal_high.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v3/configs/abl_1p5b_refusal_high.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "aa6ebfa2d12d0a71bbeb1c170baf52ab98fb225fc5dbc740b5dd93f8ca031767",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/configs/freeze.json",
+   "source_path": "rag_finetuning/experiments/p6_v3/configs/freeze.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "49fe20d1b98e56cf6498876bd6539045cd9205de0c6e60cb49542a990506b088",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/configs/v3_1p5b_full.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v3/configs/v3_1p5b_full.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "d4109f58fc2ae67607b8809f709f8bf37f0c3ec15c5b33f1e70e6b1025ce1750",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/configs/v3_1p5b_full_seed43.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v3/configs/v3_1p5b_full_seed43.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "9db3c6a297470488326b3eb58590452d9b1b73a403661611154d8a0c73321238",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/configs/v3_3b_full.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v3/configs/v3_3b_full.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "96da17bf449f2b07881236056dac86acc7344cfe3ab6fce4b740b1787c0ab2e9",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/data/frozen/reg_p6v1_47.manifest.json",
+   "source_path": "rag_finetuning/experiments/p6_v3/data/frozen/reg_p6v1_47.manifest.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "791f2d7c9823bdcddfa7a743acf6abd3768c524cc43ed36ebd980c3707fece50",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/data/frozen/reg_p6v2_63.manifest.json",
+   "source_path": "rag_finetuning/experiments/p6_v3/data/frozen/reg_p6v2_63.manifest.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "1be1ee939156c911bbde1d398d6ef6f12a03af0a1ffc12182603f89e221258c2",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/data/frozen/test_v3.manifest.json",
+   "source_path": "rag_finetuning/experiments/p6_v3/data/frozen/test_v3.manifest.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "81c4596d80cb093faa5fb18c3b81dd561345ec6be8d6b5549bf74746c145658a",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/data/v3/manifest.json",
+   "source_path": "rag_finetuning/experiments/p6_v3/data/v3/manifest.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "097515c5d5653c972d4dfeda986f6f0e4cdc884c5986676340b0ba0565c6589b",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/reports/ERROR_ANALYSIS.md",
+   "source_path": "rag_finetuning/experiments/p6_v3/reports/ERROR_ANALYSIS.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "3b0ea9e6e4d28f66e0d07e48d5039a9f624eb8378779686efb91fc7ad9fbce6f",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/reports/MODEL_DECISION.md",
+   "source_path": "rag_finetuning/experiments/p6_v3/reports/MODEL_DECISION.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "77bc40a6e960ec53534c3a3ff56021d1258ff6ace54cdf308bf1e2b4bb47ec17",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/reports/REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v3/reports/REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "95457efa5c547fc28019ec44d03b4055f6fdcad3cb2e580a2cac6f8dc8c967f9",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/results/diagnostics/refusal_prior_C.json",
+   "source_path": "rag_finetuning/experiments/p6_v3/results/diagnostics/refusal_prior_C.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "2e66655f31ed9d700310903ef8a4ce3675e202fdc116fa5d9557d0db70dbb686",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/results/diagnostics/refusal_prior_E.json",
+   "source_path": "rag_finetuning/experiments/p6_v3/results/diagnostics/refusal_prior_E.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "c546d30e391ca28a701fc12e856ad0d4fba0666661e1384ce8100e72fe285a86",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/results/diagnostics/refusal_prior_abl_no_partial.json",
+   "source_path": "rag_finetuning/experiments/p6_v3/results/diagnostics/refusal_prior_abl_no_partial.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "3615d3267912e47b00d3f4a3233ba78451b7e345cf82a90bd6e4da01cfe99cee",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/results/reg_p6v1_47/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v3/results/reg_p6v1_47/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "cff17e06afccae0174cf2401f880f39488156da9d58eb31719cb411d6629c07c",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/results/reg_p6v2_63/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v3/results/reg_p6v2_63/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "2ad2e206c5ef7c18f7f43e7e9aeb12caae3d1b1b9edde4b36d366049bd00e083",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/results/test_v3/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v3/results/test_v3/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "86f9b2e65c451fef247a58eb241c15190fcd8c13be615dbec8407f49c50c0f7a",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/scripts/__init__.py",
+   "source_path": "rag_finetuning/experiments/p6_v3/scripts/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/scripts/audit_v1.py",
+   "source_path": "rag_finetuning/experiments/p6_v3/scripts/audit_v1.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "253a92d17d79d887cb7f9e8f7054be81bcdb00191b54f52c217005c3b136fe53",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/scripts/build_test_v3.py",
+   "source_path": "rag_finetuning/experiments/p6_v3/scripts/build_test_v3.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "233fff827cdc5153713d6c41583dcc31c8dee24775ff29c44f5382ea84526c16",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/scripts/build_v3.py",
+   "source_path": "rag_finetuning/experiments/p6_v3/scripts/build_v3.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "24f7dba1c9f67c8600060ef923e8e72d88f8aec3712d5a7f2f1c56c54d952570",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/scripts/gen_corpus.py",
+   "source_path": "rag_finetuning/experiments/p6_v3/scripts/gen_corpus.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "aab111989eca2b6fbd83f829fa367d9f65eb664d509291091728d72bfbf62d60",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/scripts/gen_qa.py",
+   "source_path": "rag_finetuning/experiments/p6_v3/scripts/gen_qa.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "04ea791703443f4f71cbea323f02aa7a6858047466abf1e989937a750acf845b",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/scripts/judge_v3.py",
+   "source_path": "rag_finetuning/experiments/p6_v3/scripts/judge_v3.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "f8a64fe0bf65529bb7757f53a02e9aa84561fd412b1fb3df654c005aa62d88b2",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/scripts/make_review.py",
+   "source_path": "rag_finetuning/experiments/p6_v3/scripts/make_review.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "f590dfc1008e7756e74d85c447231e40ba7a1d883c239fdd2cd97eb5a69c7a5f",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/scripts/refusal_prior.py",
+   "source_path": "rag_finetuning/experiments/p6_v3/scripts/refusal_prior.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "74a816e7188143afb65c997779085d2048fef02d26c8d1205e88d47c3d4b9485",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/scripts/run_eval.py",
+   "source_path": "rag_finetuning/experiments/p6_v3/scripts/run_eval.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "efa7a6a5c708d17569a174e297b77596c44219e15216f89d5e06c8f7b7d9bf45",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/scripts/scoring_v2.py",
+   "source_path": "rag_finetuning/experiments/p6_v3/scripts/scoring_v2.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "47a49ebd1a9e2357c9658cd8fa3338adba98e7f6eef5391544185403fc6b95f7",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v3/scripts/train_v3.py",
+   "source_path": "rag_finetuning/experiments/p6_v3/scripts/train_v3.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "86f64e5f89ea6c82e8702938868ba11d2d9b28c2e47a7c91af5622e487ed14e4",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/ABLATION_REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v4/ABLATION_REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "36607bbfceb06b52d7848dce0b64b095334f92feeaa7dc9f35dff3bdc101bb95",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/DATASET_CARD.md",
+   "source_path": "rag_finetuning/experiments/p6_v4/DATASET_CARD.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "69c515ec4b9c568d1f626cf97f9d191b8dfe04bcfa143958e7d83f0e966e5b60",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/ERROR_ANALYSIS.md",
+   "source_path": "rag_finetuning/experiments/p6_v4/ERROR_ANALYSIS.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "809d1b2dc1dc3e9f75faa28eeac4dfda4c735211dd77e6315eeeaaf9849ee77a",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/EVALUATION_PROTOCOL.md",
+   "source_path": "rag_finetuning/experiments/p6_v4/EVALUATION_PROTOCOL.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "d4c785a80ebf83c4a1085f5131ee1b8dd8548f7322c84e3cda80fdd73819f6e7",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/METRIC_AUDIT.md",
+   "source_path": "rag_finetuning/experiments/p6_v4/METRIC_AUDIT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "51cd4b5487693579baf69c2e1391837eaef0e47636f572819a6072653d650124",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/MODEL_COMPARISON.md",
+   "source_path": "rag_finetuning/experiments/p6_v4/MODEL_COMPARISON.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ecad7192fe4b09651c193569b0604e7148dfcaab68034268f9d69b9914cf5edb",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/MODEL_DECISION.md",
+   "source_path": "rag_finetuning/experiments/p6_v4/MODEL_DECISION.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ce59a5eee4fa37ca0c2270508b457e827264be6ee23e2bb67a6743ffa52c0df6",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/README.md",
+   "source_path": "rag_finetuning/experiments/p6_v4/README.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "3ad837fb7510787aff7d8a1544284ead931dc4ade91b3b55d185e55b38cea312",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v4/REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "3a73d252a5d7d0f206f765811057f653f447abe1bf7c4b1cf4fff509d1a2638b",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/__init__.py",
+   "source_path": "rag_finetuning/experiments/p6_v4/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/configs/freeze.json",
+   "source_path": "rag_finetuning/experiments/p6_v4/configs/freeze.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ceb7c0cab829e3a4a3e7cdddef88ef4f5b7469d4e5ed989e8099cbfcf58d0cf2",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/configs/v4_3b_s42.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v4/configs/v4_3b_s42.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "20caee1fd9564592c4267edb666e64f365e28b40d617d12c28d3040869792bd5",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/configs/v4_3b_s43.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v4/configs/v4_3b_s43.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "6faf4db6412d8fe5d57ea2f6ba1162d724ef5ec04eaeafa8942c57337388bdd4",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/data/frozen/reg_test_v3.manifest.json",
+   "source_path": "rag_finetuning/experiments/p6_v4/data/frozen/reg_test_v3.manifest.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "fad6e5db64e0737ffa0f71c4b97dd52c22e0f6a7ff4eef572dcf48d897e56b68",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/data/frozen/test_v4.manifest.json",
+   "source_path": "rag_finetuning/experiments/p6_v4/data/frozen/test_v4.manifest.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "1dfdb064f7d5d0e0b8291d70baa405a0c86152d4544f0ae8b7cfe7572cb51c18",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/data/v4/manifest.json",
+   "source_path": "rag_finetuning/experiments/p6_v4/data/v4/manifest.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "caa83b56e939df53aeeec865a252b4703222a043d20d5e853bb41b42e1175b53",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/results/eng_dev.json",
+   "source_path": "rag_finetuning/experiments/p6_v4/results/eng_dev.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "fb18b61700abc08d4e0a3fbb0d16a56ece0518a4ff0b9d1485e28c728091bfea",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/results/regression_test_v3/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v4/results/regression_test_v3/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "97e8a576c994e9474426a514fb959d798ffb1c7f40bcd0fb6b43e39ebacc72d8",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/results/test_v4/analyze_stdout.txt",
+   "source_path": "rag_finetuning/experiments/p6_v4/results/test_v4/analyze_stdout.txt",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "deade84fe91d7aa8707ba7428c2befdbe1d500e45964dd1cf696866c84ee86ff",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/results/training_runs/run_status_log.txt",
+   "source_path": "rag_finetuning/experiments/p6_v4/results/training_runs/run_status_log.txt",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "4418426766246b11a89ac70db8ceb9127ea44188080d91838fbe0cb0883c0e2e",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/results/training_runs/v4_3b_s42.run_record.json",
+   "source_path": "rag_finetuning/experiments/p6_v4/results/training_runs/v4_3b_s42.run_record.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "734b5e31ea1088b0a3d7ec89ae08c6819d66488298d5c0655752881f041fea52",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/results/training_runs/v4_3b_s42_attempt1_PAUSED.json",
+   "source_path": "rag_finetuning/experiments/p6_v4/results/training_runs/v4_3b_s42_attempt1_PAUSED.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "83f20f5f3a66bda207ee677000bf9ae89774656ddf121bb0739a6cc8887921e1",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/results/training_runs/v4_3b_s43.run_record.json",
+   "source_path": "rag_finetuning/experiments/p6_v4/results/training_runs/v4_3b_s43.run_record.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "0395f83c381abfcb9f5d102db7809482467e7cf45422cfd86a3315e9abbf7ab6",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/scripts/__init__.py",
+   "source_path": "rag_finetuning/experiments/p6_v4/scripts/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/scripts/build_test_v4.py",
+   "source_path": "rag_finetuning/experiments/p6_v4/scripts/build_test_v4.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e4ff08d9e4f44b124c1196e6508749e6927dc2de84e5521f63bdd18f37b6090f",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/scripts/build_v4.py",
+   "source_path": "rag_finetuning/experiments/p6_v4/scripts/build_v4.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ca06b8e2026eee81c8e644b679cf5beeeeea777d1cfe650d46da1d1c108e2f7c",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/scripts/diagnose_v3.py",
+   "source_path": "rag_finetuning/experiments/p6_v4/scripts/diagnose_v3.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "9a538647d2b95281348a57ba02516f5e612d996a1c7eb737abc23884aa98e1a9",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/scripts/eng.py",
+   "source_path": "rag_finetuning/experiments/p6_v4/scripts/eng.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "bc62ed4d0a016bb4fe44de5f619e01502afe6ffe1dfe5690a16844ffa26115b6",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/scripts/eng_dev.py",
+   "source_path": "rag_finetuning/experiments/p6_v4/scripts/eng_dev.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "aca52dc897f2d9a333058dc225a2df66a64a7ddc9788b10f412f1f5b96480365",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/scripts/make_review_v4.py",
+   "source_path": "rag_finetuning/experiments/p6_v4/scripts/make_review_v4.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "1556bef793da54fc95878946844381b2aac20c59aeaaa19401345b0f198590c5",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/scripts/metric_audit.py",
+   "source_path": "rag_finetuning/experiments/p6_v4/scripts/metric_audit.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "1a7e76ea5285f2b96274732acffccb49efb56c2c2ce0f90b4973e972466b25db",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/scripts/regression_v4.py",
+   "source_path": "rag_finetuning/experiments/p6_v4/scripts/regression_v4.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "a9e1f9c6b01218ab286a27f4b0e7e815b3926a3f47fb5bdb2e3ea5d5d168aadb",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/scripts/run_eval_v4.py",
+   "source_path": "rag_finetuning/experiments/p6_v4/scripts/run_eval_v4.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "901e8f47ab4e072361e07f9f4f75d0b84ce65c66c287e0b43d5c2d7941ade2d1",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/scripts/scoring_v3.py",
+   "source_path": "rag_finetuning/experiments/p6_v4/scripts/scoring_v3.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e4f11c9e565a92f09e1f1e936dd26354f80bc6a8ddb32893b864815952dab447",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/scripts/train_v4.py",
+   "source_path": "rag_finetuning/experiments/p6_v4/scripts/train_v4.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "4eaa048cf9546a0cefa946d8f9dd3d52fa78e9279277173e68650648f1a04cee",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/DATA_LEAKAGE_REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/DATA_LEAKAGE_REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "c0b8698603a61007c5d5543f2f1f9e501b4773b78225ab0ba53187e096acdbe8",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/DPO_EXPERIMENT_PLAN.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/DPO_EXPERIMENT_PLAN.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "67b33fb9b864ad9f6aa0345fbbf430c0453ac99304d33ecef12c790c41278770",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/DPO_FEASIBILITY_RETEST_REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/DPO_FEASIBILITY_RETEST_REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "651b6a2260e0cf220cd53a101ed452f4ecd45adc5b8094f8316ee76f79460a57",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/DPO_LOGITS_EQUIVALENCE_REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/DPO_LOGITS_EQUIVALENCE_REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "d7e83c59a2c4e34ffc0e20ef0ef33858a6dad77efcae3c88873fb71a5749b92f",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/DPO_MEMORY_SMOKE_REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/DPO_MEMORY_SMOKE_REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "3717a18fab2bb512e8e05814f562a121e978b02e0974b01c8ccda446d599d4f0",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/DPO_WORST_CASE_MEMORY_REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/DPO_WORST_CASE_MEMORY_REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "35892669d47e9795184e4771757bed50ec206eb30b8214584b3ca65b6314cacf",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/EVALUATION_PROTOCOL.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/EVALUATION_PROTOCOL.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "c7b24285a6f162ea559933d3c3980004d322462faa4ab23c7c9d891e32377dcd",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/FACT_EXTRACTION_ANALYSIS.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/FACT_EXTRACTION_ANALYSIS.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ec4a6aae2e319882a800c466f65afc6c22561d35adc628707be5b441daa22cbb",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/HUMAN_REVIEW_SAMPLING_REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/HUMAN_REVIEW_SAMPLING_REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "196c6218fa481c7ed77eeff93323524610801158f406f1cd9727a9a05450e84d",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/LATENCY_COMPARISON.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/LATENCY_COMPARISON.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "7653185d9188732c3ed36a623a25fb3b77f70be854825a6befc98d396dff19ec",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/NEXT_EXPERIMENT_DECISION.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/NEXT_EXPERIMENT_DECISION.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "9ccebe9b925bd6a1ca93846d4a9e30a0d02c76443c199a6525cede4ab826dd2c",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/PLANNING_V2_REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/PLANNING_V2_REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "16f93cab8ebd294fcefb03042e80e522a39505c8c834654fa873df34024c1942",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/PREFERENCE_DATASET_REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/PREFERENCE_DATASET_REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "b62a50fac26a5b446f982a133021b4a57c38507bc04db2f57849ebbff043925b",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/RELEASE_CHECKLIST.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/RELEASE_CHECKLIST.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "a1a4179e13736bd51359decebe2d357974ecf1eccc277e4689ba2557df34934b",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/REPOSITORY_EXTRACTION_PLAN.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/REPOSITORY_EXTRACTION_PLAN.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "f216f81b5b4d068f77e1d5e53f1dade5d47971d8aada5c0a37f25cf29cafce8f",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/SCORER_AMENDMENT_PROPOSAL.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/SCORER_AMENDMENT_PROPOSAL.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e976ad547f4cf71d86a35aa9ac646e72ebece5cbb6af9d5fa766938fcc0805f5",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/SCORER_REGRESSION_REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/SCORER_REGRESSION_REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "48928ca070c4b08e8bbf35c7d08438e9ef44fcc7bd4d38f56ce04e4004f272f6",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/TRUNCATION_AUDIT.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/TRUNCATION_AUDIT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ced08228afe57dfeb0e0618b7113ad91b122ab30044946645fe67e0da335c7b0",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/__init__.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/configs/dpo_3b_s42.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v5/configs/dpo_3b_s42.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "149977f1a27537be2a1bd41612790bdea1095ca48149071775b8760a109ea274",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/configs/dpo_3b_s43.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v5/configs/dpo_3b_s43.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "9c578c9b3e4560e93bf805d167602abe6aa6b54ae5e8f8cbb3c8a2d83aaa1473",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/configs/dpo_smoke_from_v4s42.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v5/configs/dpo_smoke_from_v4s42.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "79800bdf115572ef16a656955a501dca2fb1a49d7b8459a2475278be2477b6e3",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/configs/freeze.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/configs/freeze.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "651b09620c366cc14d7373ef6662d2f71db8ea3542d3275e832a2338866672b7",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/configs/sft_3b_s42.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v5/configs/sft_3b_s42.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "57676e8e3a9eb6e0d9026d742155d4be4068c488ddc9e7c06d8f8f6385561250",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/configs/sft_3b_s43.yaml",
+   "source_path": "rag_finetuning/experiments/p6_v5/configs/sft_3b_s43.yaml",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "8220a8902747300811abfb6f1bc270a129a950f7568ff1d920d1c5c95ca25da1",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/configs/test_v5_final_freeze.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/configs/test_v5_final_freeze.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "eccbe15ba37598b6ef027ff67d94ee9bb0c2e3db69541229e11dd5107a393740",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/data/frozen/hard_dev.manifest.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/data/frozen/hard_dev.manifest.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "35e255438a3ba65d4b0276e7273df356a945dddecc5e678418732b3c1a48fb6e",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/data/frozen/test_v5.manifest.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/data/frozen/test_v5.manifest.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "919a8d05cedafcbde69747ea82f0c770654a21c95232d7cf21404fb98032d245",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/ORACLE_ABLATION_REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/ORACLE_ABLATION_REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "23e8b08d1447f49a45ab3ea7d1de7fa101fbdbd14dd3699c36f7796c4af155f4",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/__init__.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/collect_disputes.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/collect_disputes.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "00da8eceb65fc9d4f6bd090eb0ec8b690dee9861465d91f3b18cf61b5bc031b8",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_diag_common.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_diag_common.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "fa75bafcee97879545a5d0711b5fca5a0166d0b260e7742c747cace05bf4b2c4",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_equivalence/equivalence.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_equivalence/equivalence.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "0484a06d1605ea4e2da051ce472c2f5cbe35a3eaae0aace7a8e9e5bd0c7c1d32",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_feasibility/memory_s42.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_feasibility/memory_s42.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "dcfe6278da0e177cfd266eb61cdb5073747515899d756023529cbfdd88c2f294",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_feasibility/memory_s43.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_feasibility/memory_s43.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "6f8999681753a280686213784297ddc00793099162ed6b7327f87c3dfe02240e",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_feasibility/precheck.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_feasibility/precheck.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "60b93e794017eaf76f1d78737945e671c1b13b1641dc6ba897d0ea512c0b2b91",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_feasibility_v5.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_feasibility_v5.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "09f01ff378814c53644a452cda58fd84f6da6947460f87a86255b6ac12dc5539",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_logits_equivalence.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_logits_equivalence.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "231d70b8dae7f1dccb7f84c9417582da14b99a4056eefcb9d4b65b34b99bf8d3",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_completion_8_1024.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_completion_8_1024.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "a43ca3b9eb77e95e01994f91f495f41e088e04a58f2c230c77f50a35909ec1ae",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_completion_8_1024_AB.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_completion_8_1024_AB.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "d63c4af803c5c4d8d6372cd1290dcd68a185b09e36442a5538a43b8a54859a25",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_completion_8_1024_A_expseg.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_completion_8_1024_A_expseg.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "b3cad1be6055cfc2a9b4cdbf09a5bfe2c854f67dec6d133bd8cf439b253b8c55",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_completion_8_1024_B_pre.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_completion_8_1024_B_pre.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "087b29619006f1bc36f1aa3e0df827f8e53b0821e85d5012e4525508794f3fed",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_completion_untruncated_8_1024_base.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_completion_untruncated_8_1024_base.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "05fb389954618d0aa65faf70ae5026006fbc466a375149ecef15141463e130eb",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_1024.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_1024.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ce2e1c32cf532174e7a22d9d5a2cdf73cf6119409ab786940a30cc2d176220c4",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_1024_AB.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_1024_AB.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "392261965951dc77db97308c84da41df3264d0bbae40f4cf044aa0e75bdbc4eb",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_1024_A_expseg.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_1024_A_expseg.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "d40d0cd312b05408410605352fa9a104e03d384b2a71e4b5dfd6e0cec417e122",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_1024_B_pre.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_1024_B_pre.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "5eb0b78fc474aa9491935164f78b03d5054149ddd64e1e6c63fa9bfe95140e59",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_1024_frac080.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_1024_frac080.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "f4fbe681bbeaac90883f433176ad81f90a5cd313574ae750655f682a42dcfbae",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_1280.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_1280.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "56e33141ff253f21b95163f67dfe015a72de20e09745263ecffdc41a3c872e31",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_896_base.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_seq_8_896_base.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "34b2dffff783fd5b015c5f23fdc1edd93a638c9f09031a7bcca5a63838b0b4cf",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_untruncated_8_1024_A_expseg.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_untruncated_8_1024_A_expseg.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "a473ed95c7c2124577f6614dd7b05b1fc82028367a9804654acd8edc6e3d3684",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_untruncated_8_1024_base.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case/longest_untruncated_8_1024_base.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "58e116be1ff6c342448c22ae9f477a2eee58086819ecc60bd8b955e33bf25116",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case_memory.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/dpo_worst_case_memory.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "67c1bbf3b1ddd719650d708fb96696c9e1c3cb585752a8e7465beb64b4ace49f",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/oracle_ablation.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/oracle_ablation.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "9bb0cdc3883765e9a6c1a787596f756da361664be1fb7cfeac5092a3c1e26588",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/oracle_ablation/gold_check.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/oracle_ablation/gold_check.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "c87dc652b44c2815ffb681d783f9f7789520cc275bed79124c7ccecd5be64fa0",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/oracle_ablation/scorer_disputes_summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/oracle_ablation/scorer_disputes_summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "a28393a930d2ba646be0d9fc9ed1f3db275d31f87ee342a18022b36411c8fb61",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/oracle_ablation/sensitivity_multi_complete.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/oracle_ablation/sensitivity_multi_complete.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "253ed62264ca35208c3ff827c299318863347346fc73e6a1cdee07b097cb8785",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/scorer_disputes.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/scorer_disputes.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "2e157d580792745ce6beb983cc042516bb84382d18b3bdb0a419f1eaee11946c",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/scorer_review/malformed_403_impact.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/scorer_review/malformed_403_impact.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "17909175fdbad7729d901138ad67b0341890b9a6a7eb5d9c41a918a3bd0f04e5",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/truncation/worst_case_sets.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/truncation/worst_case_sets.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ebfd384e2f1028a5fac5d60c1ba80e7abcdcb04b9d1276e78f88bbf49e488ef6",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/diagnostics/truncation_audit.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/diagnostics/truncation_audit.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "1b29b8a5af4d497b33f5beb5fb6513157cfd6d625dab1fa2f07fa3746721f751",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/final/FINAL_EVALUATION_REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/final/FINAL_EVALUATION_REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "5d95c84526a298883e3baae27c988ae7c4ab9efcd5b1ffaf5aa403e37c7ae53b",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/final/FINAL_FAILURE_ANALYSIS.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/final/FINAL_FAILURE_ANALYSIS.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "6e9bf816209e2a8081ecc50a7c55c6847d22ee3cb149afeded062b38e1de6e1c",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/final/FINAL_METRICS_TABLE.csv",
+   "source_path": "rag_finetuning/experiments/p6_v5/final/FINAL_METRICS_TABLE.csv",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "82011cae5b3e9d0c559d0ae7cd2078815d6c4f26179dfaf69f8858e020d006ab",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/final/P6_RESEARCH_SUMMARY.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/final/P6_RESEARCH_SUMMARY.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "859ff5fb346c4e8554033aa9703ddb50671210b46f296449192a0ba888f364bb",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/final/PROMOTION_GATE_REPORT.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/final/PROMOTION_GATE_REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "75b36792d9579a1afabc810bae05c86215f35bb1e8b136f2ed4c2819506491eb",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/final/STATISTICAL_COMPARISON.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/final/STATISTICAL_COMPARISON.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "2b99199a82af6191ade0730b15001b6a179466c0a21f3850caf50540d6c67dfa",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/final/subset_table.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/final/subset_table.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "c821c26b7368c0e08add426e5af9fbfddaf8feefe52e1ac3b5dc3b8c64658e67",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/dpo_smoke/r1_keyerror_excerpt.txt",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/dpo_smoke/r1_keyerror_excerpt.txt",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "0bfe4064efc8f98538af4d88d1b8b5df0482396aa21259861b53f3290ce1f51d",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/dpo_smoke/run_record_r2_1024_oom.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/dpo_smoke/run_record_r2_1024_oom.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "56c3055418328f1a954fe4687b3a90c0213a805c27ea4602b4b15c74aa70d07b",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/dpo_smoke/run_record_r3_768.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/dpo_smoke/run_record_r3_768.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "cba238d2dffca69afacfdaec90dee59daf4da16ce1936d4212479ddc940a6e0e",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/dpo_smoke/run_record_r4_1024_ltk.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/dpo_smoke/run_record_r4_1024_ltk.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "136d88a3e2bb25201a198b77920695fcba25a00d59c2983a26385ba941200148",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/dpo_smoke/run_record_r6_1024_pre.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/dpo_smoke/run_record_r6_1024_pre.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "d96ea33e1547aab0f88b7bfbeefd0af5c10dd794951bd1c9087c19ec317b6de8",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/dpo_smoke/workspace_status_log.txt",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/dpo_smoke/workspace_status_log.txt",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "55e4c0c595229294de1ff50336864d4df9cef4e27523cd18a3875788f86a4a31",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/hard_dev_dpo/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/hard_dev_dpo/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "c143047b912ff8b987beadb27d2f519ff9262518358c73cfa4fdd761a620a855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/hard_dev_round1/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/hard_dev_round1/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "1d57d160907b2b5f02b3e2665f5df08900cef5a0a773d594675f18e68d8edb29",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/hard_dev_s42/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/hard_dev_s42/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "f5dc0b43222f3e2a7cf22fabcdbb32e2ed76072b5f61a0a3707ca8aeaac6fb08",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/hard_dev_s43/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/hard_dev_s43/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "c45f8c5306cd47e854e7116c0af7782fee4f841561a1fad255493812efab25a0",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/hard_dev_scorer402/analyze_stdout.txt",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/hard_dev_scorer402/analyze_stdout.txt",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ad008415d5a6f6426027377baad584fd5da665fcd2aa77edc5ca5ca0e5b1f115",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/hard_dev_scorer402/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/hard_dev_scorer402/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "6ac1425c1ed4cbb135d526ee82d8dd647e804299dc77e811fb0ed46942a1b241",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/hard_dev_scorer403/analyze_stdout.txt",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/hard_dev_scorer403/analyze_stdout.txt",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "99084351f2614ac07b5a2ef99c711932437cc39a92b06d1d2416b1917d5e3a58",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/hard_dev_scorer403/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/hard_dev_scorer403/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "2f2a66ae92a55affea3cf40712683d82c6b95b69ccc8ea06420563669d899545",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p42/per_checkpoint_metrics.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p42/per_checkpoint_metrics.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ca3aa7bbc5012c659525cc1a066707a43c1f387ef7352fd7326d2c854a6a8d8c",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p42/run/run_record.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p42/run/run_record.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "91e32d8d18cc0a9f1a5399d7d3c0878da8612ee0ee6bbeac5cfa47ad077448c9",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p42/run/step_stats.jsonl",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p42/run/step_stats.jsonl",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "2babb6143b1b92f6e619febd057f4df42f25e9a42ed45d82342d77d9b2965832",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p42/run/train_log.jsonl",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p42/run/train_log.jsonl",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "79e39f7813297442cade622a9c0efaf52a396af8e4ae0fffa612ffd3c1653d47",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p42/train_log.csv",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p42/train_log.csv",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "2b3418b3d955a63f175196248244f2aca67ea1000a214121a6f7486d26c851f0",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p42/training_curve.svg",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p42/training_curve.svg",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "4d52e94e06b763334dea9be6679e9d41c0ccc1b761d45de93a8a612a65484298",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p42_p43/REPORT_P42_P43.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p42_p43/REPORT_P42_P43.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "79147464100723094a11d115021ee14f0d5b3ba3ec86b059ec5bce934d4a4947",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p42_p43/dual_seed_table.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p42_p43/dual_seed_table.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "4edd3a8360558bbd9f230781d2e70ab7815daadff31c0c56dd646e1abce1bcf7",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p43/per_checkpoint_metrics.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p43/per_checkpoint_metrics.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "8a1c828437eb6fca244a56e82c6c1d60609e6ac8191492085013a6f6412592b2",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p43/run/run_record.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p43/run/run_record.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "af8f4937c9321c162efe73da19aeb5a8a5fd4bb295970e4a79c601ceabbfdf84",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p43/run/step_stats.jsonl",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p43/run/step_stats.jsonl",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "fa45ea60aa62cc40c77b38b93abf47c12bdd4042e2622dfec03dd8a36d0b0d0f",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p43/run/train_log.jsonl",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p43/run/train_log.jsonl",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "691f8bb1d3c986c6bb2047a18e5b3005e4ea9e2552e213d7e3b708f925bc126b",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p43/train_log.csv",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p43/train_log.csv",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "aa5434783f1ca29e115fd53cc373bcb12172195dc9726b02e89522a98e2645f4",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/p43/training_curve.svg",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/p43/training_curve.svg",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "d8a96710f78f6a81f7d3e2aa68ecb392062b92b315442b4ed6c2b066724a9dd9",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/planning_v2/fid_artifact_sensitivity.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/planning_v2/fid_artifact_sensitivity.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "727aa53adc5387a41329c86890d19e55e3639333bd34b14f4613a8dc9b3000a2",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/planning_v2/meta_C42_plan.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/planning_v2/meta_C42_plan.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "5b91f2d10d5ea7557d1b0e441a3323cdadf760df86557630d9bb9064c3c00c25",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/planning_v2/meta_C42_pv2.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/planning_v2/meta_C42_pv2.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "da8412b373c3491da0fa3e07c365c5e6b4df68291ce5a4279785c6606f3d92d2",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/planning_v2/meta_C42_pv21.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/planning_v2/meta_C42_pv21.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "51961af1d04d160005c1313ec3a21ddcc122bb62277a5b8562bc5471529691a5",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/planning_v2/meta_D_pv2.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/planning_v2/meta_D_pv2.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "2c1d56c4d291ec6023516dd849c04da089dd78a80ccee4ef4613ef1443607491",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/planning_v2/meta_D_pv21.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/planning_v2/meta_D_pv21.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "5bc87ddd1b063d32dd92de49924fccb0f09bce0dbfe84e83b379d31670d62729",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/planning_v2/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/planning_v2/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "82879f25b4a78f7a33a1cbdac167a826fd0a62410296fce5e8d6ca60a0968df4",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/pref_leakage_check.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/pref_leakage_check.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "710ce36036b445d7b74d88eaa71b54b4c774bef2265f22bc76945ac8813bb494",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s42/REPORT_S42.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s42/REPORT_S42.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "bed380a2a3e49c1232dfda6d335d0cbc1705a19e05cd13b603d43b579f24d14c",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s42/comparison.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s42/comparison.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "a88780cc1229265d7c43ccf385ef60ba54ebd5d7e80db77e2266772cbb4a7ffc",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s42/failure_analysis.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s42/failure_analysis.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "07f78948b064b638d150c2bf5faa5929d3aa77ac12dd0f13aaa71dc0691247dc",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s42/per_epoch_metrics.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s42/per_epoch_metrics.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "fe69bc5ad3e34c0d02e7cf3150e441c09cfa723d4931a6377f71985df5ebbb42",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s42/run/run_record.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s42/run/run_record.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "1d4d60101997ffade0e0e4b01143e54007d9651616a37a52f98521280fd24b78",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s42/run/train_log.jsonl",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s42/run/train_log.jsonl",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "765192f2cbee4bd2224a32fb75360b0054b727a0a011d406c67ec04b16459adf",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s42/train_log.csv",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s42/train_log.csv",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "217b59104aea17882d6c0862f47488d29c2e351c74fd67b28dafa912b69454f4",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s42/training_curve.svg",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s42/training_curve.svg",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "dc4a71b129270b49163f54f881d6ccef157b1bff6f2d438f1d105711dc6d4dab",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s42_s43/REPORT_S42_S43.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s42_s43/REPORT_S42_S43.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "35e184f3f6a05966ef82256711a048543c2e6c7e74cfa993fbf147419edc6ab8",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s42_s43/dual_seed_summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s42_s43/dual_seed_summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "74cb952e55df41601d2833a2de25e5cd12efee5e26e66f74db7684d0a96397e8",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s42_s43/dual_seed_table.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s42_s43/dual_seed_table.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "40e49919d4e6b5d708d0556bc0ad008831f115db47cc829b94ab30f815ca5e77",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s43/REPORT_S43.md",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s43/REPORT_S43.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "3764d7db174b9440eb613c199eef79d503ccea82d473af503e4fac0dc8bb6a0c",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s43/comparison.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s43/comparison.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "c3bd79adbc34349112623a5fa6d1ea446fb80e855f30631bef2eb97f2546b35e",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s43/failure_analysis.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s43/failure_analysis.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "77c167c6f5dd47ade87e88c9748df62ee64263a4b82f46cf41495adb8b0994b0",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s43/per_epoch_metrics.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s43/per_epoch_metrics.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "217edfc721c35507d7ac21b550c626a17e1ecf965f2f996113f58a8fd4577168",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s43/run/run_record.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s43/run/run_record.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "40448958b587b6df0f08ae7e42cb561fbbe35c2b05638d3e7f01eef6535adabe",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s43/run/s43_precheck.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s43/run/s43_precheck.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "1afd297c4cf556a5f10a182fcd8710785bdca2415b5577e6d96ad54ec83c19a6",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s43/run/train_log.jsonl",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s43/run/train_log.jsonl",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "993f014819ad454c643ddc1b964d4e102501ecb7a5eff13d33955e7167870f83",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s43/train_log.csv",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s43/train_log.csv",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e4442a098687d91e5f52b8fee6227b7231269ee9886483df73050c948fcb635e",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/s43/training_curve.svg",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/s43/training_curve.svg",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ee7d88690e209dffb2f688546577948ae198ccec29ec8bbd8701f396eae2f854",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/results/scorer_402/summary.json",
+   "source_path": "rag_finetuning/experiments/p6_v5/results/scorer_402/summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "659c14791310940c425edb210b9239f61d09a2809a2d7ca6753295bfc598360c",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/__init__.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/analyze_dpo.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/analyze_dpo.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "3e911891094ab04d7e58bcfefbdb6b4421b75e169b7a6d9d3d409a8c4a2a5871",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/analyze_planning_v2.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/analyze_planning_v2.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "df61b033c08a21ea063b098bd1d29db7c16b6b287e4a1b3520c1af5decef985c",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/analyze_s42.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/analyze_s42.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ea659239c385c15f27b633f195a0f6c752b22f33b5147f8af134892ed538e5e4",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/build_eval_v5.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/build_eval_v5.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "17e9cb149f39dfe29ef1311ca7127974580d93f8bffd535b4402edb747b36124",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/build_final_pref.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/build_final_pref.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "8b103fa940bb84bd37c0bdf9eddb0683a91b3397273e9bd6b2d7d80fcfc56a9e",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/build_pref_ef.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/build_pref_ef.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "7a60c1774238cdab3528a2707ef410a3e5d8a684b796b661f1ff8a80054622fd",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/build_pref_pairs.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/build_pref_pairs.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "946ba7d4d6bd4ad402d8b8124a70049c48a0e975f91353d8f8bdd886b1d7f8cd",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/build_pref_v5.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/build_pref_v5.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "6cbcfb3d73c93380875949337d3acad15b2d024d78d55e1c70b2ee7ed4f2c424",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/check_pref_leakage.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/check_pref_leakage.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "6aa283e8b0b3f6664536f7d15b74e8d5b850dbac460d685b75bcd08baa3784ea",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/error_ledger.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/error_ledger.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "85eaf690ca773b83c145f88d930d3442c86e7ccd8f38f296729f22bac2e073a1",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/evidence_planning.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/evidence_planning.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "252bbcd6312a8be091925a551dee52aeca5516054c32faa9353bb12ffb0afe3a",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/make_human_review_dev.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/make_human_review_dev.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "83fcc9d4dfa33492351a73a8570f02340395ab645b642b2730ac29409d8fc3ca",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/make_review_dashboard.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/make_review_dashboard.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "683c5e854b6528f6e49e9b3ff2e69057e390adca3cb54725f667d96da0f146b0",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/planning_v2.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/planning_v2.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "d807b5b22f4821a9133411ab5d0975f794708c45d8efb311cb59eda9824c92a0",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/rescore_402.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/rescore_402.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "83589c553f3bbae1fee1f3d135c0d76e57393ad0e44aa6b07208b71b889e5a5e",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/review_assist.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/review_assist.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "0fc59e60e8a19553b4ecfd1e42e1ef8b9b3c64ef03386ff58639ca473f0de150",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/run_eval_v5.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/run_eval_v5.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "8c9eb7f46674a94357c8fda0639f1219309e1039927669c6127a70f45d41186d",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/scorer_403_proposal.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/scorer_403_proposal.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "56be903a5ba1063d229a834033c40714ba1efb56b13180d63d6197cea40dd756",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/scoring_v4.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/scoring_v4.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "31f5854949c7f1a7a161e5d7c037f24ce9b4c3871047f7a502e5b72981ad02c1",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/summarize_s42_s43.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/summarize_s42_s43.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ed0c7dbea6e245474170fdcf5c6a58e1bf83bbfce7c4d94a8209f25d4bdd7fdd",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/train_dpo_v5.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/train_dpo_v5.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "76f009247d026c8b800f721d48e553a9b3be9f5669ffb9fe3ebe11fc27cb0add",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v5/scripts/train_sft_v5.py",
+   "source_path": "rag_finetuning/experiments/p6_v5/scripts/train_sft_v5.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e27840a1861828c20fedcfc3e05f6abf0e9743ac6e0e006bbb4c739a2054f9b5",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/inference/__init__.py",
+   "source_path": "rag_finetuning/inference/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/inference/hf_llm.py",
+   "source_path": "rag_finetuning/inference/hf_llm.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "008c8a060a78c4ea37795135f53bd3d9f3437a664f0af1b1ca6eebf25ac1ad36",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/reports/REPORT.md",
+   "source_path": "rag_finetuning/reports/REPORT.md",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "302634c4e5fad6406e89d79c3ff0e371307bfb7d6eb2bab1d5880341bf7e65d7",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/reports/results/test_summary_base_vs_v1.json",
+   "source_path": "rag_finetuning/reports/results/test_summary_base_vs_v1.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "95e01ce373a7c01b3a03cb95723280765f0d93144651b2dea24d22aae8017814",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/reports/results/test_summary_base_vs_v2.json",
+   "source_path": "rag_finetuning/reports/results/test_summary_base_vs_v2.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "1a1683ca21ea03c919534c96ad6f3171a702a977d9bff1b9139c8d4d7408489d",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/reports/results/test_summary_v1_vs_v2.json",
+   "source_path": "rag_finetuning/reports/results/test_summary_v1_vs_v2.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "5107515d9e8f3208ccf1ba4acd13927d7b8e4b98442ecffacada66b9c65a7756",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/reports/results/training_runs.json",
+   "source_path": "rag_finetuning/reports/results/training_runs.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "6a8698bb4fd02c40c992a8c6a3aaa36c92f9ea2ec05881c473a0d331607a3bba",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/reports/results/val_summary.json",
+   "source_path": "rag_finetuning/reports/results/val_summary.json",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "5baf793336875a562d1b5939b35e8c01aa857ae9d7ff5b2cf41de82c948bd5ce",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/scripts/__init__.py",
+   "source_path": "rag_finetuning/scripts/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/scripts/build_dataset.py",
+   "source_path": "rag_finetuning/scripts/build_dataset.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "ed1734611ac434500aa08dc5f99c9240c6b9dce64b41c10adca03d968761adaa",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/scripts/collect_reports.py",
+   "source_path": "rag_finetuning/scripts/collect_reports.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "81d32717f3a19d303f9a54787dd78ecd1298a3981c1cc4bb16aae144badf2768",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/scripts/smoke_fwd_bwd.py",
+   "source_path": "rag_finetuning/scripts/smoke_fwd_bwd.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "5c3e220837c439f0dac079f4fabe5fc7998a427780c0495468f6545e121dd565",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/scripts/train_qlora.py",
+   "source_path": "rag_finetuning/scripts/train_qlora.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "2d6ae62f242aaac073b1670dff6752a8b1d5e46dcb9f35ba2f4f3c26e62df1a4",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/tests/__init__.py",
+   "source_path": "rag_finetuning/tests/__init__.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/tests/test_p6_dataset_and_scoring.py",
+   "source_path": "rag_finetuning/tests/test_p6_dataset_and_scoring.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "a5c6457e0923d14600b78b85bfeb32daba0e0e9b5f135b145c06b84d1babb745",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/tests/test_p6v2_prompts_and_freeze.py",
+   "source_path": "rag_finetuning/tests/test_p6v2_prompts_and_freeze.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "13969c7b8471e939fd57798b35e66d58733233d6e891ed013f881f5c30231a49",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/tests/test_p6v3_scoring_and_data.py",
+   "source_path": "rag_finetuning/tests/test_p6v3_scoring_and_data.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "f75e626c111d278eeb3ecbcf45c302cd3536b32fc513c08822a41a49bc6e1f9e",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/tests/test_p6v4_scoring_v3.py",
+   "source_path": "rag_finetuning/tests/test_p6v4_scoring_v3.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "c2f6bdcf7b536ff17dd7f75dc70af41a5c924472038fa0f0237d9cfb1cf7f9f6",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/tests/test_p6v5.py",
+   "source_path": "rag_finetuning/tests/test_p6v5.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "4114445a5721233d2b7d530d098a26345cc9d567bcbbe1ccef37d41f47bfdc11",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/tests/test_p6v5_planning_leak.py",
+   "source_path": "rag_finetuning/tests/test_p6v5_planning_leak.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "cba80f223b603223ef413e927d101c5b7221a2a8425456f8051b4dd7c7272de6",
+   "modified_for_release": true
+  },
+  {
+   "path": "rag_finetuning/tests/test_p6v5_scorer_403_proposal.py",
+   "source_path": "rag_finetuning/tests/test_p6v5_scorer_403_proposal.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "b2a757121c6ac5780b8ae7d98de8ce274af9a8dea7af445b1b22411c8b44f4b5",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/tests/test_p6v5_scorer_regression.py",
+   "source_path": "rag_finetuning/tests/test_p6v5_scorer_regression.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "09bcafa6139902d7d91e7e7673321d562ce69e000b4c3a36641a4add4c108dae",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/results/training_runs/v4_3b_s42.train_log.jsonl",
+   "source_path": "rag_finetuning/experiments/p6_v4/results/training_runs/v4_3b_s42.train_log.jsonl",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "4416e8db653c653600f702f14f6b8b3490c1d51490a7c3d61e2a8c9aa9fe08d1",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/experiments/p6_v4/results/training_runs/v4_3b_s43.train_log.jsonl",
+   "source_path": "rag_finetuning/experiments/p6_v4/results/training_runs/v4_3b_s43.train_log.jsonl",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "477975110d176ddeaa731e40b47de74105d19fc1be66b5a028498b11b07846b6",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/compat/rag_pipeline.py",
+   "source_path": "ragas_eval/rag_pipeline.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "598d239e1f67282756497cb42c3dee5bb9d779e51191141464c2ff5577e35b87",
+   "modified_for_release": false
+  },
+  {
+   "path": "rag_finetuning/compat/local_llm.py",
+   "source_path": "ragas_eval/local_llm.py",
+   "source_commit": "87839f1",
+   "source_blob_sha256": "20f1121bb656e386c1377e1fcc1102c481bb90753de90d7f9c3a7885bdf60627",
+   "modified_for_release": false
+  }
+ ]
+}

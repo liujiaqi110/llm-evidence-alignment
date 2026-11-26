@@ -1,0 +1,149 @@
+{
+  "run": "dpo_smoke_from_v4s42",
+  "smoke": 10,
+  "ok": true,
+  "error": null,
+  "config": {
+    "run_name": "dpo_smoke_from_v4s42",
+    "seed": 42,
+    "model": {
+      "id": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+    },
+    "init_adapter": "<WORKSPACE>/runs/p6_v4/v4_3b_s42/adapter",
+    "data": {
+      "pairs": "rag_finetuning/experiments/p6_v5/data/train_pref/dpo_pairs.jsonl",
+      "dev": "rag_finetuning/experiments/p6_v5/data/hard_dev/built/hard_dev.jsonl",
+      "max_length": 1024,
+      "max_prompt_length": 896
+    },
+    "train": {
+      "beta": 0.1,
+      "learning_rate": 2e-05,
+      "num_epochs": 1,
+      "gradient_accumulation_steps": 8
+    },
+    "output": {
+      "root": "<WORKSPACE>/runs/p6_v5"
+    }
+  },
+  "max_length_used": 1024,
+  "use_logits_to_keep": true,
+  "precompute_ref_log_probs": false,
+  "algorithm": "DPO sigmoid（TRL DPOTrainer），policy=SFT 适配器可训练副本，reference=同一 SFT 适配器冻结副本",
+  "init_adapter": "<WORKSPACE>/runs/p6_v4/v4_3b_s42/adapter",
+  "init_adapter_sha256": "3f58fa7599b5ebcc9221ef40e4fc4517de170f6859a78624534ee62733a18f6d",
+  "pairs_file": "rag_finetuning/experiments/p6_v5/data/train_pref/dpo_pairs.jsonl",
+  "pairs_sha256": "204b40b219075111db4e56bd77b291b79dd36ad5a76cbda7188f0e01e79825f0",
+  "n_pairs_used": 80,
+  "steps": 10,
+  "trainable_params": 14966784,
+  "wall_time_s": 481.5,
+  "gpu": {
+    "peak_allocated_mib": 5577,
+    "peak_reserved_mib": 5704,
+    "load_peak_mib": 3148,
+    "total_mib": 8188
+  },
+  "has_preference_metrics": true,
+  "versions": {
+    "trl": "0.23.1",
+    "peft": "0.22.0",
+    "transformers": "4.57.6",
+    "torch": "2.11.0+cu128"
+  },
+  "first_logs": [
+    {
+      "loss": 0.6931,
+      "grad_norm": 14.598408699035645,
+      "learning_rate": 0.0,
+      "rewards/chosen": 0.0,
+      "rewards/rejected": 0.0,
+      "rewards/accuracies": 0.0,
+      "rewards/margins": 0.0,
+      "logps/chosen": -21.55255889892578,
+      "logps/rejected": -63.18138122558594,
+      "logits/chosen": -2.706580400466919,
+      "logits/rejected": -2.5767295360565186,
+      "epoch": 0.1,
+      "step": 1
+    },
+    {
+      "loss": 0.6931,
+      "grad_norm": 12.519810676574707,
+      "learning_rate": 2e-05,
+      "rewards/chosen": 0.0,
+      "rewards/rejected": 0.0,
+      "rewards/accuracies": 0.0,
+      "rewards/margins": 0.0,
+      "logps/chosen": -12.656553268432617,
+      "logps/rejected": -36.343902587890625,
+      "logits/chosen": -2.58888578414917,
+      "logits/rejected": -2.3367950916290283,
+      "epoch": 0.2,
+      "step": 2
+    },
+    {
+      "loss": 0.6089,
+      "grad_norm": 11.672701835632324,
+      "learning_rate": 1.9396926207859085e-05,
+      "rewards/chosen": -0.041158247739076614,
+      "rewards/rejected": -0.2369251847267151,
+      "rewards/accuracies": 0.875,
+      "rewards/margins": 0.19576692581176758,
+      "logps/chosen": -19.93121910095215,
+      "logps/rejected": -53.525272369384766,
+      "logits/chosen": -2.618777275085449,
+      "logits/rejected": -2.4025678634643555,
+      "epoch": 0.3,
+      "step": 3
+    }
+  ],
+  "last_logs": [
+    {
+      "loss": 0.7131,
+      "grad_norm": 15.184556007385254,
+      "learning_rate": 5.000000000000003e-06,
+      "rewards/chosen": -0.4766025245189667,
+      "rewards/rejected": -1.153700828552246,
+      "rewards/accuracies": 0.875,
+      "rewards/margins": 0.6770982146263123,
+      "logps/chosen": -26.399545669555664,
+      "logps/rejected": -68.86674499511719,
+      "logits/chosen": -2.7133655548095703,
+      "logits/rejected": -2.54081130027771,
+      "epoch": 0.8,
+      "step": 8
+    },
+    {
+      "loss": 0.4119,
+      "grad_norm": 8.28551197052002,
+      "learning_rate": 2.339555568810221e-06,
+      "rewards/chosen": -0.14554725587368011,
+      "rewards/rejected": -1.2339398860931396,
+      "rewards/accuracies": 0.75,
+      "rewards/margins": 1.0883926153182983,
+      "logps/chosen": -23.949676513671875,
+      "logps/rejected": -55.99137878417969,
+      "logits/chosen": -2.6897099018096924,
+      "logits/rejected": -2.3672561645507812,
+      "epoch": 0.9,
+      "step": 9
+    },
+    {
+      "loss": 0.709,
+      "grad_norm": 15.460349082946777,
+      "learning_rate": 6.030737921409169e-07,
+      "rewards/chosen": -0.5210517048835754,
+      "rewards/rejected": -0.9191126823425293,
+      "rewards/accuracies": 0.875,
+      "rewards/margins": 0.39806097745895386,
+      "logps/chosen": -31.726343154907227,
+      "logps/rejected": -55.480709075927734,
+      "logits/chosen": -2.728178024291992,
+      "logits/rejected": -2.424239158630371,
+      "epoch": 1.0,
+      "step": 10
+    }
+  ]
+}

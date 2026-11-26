@@ -1,0 +1,8 @@
+* text=auto eol=lf
+# Hash-frozen files: byte-exact copies of what the experiment records froze (see scripts/verify_hashes.py).
+rag_finetuning/experiments/p6_v5/scripts/scoring_v4.py -text
+rag_finetuning/experiments/p6_v5/data/frozen/test_v5.manifest.json -text
+rag_finetuning/experiments/p6_v4/scripts/scoring_v3.py -text
+rag_finetuning/experiments/p6_v4/scripts/eng.py -text
+rag_finetuning/experiments/p6_v3/scripts/scoring_v2.py -text
+*.svg -text

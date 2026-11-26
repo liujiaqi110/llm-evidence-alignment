@@ -1,0 +1,107 @@
+{
+  "when": "2026-11-25，test_v5 首次运行之前；P6-v5 全部模型训练已结束",
+  "status": "frozen（用户 2026-11-25 批准）",
+  "test_v5": {
+    "frozen": "data/frozen/test_v5.jsonl",
+    "frozen_sha256": "396150eafc3130757d9d1d60f2e3c4c96459fd1361cdb370815e6c8ceadffee4",
+    "built_sha256": "47f0a7c62346ef66a2010dbc908492938660e225900a90e3ae663bf0f10af736",
+    "manifest_sha256": "58f0a41e503e531a15d986750052626f8db19485145de73d90d623b57292f3a1",
+    "n": 125,
+    "matches_freeze": true
+  },
+  "scorer": {
+    "file": "scripts/scoring_v4.py",
+    "version": "4.0.3",
+    "sha256": "a230bfe1a4f5e884ccfaeec3e32746da2c92ada630bb4b64ae47b88c5ad6fe59",
+    "matches_freeze": true
+  },
+  "promotion_gates": "EVALUATION_PROTOCOL.md §5 / freeze.json promotion_gate_v5，不修改",
+  "final_groups": {
+    "A": {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "adapter": null,
+      "note": "3B Base"
+    },
+    "B": {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "adapter": "<WORKSPACE>/runs/p6_v3/v3_3b_full/adapter",
+      "adapter_sha256": "3e6baa91fdadc50bebeb84954f8e8ce3633b2e1b199a959f8acdf6fa85c4f939",
+      "note": "v3（P6-v3 E 组，epoch 1）"
+    },
+    "C42": {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "adapter": "<WORKSPACE>/runs/p6_v4/v4_3b_s42/adapter",
+      "adapter_sha256": "3f58fa7599b5ebcc9221ef40e4fc4517de170f6859a78624534ee62733a18f6d",
+      "note": "v4 种子 42（hard_dev 前选定 epoch 3）"
+    },
+    "C43": {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "adapter": "<WORKSPACE>/runs/p6_v4/v4_3b_s43/adapter",
+      "adapter_sha256": "f10c4d02d00b8709530b78ba31b19d6fa30bf2f8c92c04c1c3bdca2267478e7b",
+      "note": "v4 种子 43（epoch 2）"
+    },
+    "S42": {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "adapter": "<WORKSPACE>/runs/p6_v5/sft_3b_s42/adapter",
+      "adapter_sha256": "09668483084be6e6bf95ab95670795976aa201659fd23e4720db6bc7da380f89",
+      "note": "v5 SFT 种子 42，预注册规则选中 epoch3（step 177）",
+      "identical_to": "p6_v5/sft_3b_s42/checkpoint_epoch3"
+    },
+    "S43": {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "adapter": "<WORKSPACE>/runs/p6_v5/sft_3b_s43/adapter",
+      "adapter_sha256": "436440d6f1203ee10ccc0d877ba33e60c153d540e91be350f1857da30ec76354",
+      "note": "v5 SFT 种子 43，预注册规则选中 epoch3（step 177）",
+      "identical_to": "p6_v5/sft_3b_s43/checkpoint_epoch3"
+    },
+    "P42": {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "adapter": "<WORKSPACE>/runs/p6_v5/dpo_3b_s42/adapter",
+      "adapter_sha256": "2e2d032b130476305e866b4e1c43bbd76cdf60b0d45d27dca258a862ccd357fa",
+      "note": "v5 DPO 种子 42，预注册规则选中 checkpoint-108（policy）",
+      "identical_to": "p6_v5/dpo_3b_s42/checkpoint-108/policy"
+    },
+    "P43": {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "adapter": "<WORKSPACE>/runs/p6_v5/dpo_3b_s43/adapter",
+      "adapter_sha256": "27c766bd5b383947ca4b282e18af5204af42644e2631cd430ef7ad431fb6ead2",
+      "note": "v5 DPO 种子 43，预注册规则选中 checkpoint-108（policy）",
+      "identical_to": "p6_v5/dpo_3b_s43/checkpoint-108/policy"
+    },
+    "D": {
+      "backend": "Ollama 0.40.17",
+      "model": "qwen2.5:7b",
+      "quantization": "Q4_K_M",
+      "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "note": "7B Base（参考组）；本地第二个 Ollama 实例 127.0.0.1:11435，不改动用户的 11434 托盘程序"
+    }
+  },
+  "excluded_groups": {
+    "X42": "探索组 X42 不执行（用户 2026-11-25 决定：P6-v5 全部训练结束，不再训练任何模型）",
+    "A_plan / D_plan / 其他 *_plan、*_pv2": "不进入 test_v5（用户 2026-11-25 指定 9 个评测组；Planning 在 hard_dev 上为负向结果，决定 6 已停止 Planning 优化）。这与 §2 组别表列出 A_plan / D_plan 不同，记为执行偏离"
+  },
+  "inference": {
+    "prompt": "平台 rag_v1.0（ragas_eval.rag_pipeline.build_messages），相同证据与顺序",
+    "3B": "transformers 4.57.6 + peft 0.22.0 + bitsandbytes 0.50.2，torch 2.11.0+cu128，4-bit NF4 + double quant，bf16 计算，贪心，max_new_tokens 384，repetition_penalty 1.0",
+    "7B": "Ollama 0.40.17，temperature 0，seed 42，num_predict 384，num_ctx 8192",
+    "hardware": "NVIDIA GeForce RTX 4060 Laptop GPU 8 GB，driver 610.62",
+    "env": "HF_HUB_OFFLINE=1，本地离线权重",
+    "runner": "run_eval_v5 gen：测试集每组只生成一次（已有 meta.json 拒绝覆盖）；2026-11-25 加入逐题写盘与中断恢复（generations.partial.jsonl / resume_log.jsonl），不改变 Prompt、解码与评分"
+  },
+  "rules": [
+    "每组只生成一次，不覆盖",
+    "不根据 test_v5 中间结果调整模型、Prompt、评分器或训练方案",
+    "test_v5 不参与检查点选择",
+    "门槛不修改",
+    "双种子均值只作描述"
+  ],
+  "protocol_deviation_kept": "人工审核未完成（偏好对 16/167、hard_dev 15/26，均在看过 AI 辅助后判断）；test_v5 标注为 AI 编写、未经人工审核；全部结果 provisional"
+}

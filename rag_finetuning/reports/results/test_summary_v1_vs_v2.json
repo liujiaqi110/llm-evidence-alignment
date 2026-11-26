@@ -1,0 +1,1009 @@
+{
+  "split": "test",
+  "n_items": 47,
+  "review_status": {
+    "provisional": 47
+  },
+  "scoring": "rule-based scorer v1.1 (evaluation/scoring.py); provisional until human review",
+  "models": {
+    "base": {
+      "meta": {
+        "model": "qwen2.5-1.5b-instruct[nf4]",
+        "adapter": null,
+        "quant": "nf4",
+        "data": "<SOURCE_REPO>\\rag_finetuning\\data\\built\\test.jsonl",
+        "data_sha256": "cc2ebc2b19c523a7da04c3e9c78ce006a436618ab8ea7c5b2bdd0d9571061388",
+        "n": 47,
+        "prompt_version": "rag_v1.0",
+        "prompt_sha256": "1064b3ba8c26bda782598369b47bd604099609932b78e7fecaa3f68ceccebd5e",
+        "generation": {
+          "max_new_tokens": 384,
+          "do_sample": false,
+          "temperature": null,
+          "top_p": null,
+          "top_k": null,
+          "repetition_penalty": 1.0
+        },
+        "load_peak_alloc_mib": 1472,
+        "wall_s": 120.4
+      },
+      "metrics": {
+        "n_items": 47,
+        "pass_rate": {
+          "k": 0,
+          "n": 47,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0756
+          ]
+        },
+        "content_ok_rate": {
+          "k": 28,
+          "n": 47,
+          "rate": 0.5957,
+          "ci95": [
+            0.4534,
+            0.7236
+          ]
+        },
+        "faithfulness_rule": {
+          "k": 40,
+          "n": 47,
+          "rate": 0.8511,
+          "ci95": [
+            0.7231,
+            0.9259
+          ]
+        },
+        "answer_completeness": {
+          "k": 26,
+          "n": 34,
+          "rate": 0.7647,
+          "ci95": [
+            0.6,
+            0.8756
+          ]
+        },
+        "fact_recall_mean": {
+          "n": 34,
+          "mean": 0.8676
+        },
+        "citation_valid_rate": {
+          "k": 46,
+          "n": 47,
+          "rate": 0.9787,
+          "ci95": [
+            0.8889,
+            0.9962
+          ]
+        },
+        "citation_precision_mean": {
+          "n": 34,
+          "mean": 0.0588
+        },
+        "citation_recall_mean": {
+          "n": 34,
+          "mean": 0.0588
+        },
+        "refusal_accuracy": {
+          "k": 5,
+          "n": 13,
+          "rate": 0.3846,
+          "ci95": [
+            0.1771,
+            0.6448
+          ]
+        },
+        "false_refusal_rate": {
+          "k": 0,
+          "n": 28,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1206
+          ]
+        },
+        "false_refusal_rate_strict_v1_0": {
+          "k": 0,
+          "n": 28,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1206
+          ]
+        },
+        "multi_evidence_full_coverage": {
+          "k": 0,
+          "n": 13,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.2281
+          ]
+        },
+        "format_compliance": {
+          "k": 0,
+          "n": 47,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.0756
+          ]
+        },
+        "item_format_compliance": {
+          "k": 2,
+          "n": 4,
+          "rate": 0.5,
+          "ci95": [
+            0.15,
+            0.85
+          ]
+        },
+        "conflict_handling": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.6576
+          ]
+        },
+        "partial_handling": {
+          "k": 0,
+          "n": 4,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.4899
+          ]
+        },
+        "injection_resistance": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.6576
+          ]
+        },
+        "by_type": {
+          "A": {
+            "k": 0,
+            "n": 17,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.1843
+            ]
+          },
+          "B": {
+            "k": 0,
+            "n": 5,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.4345
+            ]
+          },
+          "C": {
+            "k": 0,
+            "n": 18,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.1759
+            ]
+          },
+          "D": {
+            "k": 0,
+            "n": 5,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.4345
+            ]
+          },
+          "E": {
+            "k": 0,
+            "n": 2,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.6576
+            ]
+          }
+        }
+      },
+      "efficiency": {
+        "latency_ms_p50": 1907.8,
+        "latency_ms_p95": 6149.3,
+        "output_tokens_mean": 58.0,
+        "tokens_per_s": 22.6,
+        "hit_max_tokens": 1,
+        "gpu_peak_mib": 1204
+      }
+    },
+    "v1": {
+      "meta": {
+        "model": "qwen2.5-1.5b-instruct[nf4]+lora:qlora_r8_v1",
+        "adapter": "<WORKSPACE>/runs/qlora_r8_v1/adapter",
+        "quant": "nf4",
+        "data": "<SOURCE_REPO>\\rag_finetuning\\data\\built\\test.jsonl",
+        "data_sha256": "cc2ebc2b19c523a7da04c3e9c78ce006a436618ab8ea7c5b2bdd0d9571061388",
+        "n": 47,
+        "prompt_version": "rag_v1.0",
+        "prompt_sha256": "1064b3ba8c26bda782598369b47bd604099609932b78e7fecaa3f68ceccebd5e",
+        "generation": {
+          "max_new_tokens": 384,
+          "do_sample": false,
+          "temperature": null,
+          "top_p": null,
+          "top_k": null,
+          "repetition_penalty": 1.0
+        },
+        "load_peak_alloc_mib": 1472,
+        "wall_s": 183.5
+      },
+      "metrics": {
+        "n_items": 47,
+        "pass_rate": {
+          "k": 22,
+          "n": 47,
+          "rate": 0.4681,
+          "ci95": [
+            0.3333,
+            0.6077
+          ]
+        },
+        "content_ok_rate": {
+          "k": 25,
+          "n": 47,
+          "rate": 0.5319,
+          "ci95": [
+            0.3923,
+            0.6667
+          ]
+        },
+        "faithfulness_rule": {
+          "k": 45,
+          "n": 47,
+          "rate": 0.9574,
+          "ci95": [
+            0.8575,
+            0.9883
+          ]
+        },
+        "answer_completeness": {
+          "k": 15,
+          "n": 34,
+          "rate": 0.4412,
+          "ci95": [
+            0.2888,
+            0.6055
+          ]
+        },
+        "fact_recall_mean": {
+          "n": 34,
+          "mean": 0.5515
+        },
+        "citation_valid_rate": {
+          "k": 47,
+          "n": 47,
+          "rate": 1.0,
+          "ci95": [
+            0.9244,
+            1.0
+          ]
+        },
+        "citation_precision_mean": {
+          "n": 34,
+          "mean": 0.7108
+        },
+        "citation_recall_mean": {
+          "n": 34,
+          "mean": 0.6373
+        },
+        "refusal_accuracy": {
+          "k": 11,
+          "n": 13,
+          "rate": 0.8462,
+          "ci95": [
+            0.5776,
+            0.9567
+          ]
+        },
+        "false_refusal_rate": {
+          "k": 9,
+          "n": 28,
+          "rate": 0.3214,
+          "ci95": [
+            0.1793,
+            0.5066
+          ]
+        },
+        "false_refusal_rate_strict_v1_0": {
+          "k": 6,
+          "n": 28,
+          "rate": 0.2143,
+          "ci95": [
+            0.1021,
+            0.3954
+          ]
+        },
+        "multi_evidence_full_coverage": {
+          "k": 2,
+          "n": 13,
+          "rate": 0.1538,
+          "ci95": [
+            0.0433,
+            0.4224
+          ]
+        },
+        "format_compliance": {
+          "k": 34,
+          "n": 47,
+          "rate": 0.7234,
+          "ci95": [
+            0.5824,
+            0.8306
+          ]
+        },
+        "item_format_compliance": {
+          "k": 0,
+          "n": 4,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.4899
+          ]
+        },
+        "conflict_handling": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.6576
+          ]
+        },
+        "partial_handling": {
+          "k": 1,
+          "n": 4,
+          "rate": 0.25,
+          "ci95": [
+            0.0456,
+            0.6994
+          ]
+        },
+        "injection_resistance": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.6576
+          ]
+        },
+        "by_type": {
+          "A": {
+            "k": 9,
+            "n": 17,
+            "rate": 0.5294,
+            "ci95": [
+              0.3096,
+              0.7384
+            ]
+          },
+          "B": {
+            "k": 1,
+            "n": 5,
+            "rate": 0.2,
+            "ci95": [
+              0.0362,
+              0.6245
+            ]
+          },
+          "C": {
+            "k": 11,
+            "n": 18,
+            "rate": 0.6111,
+            "ci95": [
+              0.3862,
+              0.797
+            ]
+          },
+          "D": {
+            "k": 1,
+            "n": 5,
+            "rate": 0.2,
+            "ci95": [
+              0.0362,
+              0.6245
+            ]
+          },
+          "E": {
+            "k": 0,
+            "n": 2,
+            "rate": 0.0,
+            "ci95": [
+              0.0,
+              0.6576
+            ]
+          }
+        }
+      },
+      "efficiency": {
+        "latency_ms_p50": 3361.8,
+        "latency_ms_p95": 9644.3,
+        "output_tokens_mean": 43.5,
+        "tokens_per_s": 11.1,
+        "hit_max_tokens": 0,
+        "gpu_peak_mib": 1246
+      }
+    },
+    "v2": {
+      "meta": {
+        "model": "qwen2.5-1.5b-instruct[nf4]+lora:qlora_r8_v2_noderived",
+        "adapter": "<WORKSPACE>/runs/qlora_r8_v2_noderived/adapter",
+        "quant": "nf4",
+        "data": "<SOURCE_REPO>\\rag_finetuning\\data\\built\\test.jsonl",
+        "data_sha256": "cc2ebc2b19c523a7da04c3e9c78ce006a436618ab8ea7c5b2bdd0d9571061388",
+        "n": 47,
+        "prompt_version": "rag_v1.0",
+        "prompt_sha256": "1064b3ba8c26bda782598369b47bd604099609932b78e7fecaa3f68ceccebd5e",
+        "generation": {
+          "max_new_tokens": 384,
+          "do_sample": false,
+          "temperature": null,
+          "top_p": null,
+          "top_k": null,
+          "repetition_penalty": 1.0
+        },
+        "load_peak_alloc_mib": 1472,
+        "wall_s": 221.7
+      },
+      "metrics": {
+        "n_items": 47,
+        "pass_rate": {
+          "k": 21,
+          "n": 47,
+          "rate": 0.4468,
+          "ci95": [
+            0.3141,
+            0.5875
+          ]
+        },
+        "content_ok_rate": {
+          "k": 25,
+          "n": 47,
+          "rate": 0.5319,
+          "ci95": [
+            0.3923,
+            0.6667
+          ]
+        },
+        "faithfulness_rule": {
+          "k": 46,
+          "n": 47,
+          "rate": 0.9787,
+          "ci95": [
+            0.8889,
+            0.9962
+          ]
+        },
+        "answer_completeness": {
+          "k": 17,
+          "n": 34,
+          "rate": 0.5,
+          "ci95": [
+            0.3407,
+            0.6593
+          ]
+        },
+        "fact_recall_mean": {
+          "n": 34,
+          "mean": 0.6691
+        },
+        "citation_valid_rate": {
+          "k": 47,
+          "n": 47,
+          "rate": 1.0,
+          "ci95": [
+            0.9244,
+            1.0
+          ]
+        },
+        "citation_precision_mean": {
+          "n": 34,
+          "mean": 0.8725
+        },
+        "citation_recall_mean": {
+          "n": 34,
+          "mean": 0.7647
+        },
+        "refusal_accuracy": {
+          "k": 9,
+          "n": 13,
+          "rate": 0.6923,
+          "ci95": [
+            0.4237,
+            0.8732
+          ]
+        },
+        "false_refusal_rate": {
+          "k": 3,
+          "n": 28,
+          "rate": 0.1071,
+          "ci95": [
+            0.0371,
+            0.272
+          ]
+        },
+        "false_refusal_rate_strict_v1_0": {
+          "k": 1,
+          "n": 28,
+          "rate": 0.0357,
+          "ci95": [
+            0.0063,
+            0.1771
+          ]
+        },
+        "multi_evidence_full_coverage": {
+          "k": 2,
+          "n": 13,
+          "rate": 0.1538,
+          "ci95": [
+            0.0433,
+            0.4224
+          ]
+        },
+        "format_compliance": {
+          "k": 37,
+          "n": 47,
+          "rate": 0.7872,
+          "ci95": [
+            0.651,
+            0.8801
+          ]
+        },
+        "item_format_compliance": {
+          "k": 1,
+          "n": 4,
+          "rate": 0.25,
+          "ci95": [
+            0.0456,
+            0.6994
+          ]
+        },
+        "conflict_handling": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.6576
+          ]
+        },
+        "partial_handling": {
+          "k": 2,
+          "n": 4,
+          "rate": 0.5,
+          "ci95": [
+            0.15,
+            0.85
+          ]
+        },
+        "injection_resistance": {
+          "k": 1,
+          "n": 2,
+          "rate": 0.5,
+          "ci95": [
+            0.0945,
+            0.9055
+          ]
+        },
+        "by_type": {
+          "A": {
+            "k": 8,
+            "n": 17,
+            "rate": 0.4706,
+            "ci95": [
+              0.2616,
+              0.6904
+            ]
+          },
+          "B": {
+            "k": 1,
+            "n": 5,
+            "rate": 0.2,
+            "ci95": [
+              0.0362,
+              0.6245
+            ]
+          },
+          "C": {
+            "k": 10,
+            "n": 18,
+            "rate": 0.5556,
+            "ci95": [
+              0.3372,
+              0.7544
+            ]
+          },
+          "D": {
+            "k": 1,
+            "n": 5,
+            "rate": 0.2,
+            "ci95": [
+              0.0362,
+              0.6245
+            ]
+          },
+          "E": {
+            "k": 1,
+            "n": 2,
+            "rate": 0.5,
+            "ci95": [
+              0.0945,
+              0.9055
+            ]
+          }
+        }
+      },
+      "efficiency": {
+        "latency_ms_p50": 4359.4,
+        "latency_ms_p95": 8786.9,
+        "output_tokens_mean": 52.8,
+        "tokens_per_s": 11.2,
+        "hit_max_tokens": 0,
+        "gpu_peak_mib": 1246
+      }
+    },
+    "ref7b": {
+      "meta": {
+        "model": "ollama:qwen2.5:7b",
+        "adapter": null,
+        "quant": null,
+        "data": "<SOURCE_REPO>\\rag_finetuning\\data\\built\\test.jsonl",
+        "data_sha256": "cc2ebc2b19c523a7da04c3e9c78ce006a436618ab8ea7c5b2bdd0d9571061388",
+        "n": 47,
+        "prompt_version": "rag_v1.0",
+        "prompt_sha256": "1064b3ba8c26bda782598369b47bd604099609932b78e7fecaa3f68ceccebd5e",
+        "generation": {
+          "max_new_tokens": 384,
+          "do_sample": false,
+          "temperature": null,
+          "top_p": null,
+          "top_k": null,
+          "repetition_penalty": 1.0
+        },
+        "load_peak_alloc_mib": null,
+        "wall_s": 64.0
+      },
+      "metrics": {
+        "n_items": 47,
+        "pass_rate": {
+          "k": 30,
+          "n": 47,
+          "rate": 0.6383,
+          "ci95": [
+            0.4954,
+            0.7603
+          ]
+        },
+        "content_ok_rate": {
+          "k": 37,
+          "n": 47,
+          "rate": 0.7872,
+          "ci95": [
+            0.651,
+            0.8801
+          ]
+        },
+        "faithfulness_rule": {
+          "k": 45,
+          "n": 47,
+          "rate": 0.9574,
+          "ci95": [
+            0.8575,
+            0.9883
+          ]
+        },
+        "answer_completeness": {
+          "k": 26,
+          "n": 34,
+          "rate": 0.7647,
+          "ci95": [
+            0.6,
+            0.8756
+          ]
+        },
+        "fact_recall_mean": {
+          "n": 34,
+          "mean": 0.8529
+        },
+        "citation_valid_rate": {
+          "k": 46,
+          "n": 47,
+          "rate": 0.9787,
+          "ci95": [
+            0.8889,
+            0.9962
+          ]
+        },
+        "citation_precision_mean": {
+          "n": 34,
+          "mean": 0.8971
+        },
+        "citation_recall_mean": {
+          "n": 34,
+          "mean": 0.8676
+        },
+        "refusal_accuracy": {
+          "k": 13,
+          "n": 13,
+          "rate": 1.0,
+          "ci95": [
+            0.7719,
+            1.0
+          ]
+        },
+        "false_refusal_rate": {
+          "k": 0,
+          "n": 28,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1206
+          ]
+        },
+        "false_refusal_rate_strict_v1_0": {
+          "k": 0,
+          "n": 28,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.1206
+          ]
+        },
+        "multi_evidence_full_coverage": {
+          "k": 4,
+          "n": 13,
+          "rate": 0.3077,
+          "ci95": [
+            0.1268,
+            0.5763
+          ]
+        },
+        "format_compliance": {
+          "k": 34,
+          "n": 47,
+          "rate": 0.7234,
+          "ci95": [
+            0.5824,
+            0.8306
+          ]
+        },
+        "item_format_compliance": {
+          "k": 2,
+          "n": 4,
+          "rate": 0.5,
+          "ci95": [
+            0.15,
+            0.85
+          ]
+        },
+        "conflict_handling": {
+          "k": 0,
+          "n": 2,
+          "rate": 0.0,
+          "ci95": [
+            0.0,
+            0.6576
+          ]
+        },
+        "partial_handling": {
+          "k": 3,
+          "n": 4,
+          "rate": 0.75,
+          "ci95": [
+            0.3006,
+            0.9544
+          ]
+        },
+        "injection_resistance": {
+          "k": 1,
+          "n": 2,
+          "rate": 0.5,
+          "ci95": [
+            0.0945,
+            0.9055
+          ]
+        },
+        "by_type": {
+          "A": {
+            "k": 9,
+            "n": 17,
+            "rate": 0.5294,
+            "ci95": [
+              0.3096,
+              0.7384
+            ]
+          },
+          "B": {
+            "k": 2,
+            "n": 5,
+            "rate": 0.4,
+            "ci95": [
+              0.1176,
+              0.7693
+            ]
+          },
+          "C": {
+            "k": 15,
+            "n": 18,
+            "rate": 0.8333,
+            "ci95": [
+              0.6078,
+              0.9416
+            ]
+          },
+          "D": {
+            "k": 3,
+            "n": 5,
+            "rate": 0.6,
+            "ci95": [
+              0.2307,
+              0.8824
+            ]
+          },
+          "E": {
+            "k": 1,
+            "n": 2,
+            "rate": 0.5,
+            "ci95": [
+              0.0945,
+              0.9055
+            ]
+          }
+        }
+      },
+      "efficiency": {
+        "latency_ms_p50": 1096.0,
+        "latency_ms_p95": 3241.8,
+        "output_tokens_mean": 53.5,
+        "tokens_per_s": 40.7,
+        "hit_max_tokens": 0,
+        "gpu_peak_mib": 5213
+      }
+    }
+  },
+  "paired": {
+    "baseline": "v1",
+    "candidate": "v2",
+    "pass": {
+      "n": 47,
+      "improved": 4,
+      "regressed": 5,
+      "unchanged": 38,
+      "diff": -0.0213,
+      "bootstrap_ci95": [
+        -0.1489,
+        0.1064
+      ],
+      "mcnemar_p": 1.0
+    },
+    "content_ok": {
+      "n": 47,
+      "improved": 4,
+      "regressed": 4,
+      "unchanged": 39,
+      "diff": 0.0,
+      "bootstrap_ci95": [
+        -0.1277,
+        0.1277
+      ],
+      "mcnemar_p": 1.0
+    },
+    "behavior_ok": {
+      "n": 47,
+      "improved": 4,
+      "regressed": 4,
+      "unchanged": 39,
+      "diff": 0.0,
+      "bootstrap_ci95": [
+        -0.1277,
+        0.1277
+      ],
+      "mcnemar_p": 1.0
+    },
+    "faithful_rule": {
+      "n": 47,
+      "improved": 1,
+      "regressed": 0,
+      "unchanged": 46,
+      "diff": 0.0213,
+      "bootstrap_ci95": [
+        0.0,
+        0.0638
+      ],
+      "mcnemar_p": 1.0
+    },
+    "format_ok": {
+      "n": 47,
+      "improved": 6,
+      "regressed": 3,
+      "unchanged": 38,
+      "diff": 0.0638,
+      "bootstrap_ci95": [
+        -0.0638,
+        0.1915
+      ],
+      "mcnemar_p": 0.5078
+    },
+    "false_refusal": {
+      "n": 47,
+      "improved": 1,
+      "regressed": 7,
+      "unchanged": 39,
+      "diff": -0.1277,
+      "bootstrap_ci95": [
+        -0.234,
+        -0.0213
+      ],
+      "mcnemar_p": 0.0703
+    },
+    "note": "McNemar exact p and bootstrap CI are reported for transparency; with n<100 and provisional labels they are NOT a claim of statistical significance."
+  },
+  "error_counts": {
+    "base": {
+      "missing_citation_line": 47,
+      "uncited_answer": 32,
+      "missing_gold_citation": 32,
+      "incomplete": 8,
+      "missing_gap_statement": 4,
+      "conflict_not_flagged": 2,
+      "unsupported_number": 5,
+      "fabricated_citation": 1,
+      "missed_refusal": 8,
+      "format_violation": 2,
+      "forbidden_content": 2
+    },
+    "v1": {
+      "uncited_answer": 6,
+      "false_refusal": 9,
+      "incomplete": 19,
+      "missing_gold_citation": 16,
+      "missing_gap_statement": 2,
+      "format_violation": 4,
+      "conflict_not_flagged": 2,
+      "forbidden_content": 1,
+      "unsupported_number": 1,
+      "missed_refusal": 2
+    },
+    "v2": {
+      "incomplete": 17,
+      "missing_gold_citation": 14,
+      "missing_gap_statement": 2,
+      "format_violation": 3,
+      "uncited_answer": 1,
+      "false_refusal": 3,
+      "conflict_not_flagged": 2,
+      "forbidden_content": 1,
+      "missed_refusal": 4,
+      "missing_citation_line": 1
+    },
+    "ref7b": {
+      "missing_citation_line": 11,
+      "incomplete": 8,
+      "missing_gold_citation": 8,
+      "conflict_not_flagged": 2,
+      "fabricated_citation": 1,
+      "uncited_answer": 1,
+      "forbidden_content": 1,
+      "missing_gap_statement": 1,
+      "format_violation": 2
+    }
+  }
+}

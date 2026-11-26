@@ -1,0 +1,43 @@
+# P6 消融（事后、受 v1 测试结果启发）：与 v1 完全相同，仅从训练集中去掉 derived_gold_removed 派生拒答样本
+run_name: qlora_r8_v2_noderived
+seed: 42
+
+model:
+  id: Qwen/Qwen2.5-1.5B-Instruct
+  revision: 989aa7980e4cf806f80c7fef2b1adb7bc71aa306   # 固定 Revision，保证可复现
+  load_in_4bit: true
+  bnb_4bit_quant_type: nf4
+  bnb_4bit_use_double_quant: true
+  compute_dtype: bfloat16
+
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+
+data:
+  train: rag_finetuning/data/built/train.jsonl
+  val: rag_finetuning/data/built/val.jsonl
+  max_seq_len: 1024          # 实测最长训练样本 881 token，不截断（超长样本会直接报错而不是静默截断）
+  loss_on: completion_only   # 只对助手回答计算 loss，system / 资料 / 问题部分 label = -100
+  exclude_generation_methods: [derived_gold_removed]
+
+train:
+  learning_rate: 2.0e-4
+  lr_scheduler: cosine
+  warmup_ratio: 0.1
+  per_device_batch_size: 1
+  gradient_accumulation_steps: 8
+  num_epochs: 3
+  max_steps: -1              # 冒烟测试时用 --max-steps 覆盖
+  weight_decay: 0.0
+  max_grad_norm: 1.0
+  gradient_checkpointing: true
+  optim: paged_adamw_8bit
+  logging_steps: 1
+  eval_each_epoch: true
+
+output:
+  # 权重 / Checkpoint / 日志都写到仓库外的 E 盘目录，不进入 Git
+  root: workspace/runs

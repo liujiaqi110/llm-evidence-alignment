@@ -1,0 +1,64 @@
+{
+  "frozen_before": "任何 v4 模型训练与任何 test_v4 模型输出之前",
+  "test_v4": {
+    "built_sha256": "32161036b0dd850583638b8def3b9b0dea09ee25e55ecda9dc22ac06e6d44829",
+    "frozen_inputs_sha256": "8778b2fdbbb580965ac6452a818fdd39fd2774ceaf806358a22846a65119517d",
+    "n": 84
+  },
+  "scorer_v3": {
+    "file_sha256": "e4f11c9e565a92f09e1f1e936dd26354f80bc6a8ddb32893b864815952dab447",
+    "support_threshold": 0.4
+  },
+  "engineering": {
+    "eng_py_sha256": "bc62ed4d0a016bb4fe44de5f619e01502afe6ffe1dfe5690a16844ffa26115b6",
+    "THETA_REL": 0.2,
+    "TAU": 0.35,
+    "TAU_LOW": 0.2,
+    "tuned_on": "v3 test_v3（已看过）+ v4 dev；test_v4 未参与"
+  },
+  "prompt": "平台 rag_v1.0 Zero-shot；E2 变体仅在用户消息末尾追加 eng.conflict_hint() 生成的段落",
+  "decoding": {
+    "hf": {
+      "max_new_tokens": 384,
+      "do_sample": false,
+      "repetition_penalty": 1.0
+    },
+    "ollama": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 384,
+      "num_ctx": 8192
+    }
+  },
+  "training_configs": {
+    "v4_3b_s42.yaml": "20caee1fd9564592c4267edb666e64f365e28b40d617d12c28d3040869792bd5",
+    "v4_3b_s43.yaml": "6faf4db6412d8fe5d57ea2f6ba1162d724ef5ec04eaeafa8942c57337388bdd4"
+  },
+  "data_v4": {
+    "full_sha256": "ee210fe33fd33466a2536b7bba330683327ff717089ef55449e4eb6404d9fdc3",
+    "dev_sha256": "1eb418fc5b58dae6b72c0cf8030ae5d0a3953ab3f9083bf5faa11dd3d08fc6a7"
+  },
+  "checkpoint_rule": "每个 epoch 存 Adapter；dev_v4 上评分器 v3 content_ok 最高 → multi_content_complete 更高 → 应回答类整体拒答更少 → 更早 epoch；test_v4 不参与",
+  "groups": {
+    "A": "3B Base",
+    "B": "3B v3 QLoRA",
+    "C42/C43": "3B v4 QLoRA 两个种子",
+    "D": "7B 参考",
+    "A_E2/B_E2/C42_E2": "追加冲突预检测提示",
+    "*+E1": "事实覆盖后处理（不重新生成）"
+  },
+  "promotion_gate_v4_vs_v3（C 对 B，两个种子分别判定）": [
+    "1 内容正确率不低于 v3：content_ok 差值 ≥ 0 且聚类 CI 下界 ≥ -0.05",
+    "2 多证据完整率明显优于 v3：multi_content_complete 差值 > 0 且聚类 CI 下界 > 0",
+    "3 错误拒答不明显恶化：应回答类整体拒答率差值 ≤ +0.05",
+    "4 正确拒答不明显退化：refusal_ok 差值 ≥ -0.10（10 题中最多 1 题）",
+    "5 陈述支持不下降：claim_support_full（全分母）差值点估计 ≥ 0",
+    "6 真冲突 / 版本覆盖 / 旧规仍适用 / 适用范围 / 触发条件 / 结论相同 分别报告（不设阈值，但样本量须写明）",
+    "7 延迟：p50 不超过 B 的 1.2 倍"
+  ],
+  "claim_rules": [
+    "两个种子都通过 1–5 才称“v4 优于 v3（自动评测、provisional）”；只有一个种子通过时，只称“单种子结果，不稳定”",
+    "人工审核完成前不得称为可靠改善；工程方案（E1 / E2）的改善与模型权重分开报告，不计入微调收益"
+  ],
+  "test_runs_allowed": "每组在 test_v4 上只生成一次（run_eval_v4 gen 拒绝覆盖已有结果）"
+}

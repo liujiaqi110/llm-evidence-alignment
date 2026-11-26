@@ -1,0 +1,75 @@
+dev A exit=0
+dev B exit=0
+dev C42 exit=0
+dev C43 exit=0
+dev A_plan exit=0
+dev D exit=0
+dev D_plan exit=0
+DEV1_DONE
+queue paused by user request (oracle ablation first) at 2026-11-23 21:59:19; draft keeps running
+data draft finished (orphaned run) at 2026-11-23 22:09:17
+oracle A B exit=0
+oracle A C exit=0
+oracle A D exit=0
+oracle C42 B exit=0
+oracle C42 C exit=0
+oracle C42 D exit=0
+oracle D B exit=0
+oracle D C exit=0
+oracle D D exit=0
+oracle A Brev exit=0
+oracle C42 Brev exit=0
+oracle D Brev exit=0
+oracle analyze exit=0
+ORACLE_DONE
+planning v2 dev eval resumed at 2026-11-24 10:10:32 (commit fcd4b5d + planning_v2.py)
+dev C42_pv2 exit=0
+dev C42_plan exit=0
+dev D_pv2 exit=0
+PV2_DONE
+planning v2.1 (dev-diagnosed fix) started at 2026-11-24 11:43:12
+dev D_pv21 exit=0
+dev C42_pv21 exit=0
+PV21_DONE
+pref (evidence-first) started at 2026-11-24 15:31:58
+pref rewrite exit=0
+pref assemble exit=0
+pref candidates A exit=0
+pref candidates C42 exit=0
+pref candidates B exit=0
+PREF_CAND_DONE
+pref pairs exit=0
+dpo smoke 1024 exit=1
+dpo smoke 768 exit=1
+SMOKE_DONE
+dpo smoke rerun (adapter rename train->policy) 2026-11-24 18:40:12
+dpo smoke 1024 r2 exit=2
+dpo smoke_r3_768 (--max-length 768) exit=2
+dpo smoke_r4_1024_ltk (--logits-to-keep) exit=0
+SMOKE2_DONE
+dpo smoke_r6_1024_pre (--precompute-ref, protocol-allowed) exit=2
+SMOKE3_DONE
+diag (equivalence + worst case) started 2026-11-24 19:03:00
+diag equivalence exit=1
+diag worst longest_seq_8 1024 exit=2
+diag worst longest_completion_8 1024 exit=2
+diag worst longest_seq_8 1280 exit=2
+DIAG_DONE
+diag2 started 2026-11-24 19:06:26
+diag equivalence r2 (train mode, dropout 0) exit=1
+diag worst longest_seq_8 1024 _A_expseg exit=2
+diag worst longest_seq_8 1024 _B_pre exit=2
+diag worst longest_seq_8 1024 _AB exit=2
+diag worst longest_completion_8 1024 _A_expseg exit=2
+diag worst longest_completion_8 1024 _B_pre exit=2
+diag worst longest_completion_8 1024 _AB exit=2
+DIAG2_DONE
+diag equivalence r3 (4 runs/pair, expandable_segments) exit=0
+DIAG3_DONE
+diag worst longest_untruncated_8 1024 _base exit=0 (frac=0.74 alloc=)
+diag worst longest_untruncated_8 1024 _A_expseg exit=0 (frac=0.74 alloc=expandable_segments:True)
+diag worst longest_seq_8 896 _base exit=0 (frac=0.74 alloc=)
+diag worst longest_seq_8 1024 _frac080 exit=2 (frac=0.80 alloc=)
+DIAG4_DONE
+diag worst longest_completion_untruncated_8 1024 _base exit=0
+DIAG5_DONE

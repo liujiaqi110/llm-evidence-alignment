@@ -1,0 +1,2287 @@
+{
+  "groups": {
+    "A": {
+      "multi_complete_v5（多证据完整率，主指标）": {
+        "k": 22,
+        "n": 43,
+        "rate": 0.5116,
+        "ci95_wilson": [
+          0.3675,
+          0.6538
+        ]
+      },
+      "content_ok_v4（内容正确，不含引用格式）": {
+        "k": 18,
+        "n": 56,
+        "rate": 0.3214,
+        "ci95_wilson": [
+          0.214,
+          0.4518
+        ]
+      },
+      "required_fact_coverage（必要事实覆盖率，均值）": {
+        "k": 33.58,
+        "n": 52,
+        "rate": 0.6458
+      },
+      "claim_support_full（陈述支持，全分母）": {
+        "k": 20,
+        "n": 52,
+        "rate": 0.3846,
+        "ci95_wilson": [
+          0.2647,
+          0.5204
+        ]
+      },
+      "citation_accuracy（事实引用正确）": {
+        "k": 19,
+        "n": 41,
+        "rate": 0.4634,
+        "ci95_wilson": [
+          0.3206,
+          0.6125
+        ]
+      },
+      "citation_valid（引用 ID 合法）": {
+        "k": 46,
+        "n": 56,
+        "rate": 0.8214,
+        "ci95_wilson": [
+          0.7016,
+          0.9
+        ]
+      },
+      "whole_refusal（应回答类整体拒答）": {
+        "k": 10,
+        "n": 52,
+        "rate": 0.1923,
+        "ci95_wilson": [
+          0.108,
+          0.319
+        ]
+      },
+      "false_refusal（answer 题错误拒答）": {
+        "k": 8,
+        "n": 45,
+        "rate": 0.1778,
+        "ci95_wilson": [
+          0.0929,
+          0.3133
+        ]
+      },
+      "refusal_ok（正确拒答）": {
+        "k": 3,
+        "n": 4,
+        "rate": 0.75,
+        "ci95_wilson": [
+          0.3006,
+          0.9544
+        ]
+      },
+      "partial_ok": {
+        "k": 1,
+        "n": 3,
+        "rate": 0.3333,
+        "ci95_wilson": [
+          0.0615,
+          0.7923
+        ]
+      },
+      "conflict_true_ok（真冲突识别）": {
+        "k": 0,
+        "n": 4,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.4899
+        ]
+      },
+      "no_conflict_ok（非冲突判断）": {
+        "k": 1,
+        "n": 8,
+        "rate": 0.125,
+        "ci95_wilson": [
+          0.0224,
+          0.4709
+        ]
+      },
+      "injection_resisted": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.6576
+        ]
+      },
+      "format_ok": {
+        "k": 11,
+        "n": 56,
+        "rate": 0.1964,
+        "ci95_wilson": [
+          0.1134,
+          0.3184
+        ]
+      },
+      "first_evidence_only（多证据题只用第一个）": {
+        "k": 3,
+        "n": 43,
+        "rate": 0.0698,
+        "ci95_wilson": [
+          0.024,
+          0.1861
+        ]
+      },
+      "cost": {
+        "latency_ms_p50": 4654.049999999999,
+        "latency_ms_p95": 11456.0,
+        "output_tokens_mean": 81.3,
+        "input_tokens_mean": 597.0,
+        "calls_mean": 1,
+        "revised": 0
+      }
+    },
+    "B": {
+      "multi_complete_v5（多证据完整率，主指标）": {
+        "k": 17,
+        "n": 43,
+        "rate": 0.3953,
+        "ci95_wilson": [
+          0.2637,
+          0.5442
+        ]
+      },
+      "content_ok_v4（内容正确，不含引用格式）": {
+        "k": 24,
+        "n": 56,
+        "rate": 0.4286,
+        "ci95_wilson": [
+          0.3077,
+          0.5586
+        ]
+      },
+      "required_fact_coverage（必要事实覆盖率，均值）": {
+        "k": 34.73,
+        "n": 52,
+        "rate": 0.6679
+      },
+      "claim_support_full（陈述支持，全分母）": {
+        "k": 32,
+        "n": 52,
+        "rate": 0.6154,
+        "ci95_wilson": [
+          0.4796,
+          0.7353
+        ]
+      },
+      "citation_accuracy（事实引用正确）": {
+        "k": 42,
+        "n": 47,
+        "rate": 0.8936,
+        "ci95_wilson": [
+          0.7741,
+          0.9537
+        ]
+      },
+      "citation_valid（引用 ID 合法）": {
+        "k": 56,
+        "n": 56,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.9358,
+          1.0
+        ]
+      },
+      "whole_refusal（应回答类整体拒答）": {
+        "k": 5,
+        "n": 52,
+        "rate": 0.0962,
+        "ci95_wilson": [
+          0.0418,
+          0.2061
+        ]
+      },
+      "false_refusal（answer 题错误拒答）": {
+        "k": 5,
+        "n": 45,
+        "rate": 0.1111,
+        "ci95_wilson": [
+          0.0484,
+          0.235
+        ]
+      },
+      "refusal_ok（正确拒答）": {
+        "k": 4,
+        "n": 4,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.5101,
+          1.0
+        ]
+      },
+      "partial_ok": {
+        "k": 2,
+        "n": 3,
+        "rate": 0.6667,
+        "ci95_wilson": [
+          0.2077,
+          0.9385
+        ]
+      },
+      "conflict_true_ok（真冲突识别）": {
+        "k": 1,
+        "n": 4,
+        "rate": 0.25,
+        "ci95_wilson": [
+          0.0456,
+          0.6994
+        ]
+      },
+      "no_conflict_ok（非冲突判断）": {
+        "k": 3,
+        "n": 8,
+        "rate": 0.375,
+        "ci95_wilson": [
+          0.1368,
+          0.6943
+        ]
+      },
+      "injection_resisted": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.6576
+        ]
+      },
+      "format_ok": {
+        "k": 53,
+        "n": 56,
+        "rate": 0.9464,
+        "ci95_wilson": [
+          0.8539,
+          0.9816
+        ]
+      },
+      "first_evidence_only（多证据题只用第一个）": {
+        "k": 5,
+        "n": 43,
+        "rate": 0.1163,
+        "ci95_wilson": [
+          0.0507,
+          0.2448
+        ]
+      },
+      "cost": {
+        "latency_ms_p50": 9639.4,
+        "latency_ms_p95": 16839.4,
+        "output_tokens_mean": 81.7,
+        "input_tokens_mean": 597.0,
+        "calls_mean": 1,
+        "revised": 0
+      }
+    },
+    "C42": {
+      "multi_complete_v5（多证据完整率，主指标）": {
+        "k": 26,
+        "n": 43,
+        "rate": 0.6047,
+        "ci95_wilson": [
+          0.4558,
+          0.7363
+        ]
+      },
+      "content_ok_v4（内容正确，不含引用格式）": {
+        "k": 32,
+        "n": 56,
+        "rate": 0.5714,
+        "ci95_wilson": [
+          0.4414,
+          0.6923
+        ]
+      },
+      "required_fact_coverage（必要事实覆盖率，均值）": {
+        "k": 41.2,
+        "n": 52,
+        "rate": 0.7923
+      },
+      "claim_support_full（陈述支持，全分母）": {
+        "k": 42,
+        "n": 52,
+        "rate": 0.8077,
+        "ci95_wilson": [
+          0.681,
+          0.892
+        ]
+      },
+      "citation_accuracy（事实引用正确）": {
+        "k": 47,
+        "n": 50,
+        "rate": 0.94,
+        "ci95_wilson": [
+          0.8378,
+          0.9794
+        ]
+      },
+      "citation_valid（引用 ID 合法）": {
+        "k": 56,
+        "n": 56,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.9358,
+          1.0
+        ]
+      },
+      "whole_refusal（应回答类整体拒答）": {
+        "k": 1,
+        "n": 52,
+        "rate": 0.0192,
+        "ci95_wilson": [
+          0.0034,
+          0.1012
+        ]
+      },
+      "false_refusal（answer 题错误拒答）": {
+        "k": 1,
+        "n": 45,
+        "rate": 0.0222,
+        "ci95_wilson": [
+          0.0039,
+          0.1157
+        ]
+      },
+      "refusal_ok（正确拒答）": {
+        "k": 3,
+        "n": 4,
+        "rate": 0.75,
+        "ci95_wilson": [
+          0.3006,
+          0.9544
+        ]
+      },
+      "partial_ok": {
+        "k": 2,
+        "n": 3,
+        "rate": 0.6667,
+        "ci95_wilson": [
+          0.2077,
+          0.9385
+        ]
+      },
+      "conflict_true_ok（真冲突识别）": {
+        "k": 1,
+        "n": 4,
+        "rate": 0.25,
+        "ci95_wilson": [
+          0.0456,
+          0.6994
+        ]
+      },
+      "no_conflict_ok（非冲突判断）": {
+        "k": 5,
+        "n": 8,
+        "rate": 0.625,
+        "ci95_wilson": [
+          0.3057,
+          0.8632
+        ]
+      },
+      "injection_resisted": {
+        "k": 1,
+        "n": 2,
+        "rate": 0.5,
+        "ci95_wilson": [
+          0.0945,
+          0.9055
+        ]
+      },
+      "format_ok": {
+        "k": 55,
+        "n": 56,
+        "rate": 0.9821,
+        "ci95_wilson": [
+          0.9055,
+          0.9968
+        ]
+      },
+      "first_evidence_only（多证据题只用第一个）": {
+        "k": 5,
+        "n": 43,
+        "rate": 0.1163,
+        "ci95_wilson": [
+          0.0507,
+          0.2448
+        ]
+      },
+      "cost": {
+        "latency_ms_p50": 11500.900000000001,
+        "latency_ms_p95": 14946.8,
+        "output_tokens_mean": 89.1,
+        "input_tokens_mean": 597.0,
+        "calls_mean": 1,
+        "revised": 0
+      }
+    },
+    "C43": {
+      "multi_complete_v5（多证据完整率，主指标）": {
+        "k": 22,
+        "n": 43,
+        "rate": 0.5116,
+        "ci95_wilson": [
+          0.3675,
+          0.6538
+        ]
+      },
+      "content_ok_v4（内容正确，不含引用格式）": {
+        "k": 29,
+        "n": 56,
+        "rate": 0.5179,
+        "ci95_wilson": [
+          0.3901,
+          0.6433
+        ]
+      },
+      "required_fact_coverage（必要事实覆盖率，均值）": {
+        "k": 40.28,
+        "n": 52,
+        "rate": 0.7747
+      },
+      "claim_support_full（陈述支持，全分母）": {
+        "k": 51,
+        "n": 52,
+        "rate": 0.9808,
+        "ci95_wilson": [
+          0.8988,
+          0.9966
+        ]
+      },
+      "citation_accuracy（事实引用正确）": {
+        "k": 51,
+        "n": 51,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.93,
+          1.0
+        ]
+      },
+      "citation_valid（引用 ID 合法）": {
+        "k": 56,
+        "n": 56,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.9358,
+          1.0
+        ]
+      },
+      "whole_refusal（应回答类整体拒答）": {
+        "k": 1,
+        "n": 52,
+        "rate": 0.0192,
+        "ci95_wilson": [
+          0.0034,
+          0.1012
+        ]
+      },
+      "false_refusal（answer 题错误拒答）": {
+        "k": 1,
+        "n": 45,
+        "rate": 0.0222,
+        "ci95_wilson": [
+          0.0039,
+          0.1157
+        ]
+      },
+      "refusal_ok（正确拒答）": {
+        "k": 4,
+        "n": 4,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.5101,
+          1.0
+        ]
+      },
+      "partial_ok": {
+        "k": 1,
+        "n": 3,
+        "rate": 0.3333,
+        "ci95_wilson": [
+          0.0615,
+          0.7923
+        ]
+      },
+      "conflict_true_ok（真冲突识别）": {
+        "k": 1,
+        "n": 4,
+        "rate": 0.25,
+        "ci95_wilson": [
+          0.0456,
+          0.6994
+        ]
+      },
+      "no_conflict_ok（非冲突判断）": {
+        "k": 4,
+        "n": 8,
+        "rate": 0.5,
+        "ci95_wilson": [
+          0.2152,
+          0.7848
+        ]
+      },
+      "injection_resisted": {
+        "k": 1,
+        "n": 2,
+        "rate": 0.5,
+        "ci95_wilson": [
+          0.0945,
+          0.9055
+        ]
+      },
+      "format_ok": {
+        "k": 56,
+        "n": 56,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.9358,
+          1.0
+        ]
+      },
+      "first_evidence_only（多证据题只用第一个）": {
+        "k": 6,
+        "n": 43,
+        "rate": 0.1395,
+        "ci95_wilson": [
+          0.0656,
+          0.2726
+        ]
+      },
+      "cost": {
+        "latency_ms_p50": 11376.7,
+        "latency_ms_p95": 16759.7,
+        "output_tokens_mean": 85.7,
+        "input_tokens_mean": 597.0,
+        "calls_mean": 1,
+        "revised": 0
+      }
+    },
+    "D": {
+      "multi_complete_v5（多证据完整率，主指标）": {
+        "k": 25,
+        "n": 43,
+        "rate": 0.5814,
+        "ci95_wilson": [
+          0.4333,
+          0.7162
+        ]
+      },
+      "content_ok_v4（内容正确，不含引用格式）": {
+        "k": 31,
+        "n": 56,
+        "rate": 0.5536,
+        "ci95_wilson": [
+          0.4241,
+          0.6761
+        ]
+      },
+      "required_fact_coverage（必要事实覆盖率，均值）": {
+        "k": 43.22,
+        "n": 52,
+        "rate": 0.8311
+      },
+      "claim_support_full（陈述支持，全分母）": {
+        "k": 18,
+        "n": 52,
+        "rate": 0.3462,
+        "ci95_wilson": [
+          0.2315,
+          0.482
+        ]
+      },
+      "citation_accuracy（事实引用正确）": {
+        "k": 35,
+        "n": 52,
+        "rate": 0.6731,
+        "ci95_wilson": [
+          0.5376,
+          0.7848
+        ]
+      },
+      "citation_valid（引用 ID 合法）": {
+        "k": 55,
+        "n": 56,
+        "rate": 0.9821,
+        "ci95_wilson": [
+          0.9055,
+          0.9968
+        ]
+      },
+      "whole_refusal（应回答类整体拒答）": {
+        "k": 0,
+        "n": 52,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.0688
+        ]
+      },
+      "false_refusal（answer 题错误拒答）": {
+        "k": 0,
+        "n": 45,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.0787
+        ]
+      },
+      "refusal_ok（正确拒答）": {
+        "k": 4,
+        "n": 4,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.5101,
+          1.0
+        ]
+      },
+      "partial_ok": {
+        "k": 2,
+        "n": 3,
+        "rate": 0.6667,
+        "ci95_wilson": [
+          0.2077,
+          0.9385
+        ]
+      },
+      "conflict_true_ok（真冲突识别）": {
+        "k": 1,
+        "n": 4,
+        "rate": 0.25,
+        "ci95_wilson": [
+          0.0456,
+          0.6994
+        ]
+      },
+      "no_conflict_ok（非冲突判断）": {
+        "k": 5,
+        "n": 8,
+        "rate": 0.625,
+        "ci95_wilson": [
+          0.3057,
+          0.8632
+        ]
+      },
+      "injection_resisted": {
+        "k": 1,
+        "n": 2,
+        "rate": 0.5,
+        "ci95_wilson": [
+          0.0945,
+          0.9055
+        ]
+      },
+      "format_ok": {
+        "k": 48,
+        "n": 56,
+        "rate": 0.8571,
+        "ci95_wilson": [
+          0.7426,
+          0.9258
+        ]
+      },
+      "first_evidence_only（多证据题只用第一个）": {
+        "k": 6,
+        "n": 43,
+        "rate": 0.1395,
+        "ci95_wilson": [
+          0.0656,
+          0.2726
+        ]
+      },
+      "cost": {
+        "latency_ms_p50": 4800.75,
+        "latency_ms_p95": 10424.99,
+        "output_tokens_mean": 113.4,
+        "input_tokens_mean": 597.0,
+        "calls_mean": 1,
+        "revised": 0
+      }
+    },
+    "S43": {
+      "multi_complete_v5（多证据完整率，主指标）": {
+        "k": 23,
+        "n": 43,
+        "rate": 0.5349,
+        "ci95_wilson": [
+          0.3892,
+          0.6749
+        ]
+      },
+      "content_ok_v4（内容正确，不含引用格式）": {
+        "k": 29,
+        "n": 56,
+        "rate": 0.5179,
+        "ci95_wilson": [
+          0.3901,
+          0.6433
+        ]
+      },
+      "required_fact_coverage（必要事实覆盖率，均值）": {
+        "k": 37.78,
+        "n": 52,
+        "rate": 0.7266
+      },
+      "claim_support_full（陈述支持，全分母）": {
+        "k": 45,
+        "n": 52,
+        "rate": 0.8654,
+        "ci95_wilson": [
+          0.7473,
+          0.9332
+        ]
+      },
+      "citation_accuracy（事实引用正确）": {
+        "k": 46,
+        "n": 47,
+        "rate": 0.9787,
+        "ci95_wilson": [
+          0.8889,
+          0.9962
+        ]
+      },
+      "citation_valid（引用 ID 合法）": {
+        "k": 56,
+        "n": 56,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.9358,
+          1.0
+        ]
+      },
+      "whole_refusal（应回答类整体拒答）": {
+        "k": 3,
+        "n": 52,
+        "rate": 0.0577,
+        "ci95_wilson": [
+          0.0198,
+          0.1564
+        ]
+      },
+      "false_refusal（answer 题错误拒答）": {
+        "k": 3,
+        "n": 45,
+        "rate": 0.0667,
+        "ci95_wilson": [
+          0.0229,
+          0.1786
+        ]
+      },
+      "refusal_ok（正确拒答）": {
+        "k": 4,
+        "n": 4,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.5101,
+          1.0
+        ]
+      },
+      "partial_ok": {
+        "k": 1,
+        "n": 3,
+        "rate": 0.3333,
+        "ci95_wilson": [
+          0.0615,
+          0.7923
+        ]
+      },
+      "conflict_true_ok（真冲突识别）": {
+        "k": 1,
+        "n": 4,
+        "rate": 0.25,
+        "ci95_wilson": [
+          0.0456,
+          0.6994
+        ]
+      },
+      "no_conflict_ok（非冲突判断）": {
+        "k": 3,
+        "n": 8,
+        "rate": 0.375,
+        "ci95_wilson": [
+          0.1368,
+          0.6943
+        ]
+      },
+      "injection_resisted": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.6576
+        ]
+      },
+      "format_ok": {
+        "k": 54,
+        "n": 56,
+        "rate": 0.9643,
+        "ci95_wilson": [
+          0.8788,
+          0.9902
+        ]
+      },
+      "first_evidence_only（多证据题只用第一个）": {
+        "k": 3,
+        "n": 43,
+        "rate": 0.0698,
+        "ci95_wilson": [
+          0.024,
+          0.1861
+        ]
+      },
+      "cost": {
+        "latency_ms_p50": 10617.8,
+        "latency_ms_p95": 15776.6,
+        "output_tokens_mean": 82.6,
+        "input_tokens_mean": 597.0,
+        "calls_mean": 1,
+        "revised": 0
+      }
+    }
+  },
+  "paired_vs": {
+    "B_vs_S43": {
+      "content_ok_v4（内容正确，不含引用格式）": {
+        "n": 56,
+        "n_clusters": 11,
+        "a": 0.4286,
+        "b": 0.5179,
+        "diff": 0.0893,
+        "ci95_cluster_bootstrap": [
+          0.02,
+          0.1618
+        ],
+        "a_k": 24,
+        "b_k": 29,
+        "b_higher": [
+          "dv_m06",
+          "dv_m14",
+          "dv_m25",
+          "dv_m26",
+          "dv_m27",
+          "dv_m01r",
+          "dv_m27r"
+        ],
+        "b_lower": [
+          "dv_m01",
+          "dv_p01"
+        ],
+        "mcnemar_p_item_level": 0.1797,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "multi_complete_v5（多证据完整率，主指标）": {
+        "n": 43,
+        "n_clusters": 11,
+        "a": 0.3953,
+        "b": 0.5349,
+        "diff": 0.1395,
+        "ci95_cluster_bootstrap": [
+          0.0263,
+          0.2727
+        ],
+        "a_k": 17,
+        "b_k": 23,
+        "b_higher": [
+          "dv_m06",
+          "dv_m14",
+          "dv_m25",
+          "dv_m26",
+          "dv_m27",
+          "dv_m01r",
+          "dv_m27r"
+        ],
+        "b_lower": [
+          "dv_m01"
+        ],
+        "mcnemar_p_item_level": 0.0703,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "refusal_ok（正确拒答）": {
+        "n": 4,
+        "n_clusters": 4,
+        "a": 1.0,
+        "b": 1.0,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 4,
+        "b_k": 4,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "false_refusal（answer 题错误拒答）": {
+        "n": 45,
+        "n_clusters": 11,
+        "a": 0.1111,
+        "b": 0.0667,
+        "diff": -0.0444,
+        "ci95_cluster_bootstrap": [
+          -0.1875,
+          0.0682
+        ],
+        "a_k": 5,
+        "b_k": 3,
+        "b_higher": [
+          "dv_m10",
+          "dv_x01"
+        ],
+        "b_lower": [
+          "dv_m06",
+          "dv_m16",
+          "dv_m23",
+          "dv_m01r"
+        ],
+        "mcnemar_p_item_level": 0.6875,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      },
+      "whole_refusal（应回答类整体拒答）": {
+        "n": 52,
+        "n_clusters": 11,
+        "a": 0.0962,
+        "b": 0.0577,
+        "diff": -0.0385,
+        "ci95_cluster_bootstrap": [
+          -0.1538,
+          0.06
+        ],
+        "a_k": 5,
+        "b_k": 3,
+        "b_higher": [
+          "dv_m10",
+          "dv_x01"
+        ],
+        "b_lower": [
+          "dv_m06",
+          "dv_m16",
+          "dv_m23",
+          "dv_m01r"
+        ],
+        "mcnemar_p_item_level": 0.6875,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      },
+      "partial_ok": {
+        "n": 3,
+        "n_clusters": 3,
+        "a": 0.6667,
+        "b": 0.3333,
+        "diff": -0.3333,
+        "ci95_cluster_bootstrap": [
+          -1.0,
+          0.0
+        ],
+        "a_k": 2,
+        "b_k": 1,
+        "b_higher": [],
+        "b_lower": [
+          "dv_p01"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "conflict_true_ok（真冲突识别）": {
+        "n": 4,
+        "n_clusters": 3,
+        "a": 0.25,
+        "b": 0.25,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 1,
+        "b_k": 1,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "no_conflict_ok（非冲突判断）": {
+        "n": 8,
+        "n_clusters": 4,
+        "a": 0.375,
+        "b": 0.375,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 3,
+        "b_k": 3,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "claim_support_full（陈述支持，全分母）": {
+        "n": 52,
+        "n_clusters": 11,
+        "a": 0.6154,
+        "b": 0.8654,
+        "diff": 0.25,
+        "ci95_cluster_bootstrap": [
+          0.0926,
+          0.4107
+        ],
+        "a_k": 32,
+        "b_k": 45,
+        "b_higher": [
+          "dv_m02",
+          "dv_m03",
+          "dv_m09",
+          "dv_m10",
+          "dv_m14",
+          "dv_m16",
+          "dv_m22",
+          "dv_m25",
+          "dv_m26",
+          "dv_m01r",
+          "dv_m27r",
+          "dv_x02",
+          "dv_c03",
+          "dv_p01"
+        ],
+        "b_lower": [
+          "dv_m15"
+        ],
+        "mcnemar_p_item_level": 0.001,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_accuracy（事实引用正确）": {
+        "n": 45,
+        "n_clusters": 11,
+        "a": 0.9111,
+        "b": 0.9778,
+        "diff": 0.0667,
+        "ci95_cluster_bootstrap": [
+          -0.0345,
+          0.1667
+        ],
+        "a_k": 41,
+        "b_k": 44,
+        "b_higher": [
+          "dv_m03",
+          "dv_m26r",
+          "dv_x02",
+          "dv_p01"
+        ],
+        "b_lower": [
+          "dv_x05"
+        ],
+        "mcnemar_p_item_level": 0.375,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_valid（引用 ID 合法）": {
+        "n": 56,
+        "n_clusters": 11,
+        "a": 1.0,
+        "b": 1.0,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 56,
+        "b_k": 56,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "format_ok": {
+        "n": 56,
+        "n_clusters": 11,
+        "a": 0.9464,
+        "b": 0.9643,
+        "diff": 0.0179,
+        "ci95_cluster_bootstrap": [
+          -0.0417,
+          0.0755
+        ],
+        "a_k": 53,
+        "b_k": 54,
+        "b_higher": [
+          "dv_m16",
+          "dv_m01r"
+        ],
+        "b_lower": [
+          "dv_x01"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "injection_resisted": {
+        "n": 2,
+        "n_clusters": 2,
+        "a": 0.0,
+        "b": 0.0,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 0,
+        "b_k": 0,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "first_evidence_only（多证据题只用第一个）": {
+        "n": 43,
+        "n_clusters": 11,
+        "a": 0.1163,
+        "b": 0.0698,
+        "diff": -0.0465,
+        "ci95_cluster_bootstrap": [
+          -0.1395,
+          0.0417
+        ],
+        "a_k": 5,
+        "b_k": 3,
+        "b_higher": [
+          "dv_m16"
+        ],
+        "b_lower": [
+          "dv_m06",
+          "dv_m22",
+          "dv_m27r"
+        ],
+        "mcnemar_p_item_level": 0.625,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      }
+    },
+    "C42_vs_S43": {
+      "content_ok_v4（内容正确，不含引用格式）": {
+        "n": 56,
+        "n_clusters": 11,
+        "a": 0.5714,
+        "b": 0.5179,
+        "diff": -0.0536,
+        "ci95_cluster_bootstrap": [
+          -0.1667,
+          0.0417
+        ],
+        "a_k": 32,
+        "b_k": 29,
+        "b_higher": [
+          "dv_m15",
+          "dv_m20",
+          "dv_m26",
+          "dv_m27",
+          "dv_m27r",
+          "dv_r03"
+        ],
+        "b_lower": [
+          "dv_m21",
+          "dv_m22",
+          "dv_m24",
+          "dv_m08r",
+          "dv_x04",
+          "dv_x06",
+          "dv_p01",
+          "dv_p02",
+          "dv_i02"
+        ],
+        "mcnemar_p_item_level": 0.6072,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "multi_complete_v5（多证据完整率，主指标）": {
+        "n": 43,
+        "n_clusters": 11,
+        "a": 0.6047,
+        "b": 0.5349,
+        "diff": -0.0698,
+        "ci95_cluster_bootstrap": [
+          -0.2059,
+          0.0541
+        ],
+        "a_k": 26,
+        "b_k": 23,
+        "b_higher": [
+          "dv_m26",
+          "dv_m27",
+          "dv_m27r"
+        ],
+        "b_lower": [
+          "dv_m21",
+          "dv_m22",
+          "dv_m24",
+          "dv_m08r",
+          "dv_x04",
+          "dv_x06"
+        ],
+        "mcnemar_p_item_level": 0.5078,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "refusal_ok（正确拒答）": {
+        "n": 4,
+        "n_clusters": 4,
+        "a": 0.75,
+        "b": 1.0,
+        "diff": 0.25,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.75
+        ],
+        "a_k": 3,
+        "b_k": 4,
+        "b_higher": [
+          "dv_r03"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "false_refusal（answer 题错误拒答）": {
+        "n": 45,
+        "n_clusters": 11,
+        "a": 0.0222,
+        "b": 0.0667,
+        "diff": 0.0444,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.1429
+        ],
+        "a_k": 1,
+        "b_k": 3,
+        "b_higher": [
+          "dv_x01",
+          "dv_x04"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.5,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      },
+      "whole_refusal（应回答类整体拒答）": {
+        "n": 52,
+        "n_clusters": 11,
+        "a": 0.0192,
+        "b": 0.0577,
+        "diff": 0.0385,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.1224
+        ],
+        "a_k": 1,
+        "b_k": 3,
+        "b_higher": [
+          "dv_x01",
+          "dv_x04"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.5,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      },
+      "partial_ok": {
+        "n": 3,
+        "n_clusters": 3,
+        "a": 0.6667,
+        "b": 0.3333,
+        "diff": -0.3333,
+        "ci95_cluster_bootstrap": [
+          -1.0,
+          1.0
+        ],
+        "a_k": 2,
+        "b_k": 1,
+        "b_higher": [
+          "dv_m15"
+        ],
+        "b_lower": [
+          "dv_p01",
+          "dv_p02"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "conflict_true_ok（真冲突识别）": {
+        "n": 4,
+        "n_clusters": 3,
+        "a": 0.25,
+        "b": 0.25,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 1,
+        "b_k": 1,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "no_conflict_ok（非冲突判断）": {
+        "n": 8,
+        "n_clusters": 4,
+        "a": 0.625,
+        "b": 0.375,
+        "diff": -0.25,
+        "ci95_cluster_bootstrap": [
+          -0.75,
+          0.0
+        ],
+        "a_k": 5,
+        "b_k": 3,
+        "b_higher": [],
+        "b_lower": [
+          "dv_x04",
+          "dv_x06"
+        ],
+        "mcnemar_p_item_level": 0.5,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "claim_support_full（陈述支持，全分母）": {
+        "n": 52,
+        "n_clusters": 11,
+        "a": 0.8077,
+        "b": 0.8654,
+        "diff": 0.0577,
+        "ci95_cluster_bootstrap": [
+          -0.0517,
+          0.1633
+        ],
+        "a_k": 42,
+        "b_k": 45,
+        "b_higher": [
+          "dv_m10",
+          "dv_m20",
+          "dv_m24",
+          "dv_m25",
+          "dv_m27",
+          "dv_m05r",
+          "dv_s01",
+          "dv_c03"
+        ],
+        "b_lower": [
+          "dv_m08",
+          "dv_m15",
+          "dv_m21",
+          "dv_x04",
+          "dv_c04"
+        ],
+        "mcnemar_p_item_level": 0.5811,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_accuracy（事实引用正确）": {
+        "n": 46,
+        "n_clusters": 11,
+        "a": 0.9565,
+        "b": 0.9783,
+        "diff": 0.0217,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0652
+        ],
+        "a_k": 44,
+        "b_k": 45,
+        "b_higher": [
+          "dv_m18",
+          "dv_x07"
+        ],
+        "b_lower": [
+          "dv_x05"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_valid（引用 ID 合法）": {
+        "n": 56,
+        "n_clusters": 11,
+        "a": 1.0,
+        "b": 1.0,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 56,
+        "b_k": 56,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "format_ok": {
+        "n": 56,
+        "n_clusters": 11,
+        "a": 0.9821,
+        "b": 0.9643,
+        "diff": -0.0179,
+        "ci95_cluster_bootstrap": [
+          -0.1111,
+          0.0469
+        ],
+        "a_k": 55,
+        "b_k": 54,
+        "b_higher": [
+          "dv_r03"
+        ],
+        "b_lower": [
+          "dv_x01",
+          "dv_x04"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "injection_resisted": {
+        "n": 2,
+        "n_clusters": 2,
+        "a": 0.5,
+        "b": 0.0,
+        "diff": -0.5,
+        "ci95_cluster_bootstrap": [
+          -1.0,
+          0.0
+        ],
+        "a_k": 1,
+        "b_k": 0,
+        "b_higher": [],
+        "b_lower": [
+          "dv_i02"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "first_evidence_only（多证据题只用第一个）": {
+        "n": 43,
+        "n_clusters": 11,
+        "a": 0.1163,
+        "b": 0.0698,
+        "diff": -0.0465,
+        "ci95_cluster_bootstrap": [
+          -0.1509,
+          0.0556
+        ],
+        "a_k": 5,
+        "b_k": 3,
+        "b_higher": [
+          "dv_m16"
+        ],
+        "b_lower": [
+          "dv_m01",
+          "dv_m27r",
+          "dv_x02"
+        ],
+        "mcnemar_p_item_level": 0.625,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      }
+    },
+    "C43_vs_S43": {
+      "content_ok_v4（内容正确，不含引用格式）": {
+        "n": 56,
+        "n_clusters": 11,
+        "a": 0.5179,
+        "b": 0.5179,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          -0.1042,
+          0.093
+        ],
+        "a_k": 29,
+        "b_k": 29,
+        "b_higher": [
+          "dv_m02",
+          "dv_m15",
+          "dv_m26",
+          "dv_m27",
+          "dv_m27r",
+          "dv_x05",
+          "dv_x07"
+        ],
+        "b_lower": [
+          "dv_m21",
+          "dv_m08r",
+          "dv_x02",
+          "dv_x04",
+          "dv_x06",
+          "dv_p02",
+          "dv_i02"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "multi_complete_v5（多证据完整率，主指标）": {
+        "n": 43,
+        "n_clusters": 11,
+        "a": 0.5116,
+        "b": 0.5349,
+        "diff": 0.0233,
+        "ci95_cluster_bootstrap": [
+          -0.1,
+          0.1364
+        ],
+        "a_k": 22,
+        "b_k": 23,
+        "b_higher": [
+          "dv_m02",
+          "dv_m26",
+          "dv_m27",
+          "dv_m27r",
+          "dv_x05",
+          "dv_x07"
+        ],
+        "b_lower": [
+          "dv_m21",
+          "dv_m08r",
+          "dv_x02",
+          "dv_x04",
+          "dv_x06"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "refusal_ok（正确拒答）": {
+        "n": 4,
+        "n_clusters": 4,
+        "a": 1.0,
+        "b": 1.0,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 4,
+        "b_k": 4,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "false_refusal（answer 题错误拒答）": {
+        "n": 45,
+        "n_clusters": 11,
+        "a": 0.0222,
+        "b": 0.0667,
+        "diff": 0.0444,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.1429
+        ],
+        "a_k": 1,
+        "b_k": 3,
+        "b_higher": [
+          "dv_x01",
+          "dv_x04"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.5,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      },
+      "whole_refusal（应回答类整体拒答）": {
+        "n": 52,
+        "n_clusters": 11,
+        "a": 0.0192,
+        "b": 0.0577,
+        "diff": 0.0385,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.1224
+        ],
+        "a_k": 1,
+        "b_k": 3,
+        "b_higher": [
+          "dv_x01",
+          "dv_x04"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.5,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      },
+      "partial_ok": {
+        "n": 3,
+        "n_clusters": 3,
+        "a": 0.3333,
+        "b": 0.3333,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          -1.0,
+          1.0
+        ],
+        "a_k": 1,
+        "b_k": 1,
+        "b_higher": [
+          "dv_m15"
+        ],
+        "b_lower": [
+          "dv_p02"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "conflict_true_ok（真冲突识别）": {
+        "n": 4,
+        "n_clusters": 3,
+        "a": 0.25,
+        "b": 0.25,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 1,
+        "b_k": 1,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "no_conflict_ok（非冲突判断）": {
+        "n": 8,
+        "n_clusters": 4,
+        "a": 0.5,
+        "b": 0.375,
+        "diff": -0.125,
+        "ci95_cluster_bootstrap": [
+          -1.0,
+          0.1667
+        ],
+        "a_k": 4,
+        "b_k": 3,
+        "b_higher": [
+          "dv_x05",
+          "dv_x07"
+        ],
+        "b_lower": [
+          "dv_x02",
+          "dv_x04",
+          "dv_x06"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "claim_support_full（陈述支持，全分母）": {
+        "n": 52,
+        "n_clusters": 11,
+        "a": 0.9808,
+        "b": 0.8654,
+        "diff": -0.1154,
+        "ci95_cluster_bootstrap": [
+          -0.2128,
+          -0.025
+        ],
+        "a_k": 51,
+        "b_k": 45,
+        "b_higher": [
+          "dv_s01"
+        ],
+        "b_lower": [
+          "dv_m08",
+          "dv_m15",
+          "dv_m21",
+          "dv_m23",
+          "dv_x01",
+          "dv_x04",
+          "dv_c04"
+        ],
+        "mcnemar_p_item_level": 0.0703,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_accuracy（事实引用正确）": {
+        "n": 47,
+        "n_clusters": 11,
+        "a": 1.0,
+        "b": 0.9787,
+        "diff": -0.0213,
+        "ci95_cluster_bootstrap": [
+          -0.075,
+          0.0
+        ],
+        "a_k": 47,
+        "b_k": 46,
+        "b_higher": [],
+        "b_lower": [
+          "dv_x05"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_valid（引用 ID 合法）": {
+        "n": 56,
+        "n_clusters": 11,
+        "a": 1.0,
+        "b": 1.0,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 56,
+        "b_k": 56,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "format_ok": {
+        "n": 56,
+        "n_clusters": 11,
+        "a": 1.0,
+        "b": 0.9643,
+        "diff": -0.0357,
+        "ci95_cluster_bootstrap": [
+          -0.1176,
+          0.0
+        ],
+        "a_k": 56,
+        "b_k": 54,
+        "b_higher": [],
+        "b_lower": [
+          "dv_x01",
+          "dv_x04"
+        ],
+        "mcnemar_p_item_level": 0.5,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "injection_resisted": {
+        "n": 2,
+        "n_clusters": 2,
+        "a": 0.5,
+        "b": 0.0,
+        "diff": -0.5,
+        "ci95_cluster_bootstrap": [
+          -1.0,
+          0.0
+        ],
+        "a_k": 1,
+        "b_k": 0,
+        "b_higher": [],
+        "b_lower": [
+          "dv_i02"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "first_evidence_only（多证据题只用第一个）": {
+        "n": 43,
+        "n_clusters": 11,
+        "a": 0.1395,
+        "b": 0.0698,
+        "diff": -0.0698,
+        "ci95_cluster_bootstrap": [
+          -0.1944,
+          0.0333
+        ],
+        "a_k": 6,
+        "b_k": 3,
+        "b_higher": [
+          "dv_m16"
+        ],
+        "b_lower": [
+          "dv_m01",
+          "dv_m22",
+          "dv_m27r",
+          "dv_s01"
+        ],
+        "mcnemar_p_item_level": 0.375,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      }
+    },
+    "A_vs_S43": {
+      "content_ok_v4（内容正确，不含引用格式）": {
+        "n": 56,
+        "n_clusters": 11,
+        "a": 0.3214,
+        "b": 0.5179,
+        "diff": 0.1964,
+        "ci95_cluster_bootstrap": [
+          0.0364,
+          0.3571
+        ],
+        "a_k": 18,
+        "b_k": 29,
+        "b_higher": [
+          "dv_m02",
+          "dv_m04",
+          "dv_m12",
+          "dv_m13",
+          "dv_m20",
+          "dv_m25",
+          "dv_m26",
+          "dv_m28",
+          "dv_m04r",
+          "dv_m26r",
+          "dv_m28r",
+          "dv_x05",
+          "dv_x07",
+          "dv_c03",
+          "dv_r01"
+        ],
+        "b_lower": [
+          "dv_m01",
+          "dv_m05",
+          "dv_m05r",
+          "dv_m08r"
+        ],
+        "mcnemar_p_item_level": 0.0192,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "multi_complete_v5（多证据完整率，主指标）": {
+        "n": 43,
+        "n_clusters": 11,
+        "a": 0.5116,
+        "b": 0.5349,
+        "diff": 0.0233,
+        "ci95_cluster_bootstrap": [
+          -0.14,
+          0.1875
+        ],
+        "a_k": 22,
+        "b_k": 23,
+        "b_higher": [
+          "dv_m12",
+          "dv_m20",
+          "dv_m25",
+          "dv_m26",
+          "dv_x05",
+          "dv_x07"
+        ],
+        "b_lower": [
+          "dv_m01",
+          "dv_m05",
+          "dv_m23",
+          "dv_m05r",
+          "dv_m08r"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "refusal_ok（正确拒答）": {
+        "n": 4,
+        "n_clusters": 4,
+        "a": 0.75,
+        "b": 1.0,
+        "diff": 0.25,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.75
+        ],
+        "a_k": 3,
+        "b_k": 4,
+        "b_higher": [
+          "dv_r01"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "false_refusal（answer 题错误拒答）": {
+        "n": 45,
+        "n_clusters": 11,
+        "a": 0.1778,
+        "b": 0.0667,
+        "diff": -0.1111,
+        "ci95_cluster_bootstrap": [
+          -0.2245,
+          0.0
+        ],
+        "a_k": 8,
+        "b_k": 3,
+        "b_higher": [
+          "dv_x01"
+        ],
+        "b_lower": [
+          "dv_m21",
+          "dv_m22",
+          "dv_m25",
+          "dv_m26",
+          "dv_x02",
+          "dv_i01"
+        ],
+        "mcnemar_p_item_level": 0.125,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      },
+      "whole_refusal（应回答类整体拒答）": {
+        "n": 52,
+        "n_clusters": 11,
+        "a": 0.1923,
+        "b": 0.0577,
+        "diff": -0.1346,
+        "ci95_cluster_bootstrap": [
+          -0.2407,
+          -0.0213
+        ],
+        "a_k": 10,
+        "b_k": 3,
+        "b_higher": [
+          "dv_x01"
+        ],
+        "b_lower": [
+          "dv_m21",
+          "dv_m22",
+          "dv_m25",
+          "dv_m26",
+          "dv_x02",
+          "dv_c02",
+          "dv_p01",
+          "dv_i01"
+        ],
+        "mcnemar_p_item_level": 0.0391,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      },
+      "partial_ok": {
+        "n": 3,
+        "n_clusters": 3,
+        "a": 0.3333,
+        "b": 0.3333,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 1,
+        "b_k": 1,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "conflict_true_ok（真冲突识别）": {
+        "n": 4,
+        "n_clusters": 3,
+        "a": 0.0,
+        "b": 0.25,
+        "diff": 0.25,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          1.0
+        ],
+        "a_k": 0,
+        "b_k": 1,
+        "b_higher": [
+          "dv_c03"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "no_conflict_ok（非冲突判断）": {
+        "n": 8,
+        "n_clusters": 4,
+        "a": 0.125,
+        "b": 0.375,
+        "diff": 0.25,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.375
+        ],
+        "a_k": 1,
+        "b_k": 3,
+        "b_higher": [
+          "dv_x05",
+          "dv_x07"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.5,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "claim_support_full（陈述支持，全分母）": {
+        "n": 52,
+        "n_clusters": 11,
+        "a": 0.3846,
+        "b": 0.8654,
+        "diff": 0.4808,
+        "ci95_cluster_bootstrap": [
+          0.2759,
+          0.6809
+        ],
+        "a_k": 20,
+        "b_k": 45,
+        "b_higher": [
+          "dv_m02",
+          "dv_m03",
+          "dv_m04",
+          "dv_m06",
+          "dv_m07",
+          "dv_m09",
+          "dv_m11",
+          "dv_m12",
+          "dv_m13",
+          "dv_m14",
+          "dv_m16",
+          "dv_m17",
+          "dv_m20",
+          "dv_m25",
+          "dv_m26",
+          "dv_m28",
+          "dv_m04r",
+          "dv_m17r",
+          "dv_m26r",
+          "dv_m28r",
+          "dv_x02",
+          "dv_x06",
+          "dv_s01",
+          "dv_c02",
+          "dv_c03",
+          "dv_p01",
+          "dv_i01"
+        ],
+        "b_lower": [
+          "dv_m15",
+          "dv_x01"
+        ],
+        "mcnemar_p_item_level": 0.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_accuracy（事实引用正确）": {
+        "n": 40,
+        "n_clusters": 10,
+        "a": 0.45,
+        "b": 0.975,
+        "diff": 0.525,
+        "ci95_cluster_bootstrap": [
+          0.359,
+          0.675
+        ],
+        "a_k": 18,
+        "b_k": 39,
+        "b_higher": [
+          "dv_m02",
+          "dv_m03",
+          "dv_m06",
+          "dv_m07",
+          "dv_m08",
+          "dv_m09",
+          "dv_m11",
+          "dv_m12",
+          "dv_m13",
+          "dv_m14",
+          "dv_m16",
+          "dv_m17",
+          "dv_m28",
+          "dv_m04r",
+          "dv_m05r",
+          "dv_m08r",
+          "dv_m17r",
+          "dv_m26r",
+          "dv_m28r",
+          "dv_x03",
+          "dv_c03",
+          "dv_c04"
+        ],
+        "b_lower": [
+          "dv_x05"
+        ],
+        "mcnemar_p_item_level": 0.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "citation_valid（引用 ID 合法）": {
+        "n": 56,
+        "n_clusters": 11,
+        "a": 0.8214,
+        "b": 1.0,
+        "diff": 0.1786,
+        "ci95_cluster_bootstrap": [
+          0.0781,
+          0.3061
+        ],
+        "a_k": 46,
+        "b_k": 56,
+        "b_higher": [
+          "dv_m02",
+          "dv_m11",
+          "dv_m13",
+          "dv_m28",
+          "dv_m05r",
+          "dv_m17r",
+          "dv_m28r",
+          "dv_s01",
+          "dv_c03",
+          "dv_i01"
+        ],
+        "b_lower": [],
+        "mcnemar_p_item_level": 0.002,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "format_ok": {
+        "n": 56,
+        "n_clusters": 11,
+        "a": 0.1964,
+        "b": 0.9643,
+        "diff": 0.7679,
+        "ci95_cluster_bootstrap": [
+          0.5965,
+          0.9038
+        ],
+        "a_k": 11,
+        "b_k": 54,
+        "b_higher": [
+          "dv_m01",
+          "dv_m02",
+          "dv_m03",
+          "dv_m04",
+          "dv_m05",
+          "dv_m06",
+          "dv_m08",
+          "dv_m11",
+          "dv_m12",
+          "dv_m13",
+          "dv_m14",
+          "dv_m16",
+          "dv_m17",
+          "dv_m18",
+          "dv_m19",
+          "dv_m20",
+          "dv_m21",
+          "dv_m22",
+          "dv_m24",
+          "dv_m25",
+          "dv_m26",
+          "dv_m27",
+          "dv_m28",
+          "dv_m01r",
+          "dv_m05r",
+          "dv_m08r",
+          "dv_m17r",
+          "dv_m26r",
+          "dv_m27r",
+          "dv_m28r",
+          "dv_x03",
+          "dv_x05",
+          "dv_x07",
+          "dv_s01",
+          "dv_c02",
+          "dv_c03",
+          "dv_c04",
+          "dv_p01",
+          "dv_p02",
+          "dv_r01",
+          "dv_r02",
+          "dv_r03",
+          "dv_r04",
+          "dv_i01"
+        ],
+        "b_lower": [
+          "dv_x04"
+        ],
+        "mcnemar_p_item_level": 0.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "injection_resisted": {
+        "n": 2,
+        "n_clusters": 2,
+        "a": 0.0,
+        "b": 0.0,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          0.0,
+          0.0
+        ],
+        "a_k": 0,
+        "b_k": 0,
+        "b_higher": [],
+        "b_lower": [],
+        "mcnemar_p_item_level": null,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准"
+      },
+      "first_evidence_only（多证据题只用第一个）": {
+        "n": 43,
+        "n_clusters": 11,
+        "a": 0.0698,
+        "b": 0.0698,
+        "diff": 0.0,
+        "ci95_cluster_bootstrap": [
+          -0.0851,
+          0.1081
+        ],
+        "a_k": 3,
+        "b_k": 3,
+        "b_higher": [
+          "dv_m16",
+          "dv_i01"
+        ],
+        "b_lower": [
+          "dv_m20",
+          "dv_m22"
+        ],
+        "mcnemar_p_item_level": 1.0,
+        "note": "McNemar 为题目级、未考虑同源相关，仅供参考；以聚类 bootstrap CI 为准",
+        "direction": "该指标越低越好"
+      }
+    }
+  },
+  "selected_epoch": 3,
+  "consistency_S43_eval_vs_selection_answers_identical": "56/56",
+  "gates_dev_reference_only": {
+    "1 multi_complete_v5 Δ ≥ +0.10 且 CI 下界 > 0": [
+      0.1395,
+      [
+        0.0263,
+        0.2727
+      ],
+      true
+    ],
+    "2 content_ok_v4 相对最好的已有 3B（C42）Δ ≥ −0.05 且 CI 下界 ≥ −0.10": [
+      -0.0536,
+      [
+        -0.1667,
+        0.0417
+      ],
+      false
+    ],
+    "3 whole_refusal Δ ≤ +0.03": [
+      -0.0385,
+      null,
+      true
+    ],
+    "4 refusal_ok Δ ≥ −0.09": [
+      0.0,
+      null,
+      true
+    ],
+    "5 claim_support_full Δ ≥ 0": [
+      0.25,
+      null,
+      true
+    ],
+    "6a injection_resisted 不低于 B": [
+      0.0,
+      null,
+      true
+    ],
+    "6b citation_valid Δ ≥ −0.02": [
+      0.0,
+      null,
+      true
+    ],
+    "6c 含证据外数字的题数 ≤ B + 2": [
+      {
+        "B": 1,
+        "S43": 1
+      },
+      null,
+      true
+    ],
+    "7 latency p50 ≤ 1.3 × B": [
+      {
+        "B": 9639.4,
+        "S43": 10617.8
+      },
+      null,
+      true
+    ]
+  }
+}

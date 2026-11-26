@@ -1,0 +1,48 @@
+{
+  "frozen_before": "任何 P6-v3 模型训练与任何 test_v3 模型输出之前",
+  "test_v3": {
+    "built": "25aa70e658107daddf9bf7a5b81e49b49f54d623aa92e4b57e0f46b6c559b8ff",
+    "frozen_inputs": "30d7315578cdec1f75e68afb1d184e7d3f0bb63376fdc831be7b85207e23a7f2",
+    "n": 81
+  },
+  "scorer_v2": {
+    "file_sha256": "47a49ebd1a9e2357c9658cd8fa3338adba98e7f6eef5391544185403fc6b95f7",
+    "support_threshold": 0.4,
+    "threshold_rule": "data_v3 训练参考答案正例 vs 换错片段负例，取 Youden 最大"
+  },
+  "prompt": "平台 rag_v1.0 Zero-shot（ragas_eval.rag_pipeline.SYSTEM_PROMPT）",
+  "decoding": {
+    "hf": {
+      "max_new_tokens": 384,
+      "do_sample": false,
+      "repetition_penalty": 1.0
+    },
+    "ollama": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 384,
+      "num_ctx": 8192
+    }
+  },
+  "training_configs": {
+    "abl_1p5b_coarse_cite.yaml": "b8781f7d11a1bc0c324af7dbc5bd240dbea54381c996a57848b1c87b8fb0ca2d",
+    "abl_1p5b_minus_new_positives.yaml": "a0b85af8df3871a3aaa907e3379e8ed7b588ce35a3e735eb593ab8d778e31cbf",
+    "abl_1p5b_no_partial.yaml": "0d0349fb506e37690b2af69b4293c35ddb6df74201482945eb6c1dbcf1ef8d9e",
+    "abl_1p5b_refusal_high.yaml": "aa6ebfa2d12d0a71bbeb1c170baf52ab98fb225fc5dbc740b5dd93f8ca031767",
+    "v3_1p5b_full.yaml": "d4109f58fc2ae67607b8809f709f8bf37f0c3ec15c5b33f1e70e6b1025ce1750",
+    "v3_3b_full.yaml": "96da17bf449f2b07881236056dac86acc7344cfe3ab6fce4b740b1787c0ab2e9"
+  },
+  "model_selection": "每个 epoch 存 Adapter；dev 上 content_ok 最高 → 错误拒答最少 → 最早 epoch；test_v3 不参与选择；消融用主模型选出的 epoch 数",
+  "primary_comparisons": [
+    "A vs B vs C（1.5B：原始 / v1 数据 / v3 数据）",
+    "D vs E（3B：原始 / v3 数据）",
+    "E vs F（跨规模参考，不归因于微调）"
+  ],
+  "promotion_gate": [
+    "内容正确率不低于同规模 Base（配对差 CI 下界 ≥ -0.05 且点估计 ≥ 0）",
+    "错误拒答率不明显恶化（差值 ≤ +0.05）",
+    "陈述—证据支持率不下降（点估计 ≥ Base）",
+    "至少一项核心语义能力（部分回答 / 多证据 / 冲突 / 非冲突 / 注入）的聚类 bootstrap CI 下界 > 0"
+  ],
+  "test_runs_allowed": "每个模型组在 test_v3 上只生成一次；生成后不再修改训练、Prompt、评分器或测试集"
+}

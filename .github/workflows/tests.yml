@@ -1,0 +1,39 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  cpu-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    env:
+      HF_HUB_OFFLINE: "1"
+      PYTHONIOENCODING: utf-8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install CPU dependencies
+        run: python -m pip install -r requirements/ci.txt
+      - name: Release guard (no weights / private data / absolute paths / secrets)
+        run: python scripts/check_release.py
+      - name: Frozen hashes
+        run: python scripts/verify_hashes.py
+      - name: Unit tests (tests needing unpublished data are skipped)
+        run: python -m unittest discover -s rag_finetuning/tests -t . -v
+      - name: Minimal example
+        run: python -m examples.minimal.run_example
+      - name: Package builds
+        run: |
+          python -m pip install build
+          python -m build --sdist --wheel --outdir dist .

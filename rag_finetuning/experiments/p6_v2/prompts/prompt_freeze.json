@@ -1,0 +1,21 @@
+{
+  "frozen_at": "2026-11-22（诊断完成后、盲测运行前）",
+  "prompt_set_version": "p6v2-prompts-1.0",
+  "system_prompt_sha256": "1b96acf73ef04b449cfa00e92a4aee0a1d6ea271fbc2d14e3261b58cc1612ea2",
+  "fewshot_demos_sha256": "113ad39bfacd00f8bdf6c604cdca9d2ccab25442bab740619cdf1faf967ccf81",
+  "fewshot_demo_ids": "t_it_03,t_proc_03,t_leave_07,t_bak_07,t_travel_09,t_vnd_01",
+  "decision": "Few-shot v1.0 原样冻结，不根据诊断集结果修改",
+  "rationale": [
+    "诊断集 47 题 C 与 D 的 content_ok 相同（39/47），Few-shot 收益集中在格式（34→43/47）",
+    "冲突识别在 C、D 均为 0/2，属稳定问题，单靠示例未能解决",
+    "Few-shot 副作用（2 次 Chunk ID 抄错、部分回答变短）在 47 题上调示例易过拟合诊断集",
+    "保持预先设计的 Prompt 不变，盲测结果才可视为对该 Prompt 的独立检验"
+  ],
+  "diagnostic_reproducibility": {
+    "A_vs_P6v1": "47/47 逐字一致",
+    "B_vs_P6v1": "47/47 逐字一致",
+    "C_repeat": "47/47 逐字一致",
+    "D_repeat": "47/47 逐字一致",
+    "C_vs_P6v1": "12/47 不同，原因为 num_ctx 4096→8192"
+  }
+}

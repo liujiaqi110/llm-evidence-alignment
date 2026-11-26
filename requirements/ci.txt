@@ -1,0 +1,2 @@
+# CPU-only: scorers, statistics, release checks, unit tests and the public example.
+PyYAML==6.0.3

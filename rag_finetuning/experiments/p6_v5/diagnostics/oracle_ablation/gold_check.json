@@ -1,0 +1,12 @@
+{
+  "n_multi_items": 43,
+  "n_facts": 124,
+  "gold_sufficient_items": 43,
+  "problems": [],
+  "gold_chunks_per_item": {
+    "2": 37,
+    "4": 2,
+    "3": 4
+  },
+  "distractors_removed_per_item_mean": 2
+}

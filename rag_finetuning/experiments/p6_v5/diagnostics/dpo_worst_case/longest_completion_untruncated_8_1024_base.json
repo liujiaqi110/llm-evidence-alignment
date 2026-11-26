@@ -1,0 +1,64 @@
+{
+  "set": "longest_completion_untruncated_8",
+  "tag": "_base",
+  "precompute_ref_log_probs": false,
+  "PYTORCH_CUDA_ALLOC_CONF": "",
+  "pair_ids": [
+    "v5ef_0001__2",
+    "v5ef_0065__102",
+    "v5ef_0118__164",
+    "v5ef_0117__163",
+    "v5ef_0089__134",
+    "v5ef_0089__133",
+    "v5ef_0176__231",
+    "v5ef_0084__125"
+  ],
+  "max_length": 1024,
+  "use_logits_to_keep": true,
+  "ok": true,
+  "error": null,
+  "steps": 1,
+  "wall_time_s": 72.0,
+  "load_peak_mib": 3148,
+  "train_peak_allocated_mib": 5693,
+  "train_peak_reserved_mib": 6058,
+  "limit_mib": 6059,
+  "memory_events": [
+    {
+      "event": "step_end",
+      "step": 1,
+      "allocated_mib": 2718,
+      "peak_allocated_mib": 5693,
+      "peak_reserved_mib": 6058
+    },
+    {
+      "event": "save",
+      "step": 1,
+      "allocated_mib": 2718,
+      "peak_allocated_mib": 5693,
+      "peak_reserved_mib": 6058
+    }
+  ],
+  "checkpoint_saved": [
+    "checkpoint-1\\policy\\adapter_model.safetensors",
+    "checkpoint-1\\reference\\adapter_model.safetensors"
+  ],
+  "has_preference_metrics": true,
+  "logs": [
+    {
+      "loss": 0.6931,
+      "grad_norm": 18.325027465820312,
+      "learning_rate": 0.0,
+      "rewards/chosen": 0.0,
+      "rewards/rejected": 0.0,
+      "rewards/accuracies": 0.0,
+      "rewards/margins": 0.0,
+      "logps/chosen": -24.824478149414062,
+      "logps/rejected": -76.08967590332031,
+      "logits/chosen": -2.4519920349121094,
+      "logits/rejected": -2.364799737930298,
+      "epoch": 1.0,
+      "step": 1
+    }
+  ]
+}

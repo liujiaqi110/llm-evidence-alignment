@@ -1,0 +1,75 @@
+{
+  "multi_fail_n": 20,
+  "multi_n": 43,
+  "multi_fail_pattern": {
+    "部分事实缺失": 9,
+    "只用最后一个金标准片段": 6,
+    "只用第一个金标准片段": 3,
+    "整体拒答": 2
+  },
+  "missing_fact_counts": {
+    "保密协议": 4,
+    "报关资质": 2,
+    "保价": 2,
+    "法务部": 2,
+    "陪同": 2,
+    "10个工作日": 2,
+    "行政部": 1,
+    "80元": 1,
+    "数据处理协议": 1,
+    "服务期": 1,
+    "2年": 1,
+    "7天": 1,
+    "8小时": 1,
+    "5000元": 1,
+    "部门负责人": 1
+  },
+  "content_fail_by_behavior": {
+    "answer": 22,
+    "conflict": 3,
+    "partial": 2
+  },
+  "content_fail_reasons": {
+    "缺失必要事实": 24,
+    "证据外数字": 1,
+    "行为错误（拒答 / 冲突 / 部分回答判断）": 2
+  },
+  "lost_vs_C42_multi": [
+    "dv_m21",
+    "dv_m22",
+    "dv_m24",
+    "dv_m08r",
+    "dv_x04",
+    "dv_x06"
+  ],
+  "gained_vs_C42_multi": [
+    "dv_m26",
+    "dv_m27",
+    "dv_m27r"
+  ],
+  "lost_vs_C42_content": [
+    "dv_m21",
+    "dv_m22",
+    "dv_m24",
+    "dv_m08r",
+    "dv_x04",
+    "dv_x06",
+    "dv_p01",
+    "dv_p02",
+    "dv_i02"
+  ],
+  "gained_vs_C42_content": [
+    "dv_m15",
+    "dv_m20",
+    "dv_m26",
+    "dv_m27",
+    "dv_m27r",
+    "dv_r03"
+  ],
+  "unsupported_numbers_items": {
+    "dv_m23": [
+      "2000"
+    ]
+  },
+  "output_tokens_mean": 82.6
+}

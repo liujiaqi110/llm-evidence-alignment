@@ -1,0 +1,441 @@
+{
+  "scorer": "4.0.3",
+  "selection_in_training": {
+    "rule": "max hard_dev multi_complete_v5 → max content_ok_v4 → min whole_refusal → earliest",
+    "per_epoch": [
+      {
+        "dev_multi_v5": 17,
+        "dev_multi_n": 43,
+        "dev_content_v4": 21,
+        "dev_whole_refusal": 3,
+        "dev_refusal_ok": 4,
+        "dev_conflict_ok": 0,
+        "dev_n": 56,
+        "epoch": 1
+      },
+      {
+        "dev_multi_v5": 21,
+        "dev_multi_n": 43,
+        "dev_content_v4": 26,
+        "dev_whole_refusal": 2,
+        "dev_refusal_ok": 4,
+        "dev_conflict_ok": 1,
+        "dev_n": 56,
+        "epoch": 2
+      },
+      {
+        "dev_multi_v5": 23,
+        "dev_multi_n": 43,
+        "dev_content_v4": 29,
+        "dev_whole_refusal": 3,
+        "dev_refusal_ok": 4,
+        "dev_conflict_ok": 1,
+        "dev_n": 56,
+        "epoch": 3
+      }
+    ],
+    "selected_epoch": 3
+  },
+  "rule_recheck_epoch": 3,
+  "per_epoch_full_metrics": {
+    "1": {
+      "multi_complete_v5（多证据完整率，主指标）": {
+        "k": 17,
+        "n": 43,
+        "rate": 0.3953,
+        "ci95_wilson": [
+          0.2637,
+          0.5442
+        ]
+      },
+      "content_ok_v4（内容正确，不含引用格式）": {
+        "k": 21,
+        "n": 56,
+        "rate": 0.375,
+        "ci95_wilson": [
+          0.2601,
+          0.5059
+        ]
+      },
+      "required_fact_coverage（必要事实覆盖率，均值）": {
+        "k": 34.08,
+        "n": 52,
+        "rate": 0.6554
+      },
+      "claim_support_full（陈述支持，全分母）": {
+        "k": 43,
+        "n": 52,
+        "rate": 0.8269,
+        "ci95_wilson": [
+          0.7027,
+          0.9062
+        ]
+      },
+      "citation_accuracy（事实引用正确）": {
+        "k": 45,
+        "n": 47,
+        "rate": 0.9574,
+        "ci95_wilson": [
+          0.8575,
+          0.9883
+        ]
+      },
+      "citation_valid（引用 ID 合法）": {
+        "k": 56,
+        "n": 56,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.9358,
+          1.0
+        ]
+      },
+      "whole_refusal（应回答类整体拒答）": {
+        "k": 3,
+        "n": 52,
+        "rate": 0.0577,
+        "ci95_wilson": [
+          0.0198,
+          0.1564
+        ]
+      },
+      "false_refusal（answer 题错误拒答）": {
+        "k": 2,
+        "n": 45,
+        "rate": 0.0444,
+        "ci95_wilson": [
+          0.0123,
+          0.1483
+        ]
+      },
+      "refusal_ok（正确拒答）": {
+        "k": 4,
+        "n": 4,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.5101,
+          1.0
+        ]
+      },
+      "partial_ok": {
+        "k": 0,
+        "n": 3,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.5615
+        ]
+      },
+      "conflict_true_ok（真冲突识别）": {
+        "k": 0,
+        "n": 4,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.4899
+        ]
+      },
+      "no_conflict_ok（非冲突判断）": {
+        "k": 2,
+        "n": 8,
+        "rate": 0.25,
+        "ci95_wilson": [
+          0.0715,
+          0.5907
+        ]
+      },
+      "injection_resisted": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.6576
+        ]
+      },
+      "format_ok": {
+        "k": 52,
+        "n": 56,
+        "rate": 0.9286,
+        "ci95_wilson": [
+          0.8302,
+          0.9719
+        ]
+      },
+      "first_evidence_only（多证据题只用第一个）": {
+        "k": 5,
+        "n": 43,
+        "rate": 0.1163,
+        "ci95_wilson": [
+          0.0507,
+          0.2448
+        ]
+      }
+    },
+    "2": {
+      "multi_complete_v5（多证据完整率，主指标）": {
+        "k": 21,
+        "n": 43,
+        "rate": 0.4884,
+        "ci95_wilson": [
+          0.3462,
+          0.6325
+        ]
+      },
+      "content_ok_v4（内容正确，不含引用格式）": {
+        "k": 26,
+        "n": 56,
+        "rate": 0.4643,
+        "ci95_wilson": [
+          0.3402,
+          0.593
+        ]
+      },
+      "required_fact_coverage（必要事实覆盖率，均值）": {
+        "k": 37.12,
+        "n": 52,
+        "rate": 0.7138
+      },
+      "claim_support_full（陈述支持，全分母）": {
+        "k": 45,
+        "n": 52,
+        "rate": 0.8654,
+        "ci95_wilson": [
+          0.7473,
+          0.9332
+        ]
+      },
+      "citation_accuracy（事实引用正确）": {
+        "k": 45,
+        "n": 48,
+        "rate": 0.9375,
+        "ci95_wilson": [
+          0.8316,
+          0.9785
+        ]
+      },
+      "citation_valid（引用 ID 合法）": {
+        "k": 56,
+        "n": 56,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.9358,
+          1.0
+        ]
+      },
+      "whole_refusal（应回答类整体拒答）": {
+        "k": 2,
+        "n": 52,
+        "rate": 0.0385,
+        "ci95_wilson": [
+          0.0106,
+          0.1298
+        ]
+      },
+      "false_refusal（answer 题错误拒答）": {
+        "k": 2,
+        "n": 45,
+        "rate": 0.0444,
+        "ci95_wilson": [
+          0.0123,
+          0.1483
+        ]
+      },
+      "refusal_ok（正确拒答）": {
+        "k": 4,
+        "n": 4,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.5101,
+          1.0
+        ]
+      },
+      "partial_ok": {
+        "k": 1,
+        "n": 3,
+        "rate": 0.3333,
+        "ci95_wilson": [
+          0.0615,
+          0.7923
+        ]
+      },
+      "conflict_true_ok（真冲突识别）": {
+        "k": 1,
+        "n": 4,
+        "rate": 0.25,
+        "ci95_wilson": [
+          0.0456,
+          0.6994
+        ]
+      },
+      "no_conflict_ok（非冲突判断）": {
+        "k": 3,
+        "n": 8,
+        "rate": 0.375,
+        "ci95_wilson": [
+          0.1368,
+          0.6943
+        ]
+      },
+      "injection_resisted": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.6576
+        ]
+      },
+      "format_ok": {
+        "k": 54,
+        "n": 56,
+        "rate": 0.9643,
+        "ci95_wilson": [
+          0.8788,
+          0.9902
+        ]
+      },
+      "first_evidence_only（多证据题只用第一个）": {
+        "k": 4,
+        "n": 43,
+        "rate": 0.093,
+        "ci95_wilson": [
+          0.0368,
+          0.216
+        ]
+      }
+    },
+    "3": {
+      "multi_complete_v5（多证据完整率，主指标）": {
+        "k": 23,
+        "n": 43,
+        "rate": 0.5349,
+        "ci95_wilson": [
+          0.3892,
+          0.6749
+        ]
+      },
+      "content_ok_v4（内容正确，不含引用格式）": {
+        "k": 29,
+        "n": 56,
+        "rate": 0.5179,
+        "ci95_wilson": [
+          0.3901,
+          0.6433
+        ]
+      },
+      "required_fact_coverage（必要事实覆盖率，均值）": {
+        "k": 37.78,
+        "n": 52,
+        "rate": 0.7266
+      },
+      "claim_support_full（陈述支持，全分母）": {
+        "k": 45,
+        "n": 52,
+        "rate": 0.8654,
+        "ci95_wilson": [
+          0.7473,
+          0.9332
+        ]
+      },
+      "citation_accuracy（事实引用正确）": {
+        "k": 46,
+        "n": 47,
+        "rate": 0.9787,
+        "ci95_wilson": [
+          0.8889,
+          0.9962
+        ]
+      },
+      "citation_valid（引用 ID 合法）": {
+        "k": 56,
+        "n": 56,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.9358,
+          1.0
+        ]
+      },
+      "whole_refusal（应回答类整体拒答）": {
+        "k": 3,
+        "n": 52,
+        "rate": 0.0577,
+        "ci95_wilson": [
+          0.0198,
+          0.1564
+        ]
+      },
+      "false_refusal（answer 题错误拒答）": {
+        "k": 3,
+        "n": 45,
+        "rate": 0.0667,
+        "ci95_wilson": [
+          0.0229,
+          0.1786
+        ]
+      },
+      "refusal_ok（正确拒答）": {
+        "k": 4,
+        "n": 4,
+        "rate": 1.0,
+        "ci95_wilson": [
+          0.5101,
+          1.0
+        ]
+      },
+      "partial_ok": {
+        "k": 1,
+        "n": 3,
+        "rate": 0.3333,
+        "ci95_wilson": [
+          0.0615,
+          0.7923
+        ]
+      },
+      "conflict_true_ok（真冲突识别）": {
+        "k": 1,
+        "n": 4,
+        "rate": 0.25,
+        "ci95_wilson": [
+          0.0456,
+          0.6994
+        ]
+      },
+      "no_conflict_ok（非冲突判断）": {
+        "k": 3,
+        "n": 8,
+        "rate": 0.375,
+        "ci95_wilson": [
+          0.1368,
+          0.6943
+        ]
+      },
+      "injection_resisted": {
+        "k": 0,
+        "n": 2,
+        "rate": 0.0,
+        "ci95_wilson": [
+          0.0,
+          0.6576
+        ]
+      },
+      "format_ok": {
+        "k": 54,
+        "n": 56,
+        "rate": 0.9643,
+        "ci95_wilson": [
+          0.8788,
+          0.9902
+        ]
+      },
+      "first_evidence_only（多证据题只用第一个）": {
+        "k": 3,
+        "n": 43,
+        "rate": 0.0698,
+        "ci95_wilson": [
+          0.024,
+          0.1861
+        ]
+      }
+    }
+  }
+}

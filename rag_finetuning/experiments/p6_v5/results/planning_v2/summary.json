@@ -1,0 +1,612 @@
+{
+  "note": "自动规则评分（v4.0.1），provisional；hard_dev 为开发集，不作为泛化证据",
+  "conditions": {
+    "A": "3B v4 s42 原始 RAG",
+    "B": "3B v4 s42 + 现有证据覆盖生成",
+    "C": "3B v4 s42 + Planning v2",
+    "D": "7B 原始 RAG",
+    "E": "7B + Planning v2",
+    "F": "3B v4 s42 + Planning v2.1（开发集诊断后修复）",
+    "G": "7B + Planning v2.1（开发集诊断后修复）"
+  },
+  "metrics": {
+    "A": {
+      "multi_complete_v5": "26/43",
+      "content_ok_v4": "32/56",
+      "required_fact_coverage_mean": 0.792,
+      "claim_support_full": "42/52",
+      "citation_accuracy": "47/50",
+      "citation_valid": "56/56",
+      "unsupported_inference_items(证据外数字或禁止内容)": 1,
+      "whole_refusal_on_answerable": "1/52",
+      "refusal_ok": "3/4",
+      "conflict_true_ok": "1/4",
+      "no_conflict_ok": "5/8",
+      "injection_resisted": "1/2"
+    },
+    "B": {
+      "multi_complete_v5": "16/43",
+      "content_ok_v4": "19/56",
+      "required_fact_coverage_mean": 0.679,
+      "claim_support_full": "23/52",
+      "citation_accuracy": "48/50",
+      "citation_valid": "56/56",
+      "unsupported_inference_items(证据外数字或禁止内容)": 13,
+      "whole_refusal_on_answerable": "3/52",
+      "refusal_ok": "3/4",
+      "conflict_true_ok": "2/4",
+      "no_conflict_ok": "5/8",
+      "injection_resisted": "0/2"
+    },
+    "C": {
+      "multi_complete_v5": "17/43",
+      "content_ok_v4": "22/56",
+      "required_fact_coverage_mean": 0.686,
+      "claim_support_full": "23/52",
+      "citation_accuracy": "42/44",
+      "citation_valid": "55/56",
+      "unsupported_inference_items(证据外数字或禁止内容)": 9,
+      "whole_refusal_on_answerable": "9/52",
+      "refusal_ok": "4/4",
+      "conflict_true_ok": "4/4",
+      "no_conflict_ok": "4/8",
+      "injection_resisted": "0/2"
+    },
+    "D": {
+      "multi_complete_v5": "25/43",
+      "content_ok_v4": "31/56",
+      "required_fact_coverage_mean": 0.831,
+      "claim_support_full": "18/52",
+      "citation_accuracy": "35/52",
+      "citation_valid": "55/56",
+      "unsupported_inference_items(证据外数字或禁止内容)": 5,
+      "whole_refusal_on_answerable": "0/52",
+      "refusal_ok": "4/4",
+      "conflict_true_ok": "1/4",
+      "no_conflict_ok": "5/8",
+      "injection_resisted": "1/2"
+    },
+    "E": {
+      "multi_complete_v5": "17/43",
+      "content_ok_v4": "25/56",
+      "required_fact_coverage_mean": 0.676,
+      "claim_support_full": "19/52",
+      "citation_accuracy": "35/43",
+      "citation_valid": "53/56",
+      "unsupported_inference_items(证据外数字或禁止内容)": 5,
+      "whole_refusal_on_answerable": "9/52",
+      "refusal_ok": "4/4",
+      "conflict_true_ok": "3/4",
+      "no_conflict_ok": "4/8",
+      "injection_resisted": "0/2"
+    },
+    "F": {
+      "multi_complete_v5": "20/43",
+      "content_ok_v4": "16/56",
+      "required_fact_coverage_mean": 0.719,
+      "claim_support_full": "24/52",
+      "citation_accuracy": "45/45",
+      "citation_valid": "56/56",
+      "unsupported_inference_items(证据外数字或禁止内容)": 20,
+      "whole_refusal_on_answerable": "9/52",
+      "refusal_ok": "3/4",
+      "conflict_true_ok": "4/4",
+      "no_conflict_ok": "3/8",
+      "injection_resisted": "0/2",
+      "stage2_multi_complete_v5(修订前)": "19/43",
+      "stage2_content_ok_v4(修订前)": "16/56"
+    },
+    "G": {
+      "multi_complete_v5": "23/43",
+      "content_ok_v4": "29/56",
+      "required_fact_coverage_mean": 0.782,
+      "claim_support_full": "28/52",
+      "citation_accuracy": "44/48",
+      "citation_valid": "55/56",
+      "unsupported_inference_items(证据外数字或禁止内容)": 4,
+      "whole_refusal_on_answerable": "3/52",
+      "refusal_ok": "4/4",
+      "conflict_true_ok": "3/4",
+      "no_conflict_ok": "3/8",
+      "injection_resisted": "0/2",
+      "stage2_multi_complete_v5(修订前)": "19/43",
+      "stage2_content_ok_v4(修订前)": "25/56"
+    }
+  },
+  "extraction": {
+    "B": {
+      "required_fact_extraction_recall": 0.453,
+      "n_required_facts": 139,
+      "items_with_full_extraction": 6,
+      "n_answerable_items": 52,
+      "extracted_facts": 58,
+      "precision_chunk_level(来源为金标准片段)": 0.862,
+      "precision_fact_level(含某条必要事实)": 0.862,
+      "grounded_ratio(通过原文核对的比例)": 0.967,
+      "dropped_by_reason": {
+        "原文依据不足（bigram 召回 0.00）": 1,
+        "原文依据不足（bigram 召回 0.20）": 1
+      }
+    },
+    "C": {
+      "required_fact_extraction_recall": 0.885,
+      "n_required_facts": 139,
+      "items_with_full_extraction": 39,
+      "n_answerable_items": 52,
+      "extracted_facts": 184,
+      "precision_chunk_level(来源为金标准片段)": 0.582,
+      "precision_fact_level(含某条必要事实)": 0.592,
+      "grounded_ratio(通过原文核对的比例)": 0.979,
+      "dropped_by_reason": {
+        "原文依据不足": 3,
+        "指令性文字（资料中的指令不执行）": 1
+      },
+      "multi_items_extraction_recall_mean": 0.886,
+      "multi_items_full_extraction": 31
+    },
+    "E": {
+      "required_fact_extraction_recall": 0.295,
+      "n_required_facts": 139,
+      "items_with_full_extraction": 6,
+      "n_answerable_items": 52,
+      "extracted_facts": 40,
+      "precision_chunk_level(来源为金标准片段)": 1.0,
+      "precision_fact_level(含某条必要事实)": 0.925,
+      "grounded_ratio(通过原文核对的比例)": 1.0,
+      "dropped_by_reason": {},
+      "multi_items_extraction_recall_mean": 0.264,
+      "multi_items_full_extraction": 1
+    },
+    "F": {
+      "required_fact_extraction_recall": 0.871,
+      "n_required_facts": 139,
+      "items_with_full_extraction": 37,
+      "n_answerable_items": 52,
+      "extracted_facts": 209,
+      "precision_chunk_level(来源为金标准片段)": 0.569,
+      "precision_fact_level(含某条必要事实)": 0.56,
+      "grounded_ratio(通过原文核对的比例)": 0.963,
+      "dropped_by_reason": {
+        "原文依据不足": 8
+      },
+      "multi_items_extraction_recall_mean": 0.884,
+      "multi_items_full_extraction": 31
+    },
+    "G": {
+      "required_fact_extraction_recall": 0.619,
+      "n_required_facts": 139,
+      "items_with_full_extraction": 19,
+      "n_answerable_items": 52,
+      "extracted_facts": 107,
+      "precision_chunk_level(来源为金标准片段)": 0.907,
+      "precision_fact_level(含某条必要事实)": 0.785,
+      "grounded_ratio(通过原文核对的比例)": 1.0,
+      "dropped_by_reason": {},
+      "multi_items_extraction_recall_mean": 0.624,
+      "multi_items_full_extraction": 12
+    }
+  },
+  "causes_on_multi": {
+    "A": {
+      "事实遗漏（无规划器，无法区分）": 16,
+      "正确": 25,
+      "评分器误判（疑似，见争议预审）": 2
+    },
+    "B": {
+      "事实遗漏（无规划器，无法区分）": 19,
+      "正确": 14,
+      "生成器错误组合事实": 8,
+      "评分器误判（疑似，见争议预审）": 2
+    },
+    "C": {
+      "原文存在，但规划器未提取": 7,
+      "规划器提取正确，但生成器遗漏": 13,
+      "正确": 11,
+      "生成器错误组合事实": 7,
+      "评分器误判（疑似，见争议预审）": 3,
+      "条件 / 版本 / 范围理解错误": 2
+    },
+    "D": {
+      "事实遗漏（无规划器，无法区分）": 15,
+      "正确": 23,
+      "评分器误判（疑似，见争议预审）": 2,
+      "生成器错误组合事实": 3
+    },
+    "E": {
+      "原文存在，但规划器未提取": 23,
+      "正确": 15,
+      "生成器错误组合事实": 3,
+      "评分器误判（疑似，见争议预审）": 2
+    },
+    "F": {
+      "正确": 7,
+      "评分器误判（疑似，见争议预审）": 4,
+      "生成器错误组合事实": 14,
+      "规划器提取正确，但生成器遗漏": 8,
+      "原文存在，但规划器未提取": 7,
+      "条件 / 版本 / 范围理解错误": 3
+    },
+    "G": {
+      "正确": 21,
+      "原文存在，但规划器未提取": 17,
+      "生成器错误组合事实": 1,
+      "评分器误判（疑似，见争议预审）": 2,
+      "规划器提取正确，但生成器遗漏": 1,
+      "条件 / 版本 / 范围理解错误": 1
+    }
+  },
+  "transitions": {
+    "A→B": {
+      "fixed": [
+        "dv_i01",
+        "dv_s01"
+      ],
+      "broken": [
+        "dv_m01r",
+        "dv_m02",
+        "dv_m04r",
+        "dv_m08",
+        "dv_m08r",
+        "dv_m13",
+        "dv_m14",
+        "dv_m21",
+        "dv_m22",
+        "dv_m26r",
+        "dv_m28r",
+        "dv_x05"
+      ],
+      "net": -10
+    },
+    "A→C": {
+      "fixed": [
+        "dv_m26",
+        "dv_s01",
+        "dv_x01"
+      ],
+      "broken": [
+        "dv_m02",
+        "dv_m06",
+        "dv_m07",
+        "dv_m08",
+        "dv_m08r",
+        "dv_m13",
+        "dv_m14",
+        "dv_m20",
+        "dv_m22",
+        "dv_m24",
+        "dv_m25",
+        "dv_x05"
+      ],
+      "net": -9
+    },
+    "B→C": {
+      "fixed": [
+        "dv_m01r",
+        "dv_m04r",
+        "dv_m21",
+        "dv_m26",
+        "dv_m26r",
+        "dv_m28r",
+        "dv_x01"
+      ],
+      "broken": [
+        "dv_i01",
+        "dv_m06",
+        "dv_m07",
+        "dv_m20",
+        "dv_m24",
+        "dv_m25"
+      ],
+      "net": 1
+    },
+    "D→E": {
+      "fixed": [
+        "dv_m09",
+        "dv_x02"
+      ],
+      "broken": [
+        "dv_m01r",
+        "dv_m08r",
+        "dv_m13",
+        "dv_m17r",
+        "dv_m20",
+        "dv_m26",
+        "dv_m26r",
+        "dv_m27",
+        "dv_s01",
+        "dv_x04"
+      ],
+      "net": -8
+    },
+    "C→E": {
+      "fixed": [
+        "dv_m02",
+        "dv_m05r",
+        "dv_m06",
+        "dv_m07",
+        "dv_m08",
+        "dv_m09",
+        "dv_m14",
+        "dv_m16",
+        "dv_m27r",
+        "dv_x02",
+        "dv_x05"
+      ],
+      "broken": [
+        "dv_m01r",
+        "dv_m03",
+        "dv_m21",
+        "dv_m26",
+        "dv_m26r",
+        "dv_m28",
+        "dv_m28r",
+        "dv_s01",
+        "dv_x01",
+        "dv_x04",
+        "dv_x06"
+      ],
+      "net": 0
+    },
+    "A→F": {
+      "fixed": [
+        "dv_m01",
+        "dv_m05r",
+        "dv_m16",
+        "dv_m27r",
+        "dv_s01"
+      ],
+      "broken": [
+        "dv_m01r",
+        "dv_m07",
+        "dv_m08",
+        "dv_m08r",
+        "dv_m13",
+        "dv_m14",
+        "dv_m20",
+        "dv_m22",
+        "dv_m24",
+        "dv_m28",
+        "dv_m28r"
+      ],
+      "net": -6
+    },
+    "C→F": {
+      "fixed": [
+        "dv_m01",
+        "dv_m02",
+        "dv_m05r",
+        "dv_m06",
+        "dv_m16",
+        "dv_m25",
+        "dv_m27r",
+        "dv_x05"
+      ],
+      "broken": [
+        "dv_m01r",
+        "dv_m26",
+        "dv_m28",
+        "dv_m28r",
+        "dv_x01"
+      ],
+      "net": 3
+    },
+    "D→G": {
+      "fixed": [
+        "dv_m01",
+        "dv_m03",
+        "dv_m09",
+        "dv_m18",
+        "dv_m21",
+        "dv_m24",
+        "dv_x01"
+      ],
+      "broken": [
+        "dv_m01r",
+        "dv_m05r",
+        "dv_m16",
+        "dv_m17r",
+        "dv_m26",
+        "dv_m26r",
+        "dv_m27",
+        "dv_x04",
+        "dv_x07"
+      ],
+      "net": -2
+    },
+    "E→G": {
+      "fixed": [
+        "dv_m01",
+        "dv_m03",
+        "dv_m08r",
+        "dv_m13",
+        "dv_m18",
+        "dv_m20",
+        "dv_m21",
+        "dv_m24",
+        "dv_s01",
+        "dv_x01"
+      ],
+      "broken": [
+        "dv_m05r",
+        "dv_m16",
+        "dv_x02",
+        "dv_x07"
+      ],
+      "net": 6
+    },
+    "F→G": {
+      "fixed": [
+        "dv_m07",
+        "dv_m08",
+        "dv_m08r",
+        "dv_m09",
+        "dv_m13",
+        "dv_m14",
+        "dv_m18",
+        "dv_m20",
+        "dv_m24",
+        "dv_x01"
+      ],
+      "broken": [
+        "dv_m05r",
+        "dv_m16",
+        "dv_m25",
+        "dv_m26r",
+        "dv_x04",
+        "dv_x06",
+        "dv_x07"
+      ],
+      "net": 3
+    }
+  },
+  "concentration": {
+    "A→C": {
+      "fixed_by_doc": {
+        "dv_data_export": 1,
+        "dv_admin_chat_notice": 1,
+        "dv_lab_visit": 1,
+        "dv_notices_2026": 1,
+        "dv_overtime_meal": 1
+      },
+      "fixed_by_tag": {
+        "cross_doc": 2,
+        "multi2": 1,
+        "gold_last": 1
+      }
+    },
+    "D→E": {
+      "fixed_by_doc": {
+        "dv_overtime_meal": 2,
+        "dv_notices_2026": 1
+      },
+      "fixed_by_tag": {
+        "exception": 1,
+        "cross_doc": 1
+      }
+    },
+    "A→F": {
+      "fixed_by_doc": {
+        "dv_meeting_room": 2,
+        "dv_sample_shipping": 1,
+        "dv_training_fund": 1,
+        "dv_admin_chat_notice": 1,
+        "dv_lab_visit": 1
+      },
+      "fixed_by_tag": {
+        "multi2": 3,
+        "gold_first": 2,
+        "multi4": 1,
+        "gold_last": 1,
+        "cross_doc": 1
+      }
+    },
+    "D→G": {
+      "fixed_by_doc": {
+        "dv_overtime_meal": 3,
+        "dv_meeting_room": 2,
+        "dv_data_export": 1,
+        "dv_lab_visit": 1,
+        "dv_notices_2026": 1
+      },
+      "fixed_by_tag": {
+        "multi2": 5,
+        "gold_first": 1,
+        "exception": 1,
+        "limit_trap": 1,
+        "cross_doc": 1
+      }
+    }
+  },
+  "cost": {
+    "A": {
+      "latency_ms_p50": 11500.900000000001,
+      "latency_ms_p95": 14946.8,
+      "latency_ms_mean": 10743.2,
+      "calls_mean": 1,
+      "input_tokens_mean": 597.0,
+      "output_tokens_mean": 89.1,
+      "stage_latency_ms_total_mean": {},
+      "revised_items": 0
+    },
+    "B": {
+      "latency_ms_p50": 24175.15,
+      "latency_ms_p95": 34671.8,
+      "latency_ms_mean": 24962.4,
+      "calls_mean": 2.14,
+      "input_tokens_mean": 1251.0,
+      "output_tokens_mean": 221.8,
+      "stage_latency_ms_total_mean": {
+        "extract": 12026.9,
+        "generate": 11611.8,
+        "revise": 1323.8
+      },
+      "revised_items": 6
+    },
+    "C": {
+      "latency_ms_p50": 64302.45,
+      "latency_ms_p95": 100042.0,
+      "latency_ms_mean": 60808.7,
+      "calls_mean": 5.91,
+      "input_tokens_mean": 2629.5,
+      "output_tokens_mean": 536.9,
+      "stage_latency_ms_total_mean": {
+        "extract": 40269.3,
+        "generate": 11562.5,
+        "revise": 8976.8
+      },
+      "revised_items": 34
+    },
+    "D": {
+      "latency_ms_p50": 4800.75,
+      "latency_ms_p95": 10424.99,
+      "latency_ms_mean": 5478.6,
+      "calls_mean": 1,
+      "input_tokens_mean": 597.0,
+      "output_tokens_mean": 113.4,
+      "stage_latency_ms_total_mean": {},
+      "revised_items": 0
+    },
+    "E": {
+      "latency_ms_p50": 7579.7,
+      "latency_ms_p95": 15968.5,
+      "latency_ms_mean": 8151.4,
+      "calls_mean": 5.3,
+      "input_tokens_mean": 2101.4,
+      "output_tokens_mean": 169.5,
+      "stage_latency_ms_total_mean": {
+        "extract": 3022.0,
+        "generate": 4125.1,
+        "revise": 1004.3
+      },
+      "revised_items": 6
+    },
+    "F": {
+      "latency_ms_p50": 68716.15,
+      "latency_ms_p95": 115589.2,
+      "latency_ms_mean": 71021.9,
+      "calls_mean": 6.05,
+      "input_tokens_mean": 3002.9,
+      "output_tokens_mean": 632.9,
+      "stage_latency_ms_total_mean": {
+        "extract": 44623.6,
+        "generate": 13374.2,
+        "revise": 13024.0
+      },
+      "revised_items": 4
+    },
+    "G": {
+      "latency_ms_p50": 12167.25,
+      "latency_ms_p95": 23574.5,
+      "latency_ms_mean": 13204.5,
+      "calls_mean": 5.54,
+      "input_tokens_mean": 2554.4,
+      "output_tokens_mean": 291.3,
+      "stage_latency_ms_total_mean": {
+        "extract": 6563.1,
+        "generate": 4323.4,
+        "revise": 2318.0
+      },
+      "revised_items": 16
+    }
+  }
+}

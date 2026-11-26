@@ -1,0 +1,108 @@
+{
+  "hard_dev:A": {
+    "n": 56,
+    "citation_valid_402": 51,
+    "citation_valid_403": 46,
+    "format_ok_402": 14,
+    "format_ok_403": 11,
+    "content_ok_v4（不受影响）": 18
+  },
+  "hard_dev:A_plan": {
+    "n": 56,
+    "citation_valid_402": 53,
+    "citation_valid_403": 51,
+    "format_ok_402": 28,
+    "format_ok_403": 28,
+    "content_ok_v4（不受影响）": 28
+  },
+  "hard_dev:B": {
+    "n": 56,
+    "citation_valid_402": 56,
+    "citation_valid_403": 56,
+    "format_ok_402": 53,
+    "format_ok_403": 53,
+    "content_ok_v4（不受影响）": 24
+  },
+  "hard_dev:C42": {
+    "n": 56,
+    "citation_valid_402": 56,
+    "citation_valid_403": 56,
+    "format_ok_402": 55,
+    "format_ok_403": 55,
+    "content_ok_v4（不受影响）": 32
+  },
+  "hard_dev:C42_plan": {
+    "n": 56,
+    "citation_valid_402": 56,
+    "citation_valid_403": 56,
+    "format_ok_402": 53,
+    "format_ok_403": 53,
+    "content_ok_v4（不受影响）": 22
+  },
+  "hard_dev:C42_pv21": {
+    "n": 56,
+    "citation_valid_402": 56,
+    "citation_valid_403": 56,
+    "format_ok_402": 51,
+    "format_ok_403": 51,
+    "content_ok_v4（不受影响）": 24
+  },
+  "hard_dev:C42_pv2": {
+    "n": 56,
+    "citation_valid_402": 55,
+    "citation_valid_403": 55,
+    "format_ok_402": 50,
+    "format_ok_403": 50,
+    "content_ok_v4（不受影响）": 26
+  },
+  "hard_dev:C43": {
+    "n": 56,
+    "citation_valid_402": 56,
+    "citation_valid_403": 56,
+    "format_ok_402": 56,
+    "format_ok_403": 56,
+    "content_ok_v4（不受影响）": 29
+  },
+  "hard_dev:D": {
+    "n": 56,
+    "citation_valid_402": 55,
+    "citation_valid_403": 55,
+    "format_ok_402": 48,
+    "format_ok_403": 48,
+    "content_ok_v4（不受影响）": 31
+  },
+  "hard_dev:D_plan": {
+    "n": 56,
+    "citation_valid_402": 56,
+    "citation_valid_403": 56,
+    "format_ok_402": 54,
+    "format_ok_403": 54,
+    "content_ok_v4（不受影响）": 33
+  },
+  "hard_dev:D_pv21": {
+    "n": 56,
+    "citation_valid_402": 55,
+    "citation_valid_403": 55,
+    "format_ok_402": 51,
+    "format_ok_403": 51,
+    "content_ok_v4（不受影响）": 30
+  },
+  "hard_dev:D_pv2": {
+    "n": 56,
+    "citation_valid_402": 53,
+    "citation_valid_403": 53,
+    "format_ok_402": 47,
+    "format_ok_403": 47,
+    "content_ok_v4（不受影响）": 26
+  },
+  "dpo_pairs_with_extra_malformed": {
+    "rejected:真实模型错误": 19
+  },
+  "training_candidates_token_counts": {
+    "A:P1_non_hex_chars": 51,
+    "A:P3_hex12_embedded": 5,
+    "A:hex_wrong_length（4.0.2 已识别）": 17,
+    "B:P3_hex12_embedded": 1,
+    "B:hex_wrong_length（4.0.2 已识别）": 4
+  }
+}

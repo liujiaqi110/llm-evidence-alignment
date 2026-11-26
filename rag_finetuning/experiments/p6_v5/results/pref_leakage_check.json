@@ -1,0 +1,70 @@
+{
+  "1_doc_isolation": {
+    "train_docs": 152,
+    "eval_docs": 75,
+    "name_overlap": [],
+    "chunk_text_overlap": 0
+  },
+  "2_evidence_from_training_corpus": {
+    "evidence_chunks_used": 494,
+    "not_in_training_corpus": [],
+    "in_eval_corpus": []
+  },
+  "3_question_similarity": {
+    "n_train_questions": 451,
+    "n_eval_questions": 471,
+    "max_jaccard_vs_eval": 0.345,
+    "n_over_0.5": 0,
+    "top5": [
+      [
+        0.345,
+        "系统升级期间申请翻译委托，要提前几个工作日？"
+      ],
+      [
+        0.345,
+        "每季度最后一周申请显示器，要提前几个工作日？"
+      ],
+      [
+        0.333,
+        "法定节假日期间申请测试账号，要提前几个工作日？"
+      ],
+      [
+        0.321,
+        "耗材要提前多久申请、找谁审批？每次能用多久？"
+      ],
+      [
+        0.321,
+        "样机要提前多久申请、找谁审批？每次能用多久？"
+      ]
+    ],
+    "internal_near_duplicate_pairs(>0.8)": 21,
+    "pairs_per_question_max": 2
+  },
+  "4_frozen_eval_hashes": {
+    "hard_dev": {
+      "current": "3b79e057c3e7037601944ab1fdd58a4c3e3eeba15314ed0d2617149540ef7987",
+      "manifest": "3b79e057c3e7037601944ab1fdd58a4c3e3eeba15314ed0d2617149540ef7987",
+      "freeze_json": "3b79e057c3e7037601944ab1fdd58a4c3e3eeba15314ed0d2617149540ef7987",
+      "unchanged": true
+    },
+    "test_v5": {
+      "current": "396150eafc3130757d9d1d60f2e3c4c96459fd1361cdb370815e6c8ceadffee4",
+      "manifest": "396150eafc3130757d9d1d60f2e3c4c96459fd1361cdb370815e6c8ceadffee4",
+      "freeze_json": "396150eafc3130757d9d1d60f2e3c4c96459fd1361cdb370815e6c8ceadffee4",
+      "unchanged": true
+    }
+  },
+  "5_static_code_check": {
+    "build_pref_ef.py": {
+      "reads_eval_reference_answers_or_facts": false,
+      "reads_oracle_outputs": false,
+      "reads_eval_questions_for_similarity_only": true
+    },
+    "build_pref_pairs.py": {
+      "reads_eval_reference_answers_or_facts": false,
+      "reads_oracle_outputs": false,
+      "reads_eval_questions_for_similarity_only": false
+    }
+  },
+  "all_checks_passed": true
+}

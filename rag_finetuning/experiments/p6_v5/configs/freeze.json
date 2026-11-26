@@ -1,0 +1,292 @@
+{
+  "frozen_before": "任何 v5 训练数据构建、任何 v5 训练、任何候选选择之前（只看过 hard_dev 上 A 组的生成进度，未看任何评分结果）",
+  "test_v5": {
+    "built": "data/test_v5/built/test_v5.jsonl",
+    "built_sha256": "47f0a7c62346ef66a2010dbc908492938660e225900a90e3ae663bf0f10af736",
+    "frozen_input": "data/frozen/test_v5.jsonl",
+    "frozen_sha256": "396150eafc3130757d9d1d60f2e3c4c96459fd1361cdb370815e6c8ceadffee4",
+    "yaml_sha256": "ea766b6907164116970e7175c1a8ad7b9ce8a88a226c073e847ee2702f38c534",
+    "corpus_bundle_sha256": "db251842f7c26a5abeb13cbbf08fa2397030c028ff89880937602698e7152a78",
+    "n": 125,
+    "docs": 23,
+    "multi_items_v5": 80,
+    "conflict_family": 22,
+    "review_status": "provisional（AI 编写，未经人工审核）"
+  },
+  "hard_dev": {
+    "built_sha256": "8117f2f8a6b0439f28ad56cb43785172ef00a860617653d77161e4350af7a2fb",
+    "frozen_sha256": "3b79e057c3e7037601944ab1fdd58a4c3e3eeba15314ed0d2617149540ef7987",
+    "n": 56,
+    "use": "只用于候选 / 停止点 / 推理方案阈值选择，不作为泛化证据"
+  },
+  "scorer": {
+    "file": "scripts/scoring_v4.py",
+    "sha256": "a230bfe1a4f5e884ccfaeec3e32746da2c92ada630bb4b64ae47b88c5ad6fe59",
+    "base": "p6_v4/scripts/scoring_v3.py（判定逻辑不变）",
+    "primary_metric": "multi_complete_v5（多证据完整率：is_multi_v5 题上全部必要事实答到）",
+    "version": "4.0.3",
+    "sha256_at_freeze（4.0，18e92d2）": "f7a01c91ac20f84be7570563ab7465acd72724351273cb16d681f918f3a17314",
+    "history": "4.0 → 4.0.1（修订 1）→ 4.0.2（修订 2）→ 4.0.3（修订 4）；各版本 sha256 见 amendments"
+  },
+  "prompt": "平台 rag_v1.0（ragas_eval.rag_pipeline.build_messages），所有组相同；*_plan 组仅在用户消息末尾追加已核对事实清单，并可能多一次修订调用",
+  "decoding": {
+    "3B": "transformers 4-bit NF4，贪心，max_new_tokens 384",
+    "7B": "Ollama qwen2.5:7b Q4_K_M digest 845dbda0…，temperature 0，seed 42，num_predict 384"
+  },
+  "groups": {
+    "A": "3B Base",
+    "B": "3B v3 QLoRA",
+    "C42/C43": "3B v4 QLoRA 两个种子",
+    "S42/S43": "3B v5 针对性 SFT 两个种子",
+    "P42/P43": "3B v5 DPO（分别初始化自 S42 / S43）",
+    "D": "7B Base",
+    "A_plan": "3B Base + 证据覆盖感知生成",
+    "D_plan": "7B + 证据覆盖感知生成"
+  },
+  "training_recipes": {
+    "sft": "与 P6-v3 / v4 完全相同：Qwen2.5-3B-Instruct 4-bit NF4，LoRA r8 α16 dropout0.05 全部 7 个线性层，lr 2e-4 cosine warmup0.1，3 epoch，有效批 8，max_seq_len 1024，completion-only；种子 42 / 43",
+    "dpo": "TRL DPOTrainer，sigmoid loss，beta 0.1，策略 = SFT 适配器继续训练（可训练副本），参考 = 同一 SFT 适配器的冻结副本（ref_adapter_name），lr 2e-5 cosine warmup0.1，2 epoch，批 1 × 梯度累积 8，max_length 1024，max_prompt_length 896，梯度检查点；显存不足时只允许调整序列长度与预计算参考 logp"
+  },
+  "checkpoint_rule": "每个 epoch（DPO 每半个 epoch）保存适配器；在 hard_dev 上按 multi_complete_v5 最高 → content_ok_v4 最高 → whole_refusal 最少 → 更早 的顺序选择；test_v5 不参与",
+  "plan_thresholds": "evidence_planning.GROUND_MIN / COVER_MIN 只允许在 hard_dev 上调整，进入 test 前冻结并记录哈希",
+  "promotion_gate_v5（新 3B 权重候选 vs B，两个种子分别判定；聚类 bootstrap 按源文档）": [
+    "1 多证据完整率实质改善：multi_complete_v5 差值 ≥ +0.10 且 CI 下界 > 0",
+    "2 内容正确率不明显低于已有最好的 3B 候选（B / C42 / C43 中 content_ok_v4 最高者）：差值 ≥ -0.05 且 CI 下界 ≥ -0.10",
+    "3 错误拒答不明显恶化：应回答类整体拒答率相对 B 差值 ≤ +0.03",
+    "4 正确拒答不明显恶化：refusal_ok 相对 B 差值 ≥ -0.09（12 题中最多少 1 题）",
+    "5 陈述支持不下降：claim_support_full 相对 B 差值点估计 ≥ 0",
+    "6 不引入新的明显幻觉：injection_resisted 不低于 B；citation_valid 相对 B 差值 ≥ -0.02；含证据外数字的题数不多于 B + 2",
+    "7 部署成本：单阶段 3B 候选 latency p50 ≤ 1.3 × B；推理方案（*_plan）p50 ≤ 3 × 同模型单阶段，且显存不超过 8 GB"
+  ],
+  "plan_gate（推理方案 vs 同模型单阶段，单独报告，不计入微调收益）": "条件 1、3、4、5、6、7 同上，比较对象换成同模型单阶段（A_plan vs A，D_plan vs D）",
+  "claim_rules": [
+    "两个种子都通过 1–7 才称“优于 v3（自动评测、provisional）”；只有一个种子通过时称“单种子结果，不稳定”",
+    "DPO 只有真正以偏好损失训练（日志中有 rewards/chosen、rewards/rejected、rewards/margins）才可称 DPO；否则报告未完成",
+    "人工审核完成前不得称为可靠改善；开发集结果不作为泛化证据"
+  ],
+  "test_runs_allowed": "每组在 test_v5 上只生成一次（run_eval_v5 gen 对 test* 拒绝覆盖）",
+  "amendments": [
+    {
+      "when": "2026-11-23，冻结（18e92d2）之后、任何 v5 训练 / 候选选择 / test_v5 运行之前；开发集评分结果尚未查看",
+      "what": "评分器 v4 → 4.0.1：引用 ID（含畸形 ID）中的数字不再计为“证据外数字”（新字段 unsupported_numbers_v4），使引用问题只影响 citation_valid，不影响 content_ok_v4",
+      "why": "单元测试发现畸形 ID 'aaaaaaaaaa0' 中的 '0' 被判为证据外数字，导致引用格式问题掩盖内容判断，违背预注册的“格式问题不能掩盖内容正确与否”",
+      "scorer_sha256_new": "53b969d43cd1fbe6c1d7c353c9d9ff22eecfc182f9c77bc2342839bc49808c42",
+      "effect_on_eval_sets": "hard_dev / test_v5 的构建结果与哈希不变（参考答案自检全部通过）；门槛不变"
+    },
+    {
+      "when": "2026-11-24，任何 v5 训练与 test_v5 运行之前",
+      "what": "评分器 v4 → 4.0.2：规划清单的内部事实编号（F1、[F2]、- F7：）中的数字不计为证据外数字，另记 internal_fact_ids；默认版本 4.0.2，可用 scorer='4.0.1' 复现上一版",
+      "why": "hard_dev 规划组答案照抄清单编号，4.0.1 把编号数字判为证据外数字，使内容正确被低估（见 SCORER_REGRESSION_REPORT.md）",
+      "regression_tests": "rag_finetuning/tests/test_p6v5_scorer_regression.py（8 项）",
+      "unified_rescore": "results/scorer_402/（全部 hard_dev 组与 Oracle 消融组）；多证据完整率在所有组上不变；只有 5 个规划组的内容正确变化",
+      "scorer_sha256_new": "9c56176a1a325a32e95b8b13bd90f6c8f6bb69546f0b3aed79d3920e396a36f7",
+      "gates_changed": false,
+      "eval_set_hashes_changed": false
+    },
+    {
+      "when": "2026-11-24，任何 v5 正式训练与 test_v5 运行之前（只做过 DPO 显存冒烟测试，未训练任何正式模型）",
+      "status": "frozen（2026-11-24 冻结：用户决定跳过剩余人工审核（仅抽查偏好对 16 条、hard_dev 15 条，均在看过 AI 辅助后判断）；未经完整人工审核）",
+      "what": "DPO 显存选项增加 use_logits_to_keep=True（TRL：只对回答 token 计算 logits）；其余超参数不变",
+      "why": "冒烟测试：1024 / 768 / 1024+预计算参考 logp 都在第 1 步 OOM（P6_MEM_FRACTION=0.74，上限 5.92 GiB）；只有 1024+use_logits_to_keep 完成 10 步（峰值 5577 MiB）。协议原只允许调整序列长度和预计算参考 logp，二者都不足",
+      "math_equivalence": "只跳过 prompt 位置的 logits 计算；DPO 损失本来只用回答 token 的 logp，所以损失定义不变",
+      "evidence": "DPO_MEMORY_SMOKE_REPORT.md；<WORKSPACE>/runs/p6_v5/dpo_smoke_from_v4s42_smoke_r*/run_record.json",
+      "gates_changed": false,
+      "eval_set_hashes_changed": false,
+      "numerical_note": "前向等价（logp 差 ≤ 1.5e-5）；梯度近似等价（余弦 ≥ 0.99991，bf16 舍入量级）；不逐位相同（DPO_LOGITS_EQUIVALENCE_REPORT.md）"
+    },
+    {
+      "when": "2026-11-24，任何 v5 正式训练与 test_v5 运行之前",
+      "status": "frozen（2026-11-24 冻结：用户决定跳过剩余人工审核（仅抽查偏好对 16 条、hard_dev 15 条，均在看过 AI 辅助后判断）；未经完整人工审核）",
+      "what": "评分器 4.0.3（提议）：引用区域内非十六进制 / 大写 / 嵌入式畸形引用 ID 计为畸形，只影响 citation_valid / format_ok，不影响 content_ok_v4",
+      "code": "scripts/scorer_403_proposal.py（提议实现）；tests/test_p6v5_scorer_403_proposal.py",
+      "unified_rescore": "results/hard_dev_scorer403/（全部 hard_dev 组）：只有 A、A_plan 的 citation_valid / format_ok 变化；content_ok_v4、multi_complete_v5 全部不变",
+      "gates_changed": false,
+      "eval_set_hashes_changed": false,
+      "scorer_sha256_new": "a230bfe1a4f5e884ccfaeec3e32746da2c92ada630bb4b64ae47b88c5ad6fe59",
+      "regression_tests": "rag_finetuning/tests/test_p6v5_scorer_403_proposal.py（16 项：4.0.2 漏判复现、规则行为、正式 4.0.3 行为）"
+    },
+    {
+      "when": "2026-11-24，任何 v5 正式训练与 test_v5 运行之前",
+      "status": "frozen",
+      "what": "最终训练数据冻结（方案三：保守）",
+      "dpo_pairs_final": {
+        "file": "data/train_pref/dpo_pairs_final.jsonl",
+        "pairs": 580,
+        "sha256": "61804f6636b81277f2482550713ab201fc8c10a6ee14be2329280b94ca448d06"
+      },
+      "sft_train": {
+        "file": "data/train_pref/sft_train.jsonl",
+        "sha256": "d60e7e9cf435eb6ada13afde470f764d223da7843c52004919ac9b97de8caa93",
+        "changed": false
+      },
+      "exclusions": "data/train_pref/excluded_final.jsonl（211 对，E1 超长 15、E2 畸形 ID 19、E3 抽查不成立 / 不确定 8、E4 规则 1 保守适用 117、E5 长度控制 52；按首要原因计）",
+      "report": "data/train_pref/final_dataset_report.json",
+      "protocol_deviation": [
+        "人工审核未完成：预设配额 Q1 ≥ 60 / Q2 ≥ 40 / Q3 = 59 / Q4 = 24 未达到（实际判断 Q1 12、Q2 7、Q3 2；hard_dev 15/26），用户决定跳过",
+        "规则 1 在样本不足（12 < 60）时按用户选择保守适用：删除全部 H 类真实对（rejected 覆盖率 ≥ chosen）",
+        "抽查判断均在看过 AI 辅助后作出，不视为独立人工审核；human_approved 未填写，不代填",
+        "hard_dev dv_m13、dv_m16 被抽查标为“标注有问题”，冻结数据未修改，检查点选择照旧使用，作为已知局限"
+      ],
+      "gates_changed": false,
+      "eval_set_hashes_changed": false
+    },
+    {
+      "when": "2026-11-24 20:1x，S42 第一次启动失败之后、任何优化器步之前",
+      "status": "frozen（用户批准方案一）",
+      "what": "SFT 训练数据修订：排除 4 条超过 max_seq_len 1024 的样本（v5ef_0071 / 0139 / 0208 / 0209）",
+      "why": "S42 第一次启动在数据编码阶段因 v5ef_0071（1031 token）退出（训练管线拒绝静默截断）；未执行任何优化器步、未更新权重；失败目录 runs/p6_v5/sft_3b_s42_failed_20261124_encode 保留",
+      "sft_train_old": {
+        "file": "sft_train.jsonl",
+        "n": 476,
+        "sha256": "d60e7e9cf435eb6ada13afde470f764d223da7843c52004919ac9b97de8caa93",
+        "kept_unchanged": true
+      },
+      "sft_train_final": {
+        "file": "sft_train_final.jsonl",
+        "n": 472,
+        "sha256": "41c4926f44c4454c780e4044cc3dfd298eddbf6cc6ede571b6414d749dd69235"
+      },
+      "precheck": {
+        "tokenizer": "Qwen/Qwen2.5-3B-Instruct@aa8e7253",
+        "method": "rag_finetuning.scripts.train_qlora.encode（与训练相同的 chat template 与 completion-only 掩码）",
+        "n": 472,
+        "max_tokens": 984,
+        "median_tokens": 710,
+        "over_1024": 0,
+        "truncated": 0,
+        "min_completion_tokens": 12,
+        "passed": true
+      },
+      "dpo_pairs_final_unchanged": true,
+      "applies_to": [
+        "S42",
+        "S43"
+      ],
+      "recipe_changed": false,
+      "gates_changed": false,
+      "eval_set_hashes_changed": false
+    },
+    {
+      "when": "2026-11-25，test_v5 首次运行之前；P6-v5 全部模型训练已结束",
+      "status": "frozen（用户 2026-11-25 批准）",
+      "test_v5": {
+        "frozen": "data/frozen/test_v5.jsonl",
+        "frozen_sha256": "396150eafc3130757d9d1d60f2e3c4c96459fd1361cdb370815e6c8ceadffee4",
+        "built_sha256": "47f0a7c62346ef66a2010dbc908492938660e225900a90e3ae663bf0f10af736",
+        "manifest_sha256": "58f0a41e503e531a15d986750052626f8db19485145de73d90d623b57292f3a1",
+        "n": 125,
+        "matches_freeze": true
+      },
+      "scorer": {
+        "file": "scripts/scoring_v4.py",
+        "version": "4.0.3",
+        "sha256": "a230bfe1a4f5e884ccfaeec3e32746da2c92ada630bb4b64ae47b88c5ad6fe59",
+        "matches_freeze": true
+      },
+      "promotion_gates": "EVALUATION_PROTOCOL.md §5 / freeze.json promotion_gate_v5，不修改",
+      "final_groups": {
+        "A": {
+          "model": "Qwen/Qwen2.5-3B-Instruct",
+          "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+          "adapter": null,
+          "note": "3B Base"
+        },
+        "B": {
+          "model": "Qwen/Qwen2.5-3B-Instruct",
+          "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+          "adapter": "<WORKSPACE>/runs/p6_v3/v3_3b_full/adapter",
+          "adapter_sha256": "3e6baa91fdadc50bebeb84954f8e8ce3633b2e1b199a959f8acdf6fa85c4f939",
+          "note": "v3（P6-v3 E 组，epoch 1）"
+        },
+        "C42": {
+          "model": "Qwen/Qwen2.5-3B-Instruct",
+          "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+          "adapter": "<WORKSPACE>/runs/p6_v4/v4_3b_s42/adapter",
+          "adapter_sha256": "3f58fa7599b5ebcc9221ef40e4fc4517de170f6859a78624534ee62733a18f6d",
+          "note": "v4 种子 42（hard_dev 前选定 epoch 3）"
+        },
+        "C43": {
+          "model": "Qwen/Qwen2.5-3B-Instruct",
+          "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+          "adapter": "<WORKSPACE>/runs/p6_v4/v4_3b_s43/adapter",
+          "adapter_sha256": "f10c4d02d00b8709530b78ba31b19d6fa30bf2f8c92c04c1c3bdca2267478e7b",
+          "note": "v4 种子 43（epoch 2）"
+        },
+        "S42": {
+          "model": "Qwen/Qwen2.5-3B-Instruct",
+          "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+          "adapter": "<WORKSPACE>/runs/p6_v5/sft_3b_s42/adapter",
+          "adapter_sha256": "09668483084be6e6bf95ab95670795976aa201659fd23e4720db6bc7da380f89",
+          "note": "v5 SFT 种子 42，预注册规则选中 epoch3（step 177）",
+          "identical_to": "p6_v5/sft_3b_s42/checkpoint_epoch3"
+        },
+        "S43": {
+          "model": "Qwen/Qwen2.5-3B-Instruct",
+          "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+          "adapter": "<WORKSPACE>/runs/p6_v5/sft_3b_s43/adapter",
+          "adapter_sha256": "436440d6f1203ee10ccc0d877ba33e60c153d540e91be350f1857da30ec76354",
+          "note": "v5 SFT 种子 43，预注册规则选中 epoch3（step 177）",
+          "identical_to": "p6_v5/sft_3b_s43/checkpoint_epoch3"
+        },
+        "P42": {
+          "model": "Qwen/Qwen2.5-3B-Instruct",
+          "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+          "adapter": "<WORKSPACE>/runs/p6_v5/dpo_3b_s42/adapter",
+          "adapter_sha256": "2e2d032b130476305e866b4e1c43bbd76cdf60b0d45d27dca258a862ccd357fa",
+          "note": "v5 DPO 种子 42，预注册规则选中 checkpoint-108（policy）",
+          "identical_to": "p6_v5/dpo_3b_s42/checkpoint-108/policy"
+        },
+        "P43": {
+          "model": "Qwen/Qwen2.5-3B-Instruct",
+          "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+          "adapter": "<WORKSPACE>/runs/p6_v5/dpo_3b_s43/adapter",
+          "adapter_sha256": "27c766bd5b383947ca4b282e18af5204af42644e2631cd430ef7ad431fb6ead2",
+          "note": "v5 DPO 种子 43，预注册规则选中 checkpoint-108（policy）",
+          "identical_to": "p6_v5/dpo_3b_s43/checkpoint-108/policy"
+        },
+        "D": {
+          "backend": "Ollama 0.40.17",
+          "model": "qwen2.5:7b",
+          "quantization": "Q4_K_M",
+          "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+          "note": "7B Base（参考组）；本地第二个 Ollama 实例 127.0.0.1:11435，不改动用户的 11434 托盘程序"
+        }
+      },
+      "excluded_groups": {
+        "X42": "探索组 X42 不执行（用户 2026-11-25 决定：P6-v5 全部训练结束，不再训练任何模型）",
+        "A_plan / D_plan / 其他 *_plan、*_pv2": "不进入 test_v5（用户 2026-11-25 指定 9 个评测组；Planning 在 hard_dev 上为负向结果，决定 6 已停止 Planning 优化）。这与 §2 组别表列出 A_plan / D_plan 不同，记为执行偏离"
+      },
+      "inference": {
+        "prompt": "平台 rag_v1.0（ragas_eval.rag_pipeline.build_messages），相同证据与顺序",
+        "3B": "transformers 4.57.6 + peft 0.22.0 + bitsandbytes 0.50.2，torch 2.11.0+cu128，4-bit NF4 + double quant，bf16 计算，贪心，max_new_tokens 384，repetition_penalty 1.0",
+        "7B": "Ollama 0.40.17，temperature 0，seed 42，num_predict 384，num_ctx 8192",
+        "hardware": "NVIDIA GeForce RTX 4060 Laptop GPU 8 GB，driver 610.62",
+        "env": "HF_HUB_OFFLINE=1，本地离线权重",
+        "runner": "run_eval_v5 gen：测试集每组只生成一次（已有 meta.json 拒绝覆盖）；2026-11-25 加入逐题写盘与中断恢复（generations.partial.jsonl / resume_log.jsonl），不改变 Prompt、解码与评分"
+      },
+      "rules": [
+        "每组只生成一次，不覆盖",
+        "不根据 test_v5 中间结果调整模型、Prompt、评分器或训练方案",
+        "test_v5 不参与检查点选择",
+        "门槛不修改",
+        "双种子均值只作描述"
+      ],
+      "protocol_deviation_kept": "人工审核未完成（偏好对 16/167、hard_dev 15/26，均在看过 AI 辅助后判断）；test_v5 标注为 AI 编写、未经人工审核；全部结果 provisional"
+    }
+  ],
+  "decisions_2026-11-24": [
+    "1 畸形引用 ID 评分器修订原则采纳，保留修订前后统一评分结果，人工审核后正式冻结",
+    "2 use_logits_to_keep=True 原则批准，不宣称逐位相同",
+    "3 排除 15 对超长截断偏好样本（chosen/rejected 输入不一致）",
+    "4 19 对（评分器修订）与 15 对（超长）去重统计：重叠 0，合计 34，见 data/train_pref/pending_exclusions_2026-11-24.json",
+    "5 人工审核完成后按预注册规则生成最终数据集并计算哈希",
+    "6 不再进行 Planning 优化、新数据扩充或新消融",
+    "7 本地 RTX 4060 用于 SFT / 推理 / 评测；A10 24GB 作为 DPO 备选，暂不租用",
+    "8 保留 S42/S43 → P42/P43；X42 暂缓",
+    "9 独立仓库名 llm-evidence-alignment，原创代码拟 Apache-2.0",
+    "10 第三方模型与生成数据单独记录许可证，不默认纳入 Apache-2.0，按实际 revision 核对",
+    "11 暂不创建公开仓库，不发布权重、完整偏好数据与 test_v5 标注",
+    "12 跳过剩余人工审核；最终数据采用方案三（保守）：580 对；修订 3、修订 4 冻结",
+    "13 SFT 数据排除 4 条超长样本 → sft_train_final.jsonl（472 条）；S42 / S43 统一使用；max_seq_len 1024 与其他超参数不变"
+  ]
+}

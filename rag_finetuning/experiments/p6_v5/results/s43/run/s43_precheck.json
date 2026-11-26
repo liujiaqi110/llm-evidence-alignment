@@ -1,0 +1,5 @@
+{"when": "2026-11-24 22:16:58", "git_head": "f28ba2815ecc28aef50faf10e3ad1c9ccd334865", "git_status_tracked_clean": true,
+ "untracked_files": [{"path": "rag_finetuning/experiments/p6_v5/data/train_v5/structured_questions.jsonl", "sha256": "770b8d8d1bed3e420e017ed999695e9144d5d89c0ab83de7a60a98c4d7f8c54d", "bytes": 708652, "mtime": "2026-11-24 15:19:53", "used_by_training": false, "action": "保留，未删除，未提交"}],
+ "sft_train_final_sha256": "41c4926f44c4454c780e4044cc3dfd298eddbf6cc6ede571b6414d749dd69235", "expected_sft_sha256": "41c4926f44c4454c780e4044cc3dfd298eddbf6cc6ede571b6414d749dd69235",
+ "hard_dev_sha256": "8117f2f8a6b0439f28ad56cb43785172ef00a860617653d77161e4350af7a2fb", "scoring_v4_sha256": "a230bfe1a4f5e884ccfaeec3e32746da2c92ada630bb4b64ae47b88c5ad6fe59",
+ "config_diff_vs_s42": "只有 run_name 与 seed（42→43）不同", "gpu_before": "1973 MiB, 8188 MiB"}

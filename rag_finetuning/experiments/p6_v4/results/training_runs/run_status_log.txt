@@ -1,0 +1,24 @@
+dev A exit=0
+dev B exit=0
+train s42 PAUSED_BY_USER at 2026-11-23 11:37:15
+attempt1 renamed to PAUSED_v4_3b_s42_attempt1; rerun from scratch at 2026-11-23 13:21:41
+attempt2 stalled (memory spill), restart with P6_MEM_FRACTION=0.74 at 2026-11-23 13:32:42
+train s42 exit=0
+STAGE1_DONE
+train s43 exit=0
+eval test_v4 A exit=0
+eval test_v4 B exit=0
+eval test_v4 C42 exit=0
+eval test_v4 C43 exit=0
+eval test_v4 A_E2 exit=0
+eval test_v4 B_E2 exit=0
+eval test_v4 C42_E2 exit=0
+eval test_v4 D exit=1
+eval reg_test_v3 C42 exit=0
+eval reg_test_v3 C43 exit=0
+STAGE2_DONE
+D first attempt failed: ollama not running (URLError before any generation, no output dir); retry at 2026-11-23 19:42:55
+eval test_v4 D(retry) exit=1
+STAGE3_DONE
+D retry1 failed: qwen2.5:7b not in OLLAMA_MODELS=<OLLAMA_DATA>\models (no output); retry2 with serve OLLAMA_MODELS=<OLLAMA_MODELS>, digest 845dbda0 verified = P6-v3 at 2026-11-23 19:45:24
+eval test_v4 D(retry2) exit=0

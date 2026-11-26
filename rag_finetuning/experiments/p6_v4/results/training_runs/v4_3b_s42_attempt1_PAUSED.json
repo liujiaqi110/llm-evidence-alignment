@@ -1,0 +1,1 @@
+{"paused_by_user": "2026-11-23 11:37:16", "last_step": 192, "saved": ["checkpoint_epoch1", "checkpoint_epoch2"], "note": "用户要求暂停 GPU；第 3 个 epoch 未完成，未做开发集选择"}

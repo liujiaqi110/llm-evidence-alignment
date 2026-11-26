@@ -1,0 +1,137 @@
+{
+  "run": "sft_3b_s43",
+  "config": {
+    "run_name": "sft_3b_s43",
+    "seed": 43,
+    "model": {
+      "id": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "load_in_4bit": true,
+      "bnb_4bit_quant_type": "nf4",
+      "bnb_4bit_use_double_quant": true,
+      "compute_dtype": "bfloat16"
+    },
+    "lora": {
+      "r": 8,
+      "alpha": 16,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj",
+        "gate_proj",
+        "up_proj",
+        "down_proj"
+      ]
+    },
+    "data": {
+      "train": "rag_finetuning/experiments/p6_v5/data/train_pref/sft_train_final.jsonl",
+      "dev": "rag_finetuning/experiments/p6_v5/data/hard_dev/built/hard_dev.jsonl",
+      "max_seq_len": 1024
+    },
+    "train": {
+      "learning_rate": 0.0002,
+      "lr_scheduler": "cosine",
+      "warmup_ratio": 0.1,
+      "gradient_accumulation_steps": 8,
+      "num_epochs": 3,
+      "optim": "paged_adamw_8bit"
+    },
+    "output": {
+      "root": "<WORKSPACE>/runs/p6_v5"
+    }
+  },
+  "config_file": "rag_finetuning/experiments/p6_v5/configs/sft_3b_s43.yaml",
+  "git_commit": "f28ba2815ecc28aef50faf10e3ad1c9ccd334865+dirty",
+  "model": {
+    "id": "Qwen/Qwen2.5-3B-Instruct",
+    "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+    "quantization": "4-bit NF4 + double quant, bf16 compute"
+  },
+  "dataset": {
+    "train_file": "rag_finetuning/experiments/p6_v5/data/train_pref/sft_train_final.jsonl",
+    "train_sha256": "41c4926f44c4454c780e4044cc3dfd298eddbf6cc6ede571b6414d749dd69235",
+    "dev_sha256": "8117f2f8a6b0439f28ad56cb43785172ef00a860617653d77161e4350af7a2fb",
+    "n_train": 472,
+    "n_dev": 56,
+    "train_tokens": {
+      "min": 595,
+      "median": 710,
+      "max": 984
+    },
+    "completion_tokens_total": 38022
+  },
+  "trainable_params": 14966784,
+  "steps": 177,
+  "epochs": 3.0,
+  "train_loss_mean": 0.10419841324857905,
+  "first_step_loss": 0.6254,
+  "last_step_loss": 0.0149,
+  "grad_norm_range": [
+    0.09300992637872696,
+    4.635569095611572
+  ],
+  "dev_loss_before": 1.0365372896194458,
+  "dev_loss_by_epoch": [
+    1.0365372896194458,
+    0.3495389521121979,
+    0.3392641246318817,
+    0.3511385917663574
+  ],
+  "gpu": {
+    "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "peak_allocated_mib": 5391,
+    "peak_reserved_mib": 6058,
+    "allocated_after_model_load_mib": 2939,
+    "total_mib": 8188
+  },
+  "wall_time_s": 4147.4,
+  "env": {
+    "PYTORCH_CUDA_ALLOC_CONF": null,
+    "HF_HUB_OFFLINE": "1"
+  },
+  "versions": {
+    "torch": "2.11.0+cu128",
+    "transformers": "4.57.6",
+    "peft": "0.22.0",
+    "bitsandbytes": "0.50.2"
+  },
+  "epoch_selection": {
+    "rule": "max hard_dev multi_complete_v5 → max content_ok_v4 → min whole_refusal → earliest",
+    "per_epoch": [
+      {
+        "dev_multi_v5": 17,
+        "dev_multi_n": 43,
+        "dev_content_v4": 21,
+        "dev_whole_refusal": 3,
+        "dev_refusal_ok": 4,
+        "dev_conflict_ok": 0,
+        "dev_n": 56,
+        "epoch": 1
+      },
+      {
+        "dev_multi_v5": 21,
+        "dev_multi_n": 43,
+        "dev_content_v4": 26,
+        "dev_whole_refusal": 2,
+        "dev_refusal_ok": 4,
+        "dev_conflict_ok": 1,
+        "dev_n": 56,
+        "epoch": 2
+      },
+      {
+        "dev_multi_v5": 23,
+        "dev_multi_n": 43,
+        "dev_content_v4": 29,
+        "dev_whole_refusal": 3,
+        "dev_refusal_ok": 4,
+        "dev_conflict_ok": 1,
+        "dev_n": 56,
+        "epoch": 3
+      }
+    ],
+    "selected_epoch": 3
+  },
+  "adapter_dir": "<WORKSPACE>\\runs\\p6_v5\\sft_3b_s43\\adapter"
+}

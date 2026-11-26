@@ -1,0 +1,308 @@
+{
+  "longest_seq_8": [
+    "v5ef_0208__280",
+    "v5ef_0139__187",
+    "v5ef_0016__28",
+    "v5ef_0209__282",
+    "v5ef_0083__124",
+    "v5ef_0083__123",
+    "v5ef_0139__188",
+    "v5ef_0208__281"
+  ],
+  "longest_completion_8": [
+    "v5ef_0208__280",
+    "v5ef_0016__28",
+    "v5ef_0067__105",
+    "v5ef_0001__2",
+    "v5ef_0033__56",
+    "v5ef_0083__124",
+    "v5ef_0083__123",
+    "v5ef_0080__118"
+  ],
+  "longest_untruncated_8": [
+    "v5ef_0089__134",
+    "v5ef_0089__133",
+    "v5ef_0068__107",
+    "v5ef_0117__163",
+    "v5ef_0084__125",
+    "v5ef_0090__135",
+    "v5ef_0154__201",
+    "v5ef_0065__102"
+  ],
+  "longest_completion_untruncated_8": [
+    "v5ef_0001__2",
+    "v5ef_0065__102",
+    "v5ef_0118__164",
+    "v5ef_0117__163",
+    "v5ef_0089__134",
+    "v5ef_0089__133",
+    "v5ef_0176__231",
+    "v5ef_0084__125"
+  ],
+  "detail": {
+    "longest_seq_8": [
+      {
+        "pair_id": "v5ef_0208__280",
+        "prompt": 832,
+        "chosen": 223,
+        "rejected": 386,
+        "seq_chosen": 1055,
+        "seq_rejected": 1218
+      },
+      {
+        "pair_id": "v5ef_0139__187",
+        "prompt": 844,
+        "chosen": 220,
+        "rejected": 254,
+        "seq_chosen": 1064,
+        "seq_rejected": 1098
+      },
+      {
+        "pair_id": "v5ef_0016__28",
+        "prompt": 728,
+        "chosen": 156,
+        "rejected": 367,
+        "seq_chosen": 884,
+        "seq_rejected": 1095
+      },
+      {
+        "pair_id": "v5ef_0209__282",
+        "prompt": 830,
+        "chosen": 213,
+        "rejected": 239,
+        "seq_chosen": 1043,
+        "seq_rejected": 1069
+      },
+      {
+        "pair_id": "v5ef_0083__124",
+        "prompt": 764,
+        "chosen": 303,
+        "rejected": 219,
+        "seq_chosen": 1067,
+        "seq_rejected": 983
+      },
+      {
+        "pair_id": "v5ef_0083__123",
+        "prompt": 764,
+        "chosen": 303,
+        "rejected": 180,
+        "seq_chosen": 1067,
+        "seq_rejected": 944
+      },
+      {
+        "pair_id": "v5ef_0139__188",
+        "prompt": 844,
+        "chosen": 220,
+        "rejected": 142,
+        "seq_chosen": 1064,
+        "seq_rejected": 986
+      },
+      {
+        "pair_id": "v5ef_0208__281",
+        "prompt": 832,
+        "chosen": 223,
+        "rejected": 209,
+        "seq_chosen": 1055,
+        "seq_rejected": 1041
+      }
+    ],
+    "longest_completion_8": [
+      {
+        "pair_id": "v5ef_0208__280",
+        "prompt": 832,
+        "chosen": 223,
+        "rejected": 386,
+        "seq_chosen": 1055,
+        "seq_rejected": 1218
+      },
+      {
+        "pair_id": "v5ef_0016__28",
+        "prompt": 728,
+        "chosen": 156,
+        "rejected": 367,
+        "seq_chosen": 884,
+        "seq_rejected": 1095
+      },
+      {
+        "pair_id": "v5ef_0067__105",
+        "prompt": 703,
+        "chosen": 144,
+        "rejected": 344,
+        "seq_chosen": 847,
+        "seq_rejected": 1047
+      },
+      {
+        "pair_id": "v5ef_0001__2",
+        "prompt": 687,
+        "chosen": 168,
+        "rejected": 321,
+        "seq_chosen": 855,
+        "seq_rejected": 1008
+      },
+      {
+        "pair_id": "v5ef_0033__56",
+        "prompt": 726,
+        "chosen": 196,
+        "rejected": 318,
+        "seq_chosen": 922,
+        "seq_rejected": 1044
+      },
+      {
+        "pair_id": "v5ef_0083__124",
+        "prompt": 764,
+        "chosen": 303,
+        "rejected": 219,
+        "seq_chosen": 1067,
+        "seq_rejected": 983
+      },
+      {
+        "pair_id": "v5ef_0083__123",
+        "prompt": 764,
+        "chosen": 303,
+        "rejected": 180,
+        "seq_chosen": 1067,
+        "seq_rejected": 944
+      },
+      {
+        "pair_id": "v5ef_0080__118",
+        "prompt": 764,
+        "chosen": 154,
+        "rejected": 279,
+        "seq_chosen": 918,
+        "seq_rejected": 1043
+      }
+    ],
+    "longest_untruncated_8": [
+      {
+        "pair_id": "v5ef_0089__134",
+        "prompt": 781,
+        "chosen": 238,
+        "rejected": 177,
+        "seq_chosen": 1019,
+        "seq_rejected": 958
+      },
+      {
+        "pair_id": "v5ef_0089__133",
+        "prompt": 781,
+        "chosen": 238,
+        "rejected": 174,
+        "seq_chosen": 1019,
+        "seq_rejected": 955
+      },
+      {
+        "pair_id": "v5ef_0068__107",
+        "prompt": 798,
+        "chosen": 182,
+        "rejected": 188,
+        "seq_chosen": 980,
+        "seq_rejected": 986
+      },
+      {
+        "pair_id": "v5ef_0117__163",
+        "prompt": 761,
+        "chosen": 225,
+        "rejected": 212,
+        "seq_chosen": 986,
+        "seq_rejected": 973
+      },
+      {
+        "pair_id": "v5ef_0084__125",
+        "prompt": 767,
+        "chosen": 168,
+        "rejected": 233,
+        "seq_chosen": 935,
+        "seq_rejected": 1000
+      },
+      {
+        "pair_id": "v5ef_0090__135",
+        "prompt": 787,
+        "chosen": 171,
+        "rejected": 178,
+        "seq_chosen": 958,
+        "seq_rejected": 965
+      },
+      {
+        "pair_id": "v5ef_0154__201",
+        "prompt": 775,
+        "chosen": 157,
+        "rejected": 213,
+        "seq_chosen": 932,
+        "seq_rejected": 988
+      },
+      {
+        "pair_id": "v5ef_0065__102",
+        "prompt": 734,
+        "chosen": 208,
+        "rejected": 242,
+        "seq_chosen": 942,
+        "seq_rejected": 976
+      }
+    ],
+    "longest_completion_untruncated_8": [
+      {
+        "pair_id": "v5ef_0001__2",
+        "prompt": 687,
+        "chosen": 168,
+        "rejected": 321,
+        "seq_chosen": 855,
+        "seq_rejected": 1008
+      },
+      {
+        "pair_id": "v5ef_0065__102",
+        "prompt": 734,
+        "chosen": 208,
+        "rejected": 242,
+        "seq_chosen": 942,
+        "seq_rejected": 976
+      },
+      {
+        "pair_id": "v5ef_0118__164",
+        "prompt": 676,
+        "chosen": 198,
+        "rejected": 247,
+        "seq_chosen": 874,
+        "seq_rejected": 923
+      },
+      {
+        "pair_id": "v5ef_0117__163",
+        "prompt": 761,
+        "chosen": 225,
+        "rejected": 212,
+        "seq_chosen": 986,
+        "seq_rejected": 973
+      },
+      {
+        "pair_id": "v5ef_0089__134",
+        "prompt": 781,
+        "chosen": 238,
+        "rejected": 177,
+        "seq_chosen": 1019,
+        "seq_rejected": 958
+      },
+      {
+        "pair_id": "v5ef_0089__133",
+        "prompt": 781,
+        "chosen": 238,
+        "rejected": 174,
+        "seq_chosen": 1019,
+        "seq_rejected": 955
+      },
+      {
+        "pair_id": "v5ef_0176__231",
+        "prompt": 660,
+        "chosen": 157,
+        "rejected": 254,
+        "seq_chosen": 817,
+        "seq_rejected": 914
+      },
+      {
+        "pair_id": "v5ef_0084__125",
+        "prompt": 767,
+        "chosen": 168,
+        "rejected": 233,
+        "seq_chosen": 935,
+        "seq_rejected": 1000
+      }
+    ]
+  }
+}

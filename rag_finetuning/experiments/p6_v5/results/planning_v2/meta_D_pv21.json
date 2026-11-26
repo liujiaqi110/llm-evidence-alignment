@@ -1,0 +1,26 @@
+{
+  "group": "D_pv21",
+  "desc": "7B + Planning v2.1（hard_dev 诊断后修复版）",
+  "model": "ollama:qwen2.5:7b",
+  "input": "hard_dev",
+  "frozen_sha256": "3b79e057c3e7037601944ab1fdd58a4c3e3eeba15314ed0d2617149540ef7987",
+  "generation_settings": {
+    "backend": "ollama",
+    "temperature": 0,
+    "seed": 42,
+    "num_predict": 384,
+    "num_ctx": 8192,
+    "model_info": {
+      "ollama_version": "0.40.17",
+      "model": "qwen2.5:7b",
+      "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+      "size": 4683087332,
+      "parameter_size": "7.6B",
+      "quantization": "Q4_K_M",
+      "family": "qwen2"
+    }
+  },
+  "plan": true,
+  "n": 56,
+  "wall_s": 739.8
+}

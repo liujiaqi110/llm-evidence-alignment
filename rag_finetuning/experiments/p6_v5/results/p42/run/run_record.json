@@ -1,0 +1,219 @@
+{
+  "run": "dpo_3b_s42",
+  "git_commit": "905abf19a87c8a82096e4172378cf2e4aee8c66f+dirty",
+  "config_file": "rag_finetuning/experiments/p6_v5/configs/dpo_3b_s42.yaml",
+  "smoke": 0,
+  "ok": true,
+  "error": null,
+  "config": {
+    "run_name": "dpo_3b_s42",
+    "seed": 42,
+    "model": {
+      "id": "Qwen/Qwen2.5-3B-Instruct",
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1"
+    },
+    "init_adapter": "<WORKSPACE>/runs/p6_v5/sft_3b_s42/adapter",
+    "data": {
+      "pairs": "rag_finetuning/experiments/p6_v5/data/train_pref/dpo_pairs_final.jsonl",
+      "dev": "rag_finetuning/experiments/p6_v5/data/hard_dev/built/hard_dev.jsonl",
+      "max_length": 1024,
+      "max_prompt_length": 896
+    },
+    "train": {
+      "beta": 0.1,
+      "learning_rate": 2e-05,
+      "num_epochs": 2,
+      "gradient_accumulation_steps": 8,
+      "use_logits_to_keep": true
+    },
+    "output": {
+      "root": "<WORKSPACE>/runs/p6_v5"
+    }
+  },
+  "max_length_used": 1024,
+  "use_logits_to_keep": true,
+  "precompute_ref_log_probs": false,
+  "algorithm": "DPO sigmoid（TRL DPOTrainer），policy=SFT 适配器可训练副本，reference=同一 SFT 适配器冻结副本",
+  "init_adapter": "<WORKSPACE>/runs/p6_v5/sft_3b_s42/adapter",
+  "init_adapter_sha256": "09668483084be6e6bf95ab95670795976aa201659fd23e4720db6bc7da380f89",
+  "pairs_file": "rag_finetuning/experiments/p6_v5/data/train_pref/dpo_pairs_final.jsonl",
+  "pairs_sha256": "61804f6636b81277f2482550713ab201fc8c10a6ee14be2329280b94ca448d06",
+  "n_pairs_used": 580,
+  "steps": 146,
+  "trainable_params": 14966784,
+  "wall_time_s": 6586.8,
+  "gpu": {
+    "peak_allocated_mib": 5590,
+    "peak_reserved_mib": 5834,
+    "load_peak_mib": 3148,
+    "total_mib": 8188
+  },
+  "has_preference_metrics": true,
+  "versions": {
+    "trl": "0.23.1",
+    "peft": "0.22.0",
+    "transformers": "4.57.6",
+    "torch": "2.11.0+cu128"
+  },
+  "first_logs": [
+    {
+      "loss": 0.6931,
+      "grad_norm": 7.939384937286377,
+      "learning_rate": 0.0,
+      "rewards/chosen": 0.0,
+      "rewards/rejected": 0.0,
+      "rewards/accuracies": 0.0,
+      "rewards/margins": 0.0,
+      "logps/chosen": -19.218915939331055,
+      "logps/rejected": -37.52552795410156,
+      "logits/chosen": -2.2745912075042725,
+      "logits/rejected": -2.079101085662842,
+      "epoch": 0.013793103448275862,
+      "step": 1
+    },
+    {
+      "loss": 0.6931,
+      "grad_norm": 8.021125793457031,
+      "learning_rate": 1.3333333333333334e-06,
+      "rewards/chosen": 0.0,
+      "rewards/rejected": 0.0,
+      "rewards/accuracies": 0.0,
+      "rewards/margins": 0.0,
+      "logps/chosen": -25.651851654052734,
+      "logps/rejected": -36.34773254394531,
+      "logits/chosen": -2.148688554763794,
+      "logits/rejected": -2.004401922225952,
+      "epoch": 0.027586206896551724,
+      "step": 2
+    },
+    {
+      "loss": 0.6967,
+      "grad_norm": 6.335541725158691,
+      "learning_rate": 2.666666666666667e-06,
+      "rewards/chosen": -0.02633349969983101,
+      "rewards/rejected": -0.01947331614792347,
+      "rewards/accuracies": 0.5,
+      "rewards/margins": -0.006860184483230114,
+      "logps/chosen": -9.56540298461914,
+      "logps/rejected": -29.808673858642578,
+      "logits/chosen": -2.285221576690674,
+      "logits/rejected": -2.191976547241211,
+      "epoch": 0.041379310344827586,
+      "step": 3
+    }
+  ],
+  "last_logs": [
+    {
+      "loss": 0.0423,
+      "grad_norm": 1.3689348697662354,
+      "learning_rate": 2.586916028770259e-08,
+      "rewards/chosen": -1.0942955017089844,
+      "rewards/rejected": -6.99752950668335,
+      "rewards/accuracies": 1.0,
+      "rewards/margins": 5.903233528137207,
+      "logps/chosen": -22.237150192260742,
+      "logps/rejected": -100.9979248046875,
+      "logits/chosen": -3.0618233680725098,
+      "logits/rejected": -2.6862635612487793,
+      "epoch": 1.9793103448275862,
+      "step": 144
+    },
+    {
+      "loss": 0.1428,
+      "grad_norm": 6.541900157928467,
+      "learning_rate": 1.150016022719691e-08,
+      "rewards/chosen": -2.596576690673828,
+      "rewards/rejected": -8.264236450195312,
+      "rewards/accuracies": 0.875,
+      "rewards/margins": 5.667658805847168,
+      "logps/chosen": -51.37519454956055,
+      "logps/rejected": -123.66387939453125,
+      "logits/chosen": -3.0882515907287598,
+      "logits/rejected": -2.7691750526428223,
+      "epoch": 1.993103448275862,
+      "step": 145
+    },
+    {
+      "loss": 0.0037,
+      "grad_norm": 0.2961677014827728,
+      "learning_rate": 2.8754534684316548e-09,
+      "rewards/chosen": -2.1814827919006348,
+      "rewards/rejected": -9.861056327819824,
+      "rewards/accuracies": 1.0,
+      "rewards/margins": 7.679574012756348,
+      "logps/chosen": -33.690711975097656,
+      "logps/rejected": -141.0489959716797,
+      "logits/chosen": -3.0763683319091797,
+      "logits/rejected": -2.7007761001586914,
+      "epoch": 2.0,
+      "step": 146
+    }
+  ],
+  "checkpoint_selection": {
+    "rule": "max hard_dev multi_complete_v5 → max content_ok_v4 → min whole_refusal → earliest（init_sft 只作参照，不参与选择）",
+    "per_checkpoint": [
+      {
+        "dev_multi_v5": 22,
+        "dev_multi_n": 43,
+        "dev_content_v4": 28,
+        "dev_whole_refusal": 4,
+        "dev_refusal_ok": 4,
+        "dev_conflict_ok": 2,
+        "dev_n": 56,
+        "checkpoint": "init_sft"
+      },
+      {
+        "dev_multi_v5": 22,
+        "dev_multi_n": 43,
+        "dev_content_v4": 31,
+        "dev_whole_refusal": 2,
+        "dev_refusal_ok": 4,
+        "dev_conflict_ok": 2,
+        "dev_n": 56,
+        "checkpoint": "checkpoint-36"
+      },
+      {
+        "dev_multi_v5": 25,
+        "dev_multi_n": 43,
+        "dev_content_v4": 33,
+        "dev_whole_refusal": 1,
+        "dev_refusal_ok": 4,
+        "dev_conflict_ok": 1,
+        "dev_n": 56,
+        "checkpoint": "checkpoint-72"
+      },
+      {
+        "dev_multi_v5": 28,
+        "dev_multi_n": 43,
+        "dev_content_v4": 34,
+        "dev_whole_refusal": 1,
+        "dev_refusal_ok": 4,
+        "dev_conflict_ok": 1,
+        "dev_n": 56,
+        "checkpoint": "checkpoint-108"
+      },
+      {
+        "dev_multi_v5": 28,
+        "dev_multi_n": 43,
+        "dev_content_v4": 34,
+        "dev_whole_refusal": 1,
+        "dev_refusal_ok": 4,
+        "dev_conflict_ok": 1,
+        "dev_n": 56,
+        "checkpoint": "checkpoint-144"
+      },
+      {
+        "dev_multi_v5": 27,
+        "dev_multi_n": 43,
+        "dev_content_v4": 33,
+        "dev_whole_refusal": 1,
+        "dev_refusal_ok": 4,
+        "dev_conflict_ok": 1,
+        "dev_n": 56,
+        "checkpoint": "checkpoint-146"
+      }
+    ],
+    "selected": "checkpoint-108"
+  },
+  "adapter_sha256": "2e2d032b130476305e866b4e1c43bbd76cdf60b0d45d27dca258a862ccd357fa"
+}

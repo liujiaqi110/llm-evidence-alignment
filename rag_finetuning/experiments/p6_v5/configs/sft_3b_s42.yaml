@@ -1,0 +1,28 @@
+# P6-v5 实验一：针对性 SFT。配方与 P6-v3 / v4 完全相同；数据 = v3 full 315 条 + 新增困难多证据样本；停止点用 hard_dev 选择。
+run_name: sft_3b_s42
+seed: 42
+model:
+  id: Qwen/Qwen2.5-3B-Instruct
+  revision: aa8e72537993ba99e69dfaafa59ed015b17504d1
+  load_in_4bit: true
+  bnb_4bit_quant_type: nf4
+  bnb_4bit_use_double_quant: true
+  compute_dtype: bfloat16
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+data:
+  train: rag_finetuning/experiments/p6_v5/data/train_pref/sft_train_final.jsonl
+  dev: rag_finetuning/experiments/p6_v5/data/hard_dev/built/hard_dev.jsonl
+  max_seq_len: 1024
+train:
+  learning_rate: 2.0e-4
+  lr_scheduler: cosine
+  warmup_ratio: 0.1
+  gradient_accumulation_steps: 8
+  num_epochs: 3
+  optim: paged_adamw_8bit
+output:
+  root: workspace/runs/p6_v5

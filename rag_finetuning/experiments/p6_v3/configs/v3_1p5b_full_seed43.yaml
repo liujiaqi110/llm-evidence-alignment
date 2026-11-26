@@ -1,0 +1,29 @@
+# 事后补充（看过 test_v3 后）：与 v3_1p5b_full 完全相同，仅随机种子 42→43，用于估计训练随机性；不替换主模型 C
+run_name: v3_1p5b_full_seed43
+seed: 43
+model:
+  id: Qwen/Qwen2.5-1.5B-Instruct
+  revision: 989aa7980e4cf806f80c7fef2b1adb7bc71aa306
+  load_in_4bit: true
+  bnb_4bit_quant_type: nf4
+  bnb_4bit_use_double_quant: true
+  compute_dtype: bfloat16
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+data:
+  train: rag_finetuning/experiments/p6_v3/data/v3/full/train.jsonl
+  dev: rag_finetuning/experiments/p6_v3/data/v3/dev.jsonl
+  variant: full
+  max_seq_len: 1024
+train:
+  learning_rate: 2.0e-4
+  lr_scheduler: cosine
+  warmup_ratio: 0.1
+  gradient_accumulation_steps: 8
+  num_epochs: 3            # 最多 3 个 epoch；停止点由开发集按预注册规则选择（消融使用主模型选出的 epoch 数）
+  optim: paged_adamw_8bit
+output:
+  root: workspace/runs/p6_v3

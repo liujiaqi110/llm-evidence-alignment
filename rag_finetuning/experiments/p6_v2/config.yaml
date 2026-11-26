@@ -1,0 +1,20 @@
+# P6-v2：7B 基线与 Few-shot 对照实验配置（不训练任何模型）
+experiment: p6_v2_prompt_ablation
+runs_root: workspace/runs/p6_v2     # 逐题原始输出也复制一份到 results/（非敏感，体积小）
+
+groups:
+  A: {backend: hf, prompt_variant: zero_shot, desc: "Qwen2.5-1.5B-Instruct 原始模型（4-bit NF4），Zero-shot"}
+  B: {backend: hf, prompt_variant: zero_shot, adapter: "workspace/runs/qlora_r8_v1/adapter",
+      desc: "Qwen2.5-1.5B-Instruct + P6-v1 QLoRA Adapter（qlora_r8_v1，正式组），Zero-shot"}
+  C: {backend: ollama, model: "qwen2.5:7b", prompt_variant: zero_shot, desc: "Ollama qwen2.5:7b（Q4_K_M），Zero-shot"}
+  D: {backend: ollama, model: "qwen2.5:7b", prompt_variant: few_shot, desc: "Ollama qwen2.5:7b（Q4_K_M），Few-shot（6 例）"}
+  E: {backend: hf, prompt_variant: few_shot, desc: "额外参考：Qwen2.5-1.5B-Instruct 原始模型，Few-shot（6 例）"}
+
+# 统一生成设置：贪心；HF 侧 do_sample=False、max_new_tokens=384、repetition_penalty=1.0（见 evaluation/generate.py GEN）
+ollama_options: {temperature: 0, seed: 42, num_predict: 384, num_ctx: 8192}
+
+comparisons:
+  - {a: C, b: D, question: "7B 仅加入 Few-shot 是否改善（同模型、同证据）"}
+  - {a: A, b: B, question: "原始 1.5B vs QLoRA 1.5B（复现 P6-v1）"}
+  - {a: B, b: C, question: "QLoRA 1.5B vs 原始 7B（同时涉及规模、权重与推理实现差异）"}
+  - {a: A, b: E, question: "额外：1.5B 仅加入 Few-shot"}

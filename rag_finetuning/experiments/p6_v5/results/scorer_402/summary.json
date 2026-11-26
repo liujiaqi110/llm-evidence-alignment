@@ -1,0 +1,437 @@
+{
+  "note": "同一批已有输出，分别用 4.0.1 与 4.0.2 评分；只读，不重新生成",
+  "sets": {
+    "hard_dev:A": {
+      "4.0.1": {
+        "n": 56,
+        "multi_complete_v5": 22,
+        "multi_n": 43,
+        "content_ok_v4": 18,
+        "unsupported_number_items": 11,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 56,
+        "multi_complete_v5": 22,
+        "multi_n": 43,
+        "content_ok_v4": 18,
+        "unsupported_number_items": 11,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "hard_dev:B": {
+      "4.0.1": {
+        "n": 56,
+        "multi_complete_v5": 17,
+        "multi_n": 43,
+        "content_ok_v4": 24,
+        "unsupported_number_items": 1,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 56,
+        "multi_complete_v5": 17,
+        "multi_n": 43,
+        "content_ok_v4": 24,
+        "unsupported_number_items": 1,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "hard_dev:C42": {
+      "4.0.1": {
+        "n": 56,
+        "multi_complete_v5": 26,
+        "multi_n": 43,
+        "content_ok_v4": 32,
+        "unsupported_number_items": 1,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 56,
+        "multi_complete_v5": 26,
+        "multi_n": 43,
+        "content_ok_v4": 32,
+        "unsupported_number_items": 1,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "hard_dev:C43": {
+      "4.0.1": {
+        "n": 56,
+        "multi_complete_v5": 22,
+        "multi_n": 43,
+        "content_ok_v4": 29,
+        "unsupported_number_items": 0,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 56,
+        "multi_complete_v5": 22,
+        "multi_n": 43,
+        "content_ok_v4": 29,
+        "unsupported_number_items": 0,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "hard_dev:D": {
+      "4.0.1": {
+        "n": 56,
+        "multi_complete_v5": 25,
+        "multi_n": 43,
+        "content_ok_v4": 31,
+        "unsupported_number_items": 4,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 56,
+        "multi_complete_v5": 25,
+        "multi_n": 43,
+        "content_ok_v4": 31,
+        "unsupported_number_items": 4,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "hard_dev:A_plan": {
+      "4.0.1": {
+        "n": 56,
+        "multi_complete_v5": 28,
+        "multi_n": 43,
+        "content_ok_v4": 28,
+        "unsupported_number_items": 7,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 56,
+        "multi_complete_v5": 28,
+        "multi_n": 43,
+        "content_ok_v4": 28,
+        "unsupported_number_items": 7,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "hard_dev:D_plan": {
+      "4.0.1": {
+        "n": 56,
+        "multi_complete_v5": 26,
+        "multi_n": 43,
+        "content_ok_v4": 33,
+        "unsupported_number_items": 5,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 56,
+        "multi_complete_v5": 26,
+        "multi_n": 43,
+        "content_ok_v4": 33,
+        "unsupported_number_items": 5,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "hard_dev:C42_plan": {
+      "4.0.1": {
+        "n": 56,
+        "multi_complete_v5": 16,
+        "multi_n": 43,
+        "content_ok_v4": 19,
+        "unsupported_number_items": 13,
+        "items_with_internal_fact_ids": 17
+      },
+      "4.0.2": {
+        "n": 56,
+        "multi_complete_v5": 16,
+        "multi_n": 43,
+        "content_ok_v4": 22,
+        "unsupported_number_items": 3,
+        "items_with_internal_fact_ids": 17
+      }
+    },
+    "hard_dev:C42_pv2": {
+      "4.0.1": {
+        "n": 56,
+        "multi_complete_v5": 17,
+        "multi_n": 43,
+        "content_ok_v4": 22,
+        "unsupported_number_items": 9,
+        "items_with_internal_fact_ids": 8
+      },
+      "4.0.2": {
+        "n": 56,
+        "multi_complete_v5": 17,
+        "multi_n": 43,
+        "content_ok_v4": 26,
+        "unsupported_number_items": 1,
+        "items_with_internal_fact_ids": 8
+      }
+    },
+    "hard_dev:D_pv2": {
+      "4.0.1": {
+        "n": 56,
+        "multi_complete_v5": 17,
+        "multi_n": 43,
+        "content_ok_v4": 25,
+        "unsupported_number_items": 4,
+        "items_with_internal_fact_ids": 2
+      },
+      "4.0.2": {
+        "n": 56,
+        "multi_complete_v5": 17,
+        "multi_n": 43,
+        "content_ok_v4": 26,
+        "unsupported_number_items": 3,
+        "items_with_internal_fact_ids": 2
+      }
+    },
+    "hard_dev:C42_pv21": {
+      "4.0.1": {
+        "n": 56,
+        "multi_complete_v5": 20,
+        "multi_n": 43,
+        "content_ok_v4": 16,
+        "unsupported_number_items": 19,
+        "items_with_internal_fact_ids": 16
+      },
+      "4.0.2": {
+        "n": 56,
+        "multi_complete_v5": 20,
+        "multi_n": 43,
+        "content_ok_v4": 24,
+        "unsupported_number_items": 5,
+        "items_with_internal_fact_ids": 16
+      }
+    },
+    "hard_dev:D_pv21": {
+      "4.0.1": {
+        "n": 56,
+        "multi_complete_v5": 23,
+        "multi_n": 43,
+        "content_ok_v4": 29,
+        "unsupported_number_items": 3,
+        "items_with_internal_fact_ids": 1
+      },
+      "4.0.2": {
+        "n": 56,
+        "multi_complete_v5": 23,
+        "multi_n": 43,
+        "content_ok_v4": 30,
+        "unsupported_number_items": 2,
+        "items_with_internal_fact_ids": 1
+      }
+    },
+    "oracle:A|B": {
+      "4.0.1": {
+        "n": 43,
+        "multi_complete_v5": 27,
+        "multi_n": 43,
+        "content_ok_v4": 22,
+        "unsupported_number_items": 5,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 43,
+        "multi_complete_v5": 27,
+        "multi_n": 43,
+        "content_ok_v4": 22,
+        "unsupported_number_items": 5,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "oracle:A|C": {
+      "4.0.1": {
+        "n": 43,
+        "multi_complete_v5": 30,
+        "multi_n": 43,
+        "content_ok_v4": 26,
+        "unsupported_number_items": 4,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 43,
+        "multi_complete_v5": 30,
+        "multi_n": 43,
+        "content_ok_v4": 26,
+        "unsupported_number_items": 4,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "oracle:A|D": {
+      "4.0.1": {
+        "n": 43,
+        "multi_complete_v5": 39,
+        "multi_n": 43,
+        "content_ok_v4": 35,
+        "unsupported_number_items": 4,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 43,
+        "multi_complete_v5": 39,
+        "multi_n": 43,
+        "content_ok_v4": 35,
+        "unsupported_number_items": 4,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "oracle:A|Brev": {
+      "4.0.1": {
+        "n": 16,
+        "multi_complete_v5": 5,
+        "multi_n": 16,
+        "content_ok_v4": 5,
+        "unsupported_number_items": 2,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 16,
+        "multi_complete_v5": 5,
+        "multi_n": 16,
+        "content_ok_v4": 5,
+        "unsupported_number_items": 2,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "oracle:C42|B": {
+      "4.0.1": {
+        "n": 43,
+        "multi_complete_v5": 24,
+        "multi_n": 43,
+        "content_ok_v4": 24,
+        "unsupported_number_items": 0,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 43,
+        "multi_complete_v5": 24,
+        "multi_n": 43,
+        "content_ok_v4": 24,
+        "unsupported_number_items": 0,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "oracle:C42|C": {
+      "4.0.1": {
+        "n": 43,
+        "multi_complete_v5": 41,
+        "multi_n": 43,
+        "content_ok_v4": 40,
+        "unsupported_number_items": 1,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 43,
+        "multi_complete_v5": 41,
+        "multi_n": 43,
+        "content_ok_v4": 40,
+        "unsupported_number_items": 1,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "oracle:C42|D": {
+      "4.0.1": {
+        "n": 43,
+        "multi_complete_v5": 41,
+        "multi_n": 43,
+        "content_ok_v4": 40,
+        "unsupported_number_items": 1,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 43,
+        "multi_complete_v5": 41,
+        "multi_n": 43,
+        "content_ok_v4": 40,
+        "unsupported_number_items": 1,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "oracle:C42|Brev": {
+      "4.0.1": {
+        "n": 19,
+        "multi_complete_v5": 6,
+        "multi_n": 19,
+        "content_ok_v4": 5,
+        "unsupported_number_items": 1,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 19,
+        "multi_complete_v5": 6,
+        "multi_n": 19,
+        "content_ok_v4": 5,
+        "unsupported_number_items": 1,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "oracle:D|B": {
+      "4.0.1": {
+        "n": 43,
+        "multi_complete_v5": 29,
+        "multi_n": 43,
+        "content_ok_v4": 24,
+        "unsupported_number_items": 6,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 43,
+        "multi_complete_v5": 29,
+        "multi_n": 43,
+        "content_ok_v4": 24,
+        "unsupported_number_items": 6,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "oracle:D|C": {
+      "4.0.1": {
+        "n": 43,
+        "multi_complete_v5": 36,
+        "multi_n": 43,
+        "content_ok_v4": 35,
+        "unsupported_number_items": 2,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 43,
+        "multi_complete_v5": 36,
+        "multi_n": 43,
+        "content_ok_v4": 35,
+        "unsupported_number_items": 2,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "oracle:D|D": {
+      "4.0.1": {
+        "n": 43,
+        "multi_complete_v5": 41,
+        "multi_n": 43,
+        "content_ok_v4": 40,
+        "unsupported_number_items": 2,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 43,
+        "multi_complete_v5": 41,
+        "multi_n": 43,
+        "content_ok_v4": 40,
+        "unsupported_number_items": 2,
+        "items_with_internal_fact_ids": 0
+      }
+    },
+    "oracle:D|Brev": {
+      "4.0.1": {
+        "n": 14,
+        "multi_complete_v5": 7,
+        "multi_n": 14,
+        "content_ok_v4": 3,
+        "unsupported_number_items": 3,
+        "items_with_internal_fact_ids": 0
+      },
+      "4.0.2": {
+        "n": 14,
+        "multi_complete_v5": 7,
+        "multi_n": 14,
+        "content_ok_v4": 3,
+        "unsupported_number_items": 3,
+        "items_with_internal_fact_ids": 0
+      }
+    }
+  }
+}

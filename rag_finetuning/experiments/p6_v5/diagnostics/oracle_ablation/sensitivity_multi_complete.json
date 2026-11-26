@@ -1,0 +1,62 @@
+{
+  "A|A": {
+    "raw": 22,
+    "upper_bound_if_all_flagged_correct": 24,
+    "n": 43
+  },
+  "A|B": {
+    "raw": 27,
+    "upper_bound_if_all_flagged_correct": 28,
+    "n": 43
+  },
+  "A|C": {
+    "raw": 30,
+    "upper_bound_if_all_flagged_correct": 34,
+    "n": 43
+  },
+  "A|D": {
+    "raw": 39,
+    "upper_bound_if_all_flagged_correct": 41,
+    "n": 43
+  },
+  "C42|A": {
+    "raw": 26,
+    "upper_bound_if_all_flagged_correct": 27,
+    "n": 43
+  },
+  "C42|B": {
+    "raw": 24,
+    "upper_bound_if_all_flagged_correct": 25,
+    "n": 43
+  },
+  "C42|C": {
+    "raw": 41,
+    "upper_bound_if_all_flagged_correct": 41,
+    "n": 43
+  },
+  "C42|D": {
+    "raw": 41,
+    "upper_bound_if_all_flagged_correct": 41,
+    "n": 43
+  },
+  "D|A": {
+    "raw": 25,
+    "upper_bound_if_all_flagged_correct": 27,
+    "n": 43
+  },
+  "D|B": {
+    "raw": 29,
+    "upper_bound_if_all_flagged_correct": 31,
+    "n": 43
+  },
+  "D|C": {
+    "raw": 36,
+    "upper_bound_if_all_flagged_correct": 39,
+    "n": 43
+  },
+  "D|D": {
+    "raw": 41,
+    "upper_bound_if_all_flagged_correct": 43,
+    "n": 43
+  }
+}

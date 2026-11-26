@@ -1,0 +1,18 @@
+llm-evidence-alignment
+Copyright 2026 The llm-evidence-alignment contributors
+
+This product includes original research code licensed under the Apache License, Version 2.0 (see LICENSE).
+
+rag_finetuning/compat/rag_pipeline.py and rag_finetuning/compat/local_llm.py are verbatim copies of two modules
+from the authors' own earlier knowledge-base project (same authors, released here under Apache-2.0); see
+docs/PROVENANCE.md.
+
+Built with Qwen. The experiments fine-tuned and evaluated Qwen2.5 models. No Qwen model weights, LoRA adapters,
+checkpoints or bulk model outputs are distributed in this repository.
+  - Qwen2.5-3B-Instruct (revision aa8e72537993ba99e69dfaafa59ed015b17504d1):
+    "Qwen is licensed under the Qwen RESEARCH LICENSE AGREEMENT, Copyright (c) Alibaba Cloud. All Rights Reserved."
+    The Qwen Research License permits non-commercial (research / evaluation) use only.
+  - Qwen2.5-1.5B-Instruct (revision 989aa7980e4cf806f80c7fef2b1adb7bc71aa306) and Qwen2.5-7B-Instruct
+    (Ollama qwen2.5:7b, Q4_K_M): Apache License 2.0, Copyright Alibaba Cloud.
+
+Third-party software used at run time is listed in THIRD_PARTY_NOTICES.md; none of it is vendored here.
