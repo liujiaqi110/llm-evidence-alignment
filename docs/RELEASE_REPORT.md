@@ -124,7 +124,17 @@ the final experiments.
 
 | Item | Value |
 |---|---|
-| Repository | to be filled after creation |
-| Visibility | **private** (not changed to public) |
-| Tag | `v1.0.0`: research engineering version complete; no model promoted |
-| CI | to be filled after the first run |
+| Repository | https://github.com/liujiaqi110/llm-evidence-alignment |
+| Visibility | **public**. The repository was created as public; the owner decided to keep it public before the first push (2026-11-26) |
+| Default branch | `main` (fresh history; no history of the source repository) |
+| Tag | `v1.0.0` → `da5e343` (annotated). Research engineering version complete; **no model promoted** |
+| CI | GitHub Actions `tests`. All steps succeeded on Python 3.11 and 3.12 (release guard, frozen hashes, unit tests, minimal example, package build) |
+
+CI runs:
+
+| Run | Ref | Commit | Result |
+|---|---|---|---|
+| [45736687708](https://github.com/liujiaqi110/llm-evidence-alignment/actions/runs/45736687708) | `main` | `da5e343` | success |
+| [45736701793](https://github.com/liujiaqi110/llm-evidence-alignment/actions/runs/45736701793) | `v1.0.0` | `da5e343` | success |
+
+The commit that adds this section is after the tag, so it is on `main` but not in `v1.0.0`.
