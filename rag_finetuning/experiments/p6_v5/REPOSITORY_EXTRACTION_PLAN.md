@@ -91,7 +91,7 @@ llm-evidence-alignment/
 | 密钥 / Token（sk-、hf_、ghp_、AKIA、私钥、api_key 赋值） | `rag_finetuning`、`ragas_eval`、`kb_platform` 中**未发现** | 发布前用 gitleaks 或同类工具再扫一次 |
 | 邮箱 | `rag_finetuning` 中未发现；`ragas_eval/redaction.py` 中的只是邮箱域名列表（脱敏规则），不是个人信息 | 不抽取 redaction.py |
 | Windows 用户名、个人目录（用户主目录路径） | `rag_finetuning` 中未发现 | — |
-| **本地绝对路径** | **86 个文件**：`<WORKSPACE>`（约 246 处）、`<SOURCE_REPO>`（15 处）、`D:\Ai\Model…`、`<OLLAMA_DATA>`（3 处）。分布在 26 个 Python 脚本、17 个 YAML 配置和若干结果 JSON / 报告中 | 代码与配置：改为环境变量 `LEA_WORKSPACE`（默认 `./workspace`）和 `LEA_OLLAMA_URL`。历史结果 JSON 与报告：导出时把路径替换为 `<WORKSPACE>`，并在 `reports/PATH_REDACTION.md` 记录替换规则。被哈希记录的文件（冻结数据、训练数据、评分器）**都不含路径**，替换不影响任何已记录的哈希 |
+| **本地绝对路径** | **86 个文件**：`<WORKSPACE>`（约 246 处）、`<SOURCE_REPO>`（15 处）、`<OLLAMA_MODELS>`、`<OLLAMA_DATA>`（3 处）。分布在 26 个 Python 脚本、17 个 YAML 配置和若干结果 JSON / 报告中 | 代码与配置：改为环境变量 `LEA_WORKSPACE`（默认 `./workspace`）和 `LEA_OLLAMA_URL`。历史结果 JSON 与报告：导出时把路径替换为 `<WORKSPACE>`，并在 `reports/PATH_REDACTION.md` 记录替换规则。被哈希记录的文件（冻结数据、训练数据、评分器）**都不含路径**，替换不影响任何已记录的哈希 |
 | test_v5 内容外泄 | 125 道题的题目和参考答案只出现在 `data/test_v5/` 与 `data/frozen/test_v5.jsonl` 中，其他报告、脚本、数据都没有 | 发布时排除这两处 |
 | 大文件 / 权重 | `rag_finetuning` 中没有 > 2 MB 的文件，也没有 .safetensors / .bin / .pt / .gguf | `.gitignore` 加入 `workspace/`、`*.safetensors` 等 |
 | 私有研究仓库 | 没有引用 `<PRIVATE_REPO>` | — |
